@@ -1,0 +1,35 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editores
+.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Python
+__pycache__/
+*.py[cod]
+*.py
+*.pyo
+.env
+.venv/
+venv/
+env/
+
+# Node (por si se agrega en el futuro)
+node_modules/
+
+# Logs y temporales
+*.log
+*.tmp
+*.bak
+*.swp
+*.orig
+
+# Archivos comprimidos generados
+*.zip
+*.tar.gz

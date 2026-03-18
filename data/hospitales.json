@@ -1,0 +1,3410 @@
+{
+  "CSIMB003511": {
+    "hospital": "HOSPITAL DE ESPECIALIDADES PEDIÁTRICAS",
+    "estado": "CHIAPAS",
+    "lat": 16.750663,
+    "lon": -93.078047
+  },
+  "CSIMB003506": {
+    "hospital": "HOSPITAL REGIONAL DE ALTA ESPECIALIDAD CIUDAD SALUD",
+    "estado": "CHIAPAS",
+    "lat": 15.351201,
+    "lon": -92.548768
+  },
+  "CMIMB000470": {
+    "hospital": "HOSPITAL GENERAL IXTLÁHUACAN",
+    "estado": "COLIMA",
+    "lat": 18.997541,
+    "lon": -103.736051
+  },
+  "CMIMB000103": {
+    "hospital": "HOSPITAL REGIONAL UNIVERSITARIO",
+    "estado": "COLIMA",
+    "lat": 19.2581366,
+    "lon": -103.6898378
+  },
+  "CCIMB000073": {
+    "hospital": "HOSPITAL DR. MANUEL CAMPOS",
+    "estado": "CAMPECHE",
+    "lat": 19.844724,
+    "lon": -90.532584
+  },
+  "CCIMB000143": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO DE CAMPECHE",
+    "estado": "CAMPECHE",
+    "lat": 19.913613,
+    "lon": -90.419136
+  },
+  "CCIMB000266": {
+    "hospital": "HOSPITAL COMUNITARIO DE CHAMPOTÓN \"DR.JOSÉ E. NAZAR RAIDEN",
+    "estado": "CAMPECHE",
+    "lat": 19.341048,
+    "lon": -90.733363
+  },
+  "CCIMB001362": {
+    "hospital": "HOSPITAL INTEGRAL DE CALKINÍ",
+    "estado": "CAMPECHE",
+    "lat": 20.380403,
+    "lon": -90.064245
+  },
+  "CCIMB001526": {
+    "hospital": "HOSPITAL GENERAL DE ESPECIALIDADES DR. JAVIER BUENFIL OSORIO",
+    "estado": "CAMPECHE",
+    "lat": 19.815162,
+    "lon": -90.523917
+  },
+  "CSIMB000023": {
+    "hospital": "H. B. C. MANUEL VELASCO SUAREZ ACALA",
+    "estado": "CHIAPAS",
+    "lat": 16.556405,
+    "lon": -92.815191
+  },
+  "CSIMB000175": {
+    "hospital": "HOSPITAL GENERAL JUÁREZ ARRIAGA",
+    "estado": "CHIAPAS",
+    "lat": 16.241557,
+    "lon": -93.887718
+  },
+  "CSIMB000373": {
+    "hospital": "H. B. C. DE CINTALAPA DE FIGUEROA",
+    "estado": "CHIAPAS",
+    "lat": 16.681323,
+    "lon": -93.730085
+  },
+  "CSIMB002152": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO SALTO DE AGUA",
+    "estado": "CHIAPAS",
+    "lat": 17.552807,
+    "lon": -92.338727
+  },
+  "CSIMB003605": {
+    "hospital": "UNIDAD DE ATENCIÓN A LA SALUD MENTAL SAN AGUSTÍN",
+    "estado": "CHIAPAS",
+    "lat": 16.682003,
+    "lon": -93.103124
+  },
+  "CSIMB003704": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO LAS ROSAS",
+    "estado": "CHIAPAS",
+    "lat": 16.365531,
+    "lon": -92.377345
+  },
+  "CSIMB004626": {
+    "hospital": "H. B. C. DEL PORVENIR",
+    "estado": "CHIAPAS",
+    "lat": 15.453841,
+    "lon": -92.276784
+  },
+  "CSIMB005495": {
+    "hospital": "H. B. C. DE TEOPISCA",
+    "estado": "CHIAPAS",
+    "lat": 16.554808,
+    "lon": -92.475661
+  },
+  "CSIMB005512": {
+    "hospital": "HOSPITAL DE LA MUJER COMITÁN",
+    "estado": "CHIAPAS",
+    "lat": 16.207545,
+    "lon": -92.106986
+  },
+  "CSIMB006533": {
+    "hospital": "HOSPITAL CHIAPAS NOS UNE DR. JESUS GILBERTO GOMEZ MAZA",
+    "estado": "CHIAPAS",
+    "lat": 16.7484597,
+    "lon": -93.0727995
+  },
+  "DFIMB001064": {
+    "hospital": "HOSPITAL MATERNO INFANTIL MAGDALENA CONTRERAS",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3194005,
+    "lon": -99.239021
+  },
+  "DFIMB002341": {
+    "hospital": "HOSPITAL GENERAL TOPILEJO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.1990194,
+    "lon": -99.1415403
+  },
+  "DFIMB002435": {
+    "hospital": "HOSPITAL GENERAL DE CUAJIMALPA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3474174,
+    "lon": -99.3009058
+  },
+  "GRIMB002170": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO COPALA",
+    "estado": "GUERRERO",
+    "lat": 16.6079,
+    "lon": -98.987965
+  },
+  "GRIMB003705": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO TLACOTEPEC",
+    "estado": "GUERRERO",
+    "lat": 17.786453,
+    "lon": -99.97987
+  },
+  "GRIMB004096": {
+    "hospital": "DR. JORGE SOBERON ACEVEDO",
+    "estado": "GUERRERO",
+    "lat": 18.344546,
+    "lon": -99.523603
+  },
+  "GRIMB004562": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO FILO DE CABALLOS",
+    "estado": "GUERRERO",
+    "lat": 17.651319,
+    "lon": -99.835199
+  },
+  "GRIMB005566": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO QUECHULTENANGO",
+    "estado": "GUERRERO",
+    "lat": 17.413819,
+    "lon": -99.245531
+  },
+  "GRIMB006930": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO XALITLA",
+    "estado": "GUERRERO",
+    "lat": 17.997495,
+    "lon": -99.542937
+  },
+  "GRIMB006983": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO TIXTLA DE GUERRERO",
+    "estado": "GUERRERO",
+    "lat": 17.561396,
+    "lon": -99.404747
+  },
+  "GRIMB007753": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO XOCHISTLÁHUACA",
+    "estado": "GUERRERO",
+    "lat": 16.784161,
+    "lon": -98.245852
+  },
+  "GRIMB007980": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO ZUMPANGO JOSÉ PONIENTE",
+    "estado": "GUERRERO",
+    "lat": 17.653625,
+    "lon": -99.530989
+  },
+  "GRIMB008120": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO ACATEPEC",
+    "estado": "GUERRERO",
+    "lat": 17.329127,
+    "lon": -98.907693
+  },
+  "GRIMB008890": {
+    "hospital": "HOSPITAL DE LA MADRE Y DEL NIÑO DE TLAPA",
+    "estado": "GUERRERO",
+    "lat": 17.543476,
+    "lon": -98.58937
+  },
+  "GRIMB008902": {
+    "hospital": "HOSPITAL DE LA MADRE Y DEL NIÑO DE CHILPANCINGO",
+    "estado": "GUERRERO",
+    "lat": 17.525232,
+    "lon": -99.49196
+  },
+  "GRIMB008926": {
+    "hospital": "HOSPITAL GENERAL DE ACAPULCO",
+    "estado": "GUERRERO",
+    "lat": 16.930872,
+    "lon": -99.82064
+  },
+  "GRIMB008931": {
+    "hospital": "HOSPITAL GENERAL DE CHILPANCINGO",
+    "estado": "GUERRERO",
+    "lat": 17.605384,
+    "lon": -99.520921
+  },
+  "GRIMB009030": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE SAN MARCOS",
+    "estado": "GUERRERO",
+    "lat": 16.7923339,
+    "lon": -99.39172
+  },
+  "GRIMB009042": {
+    "hospital": "HOSPITAL GENERAL DE COYUCA DE CATALÁN",
+    "estado": "GUERRERO",
+    "lat": 18.334646,
+    "lon": -100.712317
+  },
+  "GRIMB010285": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE HUAMUXTITLÁN",
+    "estado": "GUERRERO",
+    "lat": 17.8114203,
+    "lon": -98.5621538
+  },
+  "GRIMB010290": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE COYUCA DE BENITEZ",
+    "estado": "GUERRERO",
+    "lat": 16.9996499,
+    "lon": -100.0763735
+  },
+  "GRIMB010495": {
+    "hospital": "HOSPITAL IMSS BIENESTAR SAN LUIS ACATLAN",
+    "estado": "GUERRERO",
+    "lat": 16.7994181,
+    "lon": -98.7377242
+  },
+  "GRIMB010512": {
+    "hospital": "HOSPITAL COMUNITARIO DE OLINALÁ",
+    "estado": "GUERRERO",
+    "lat": 17.7609192,
+    "lon": -98.7403215
+  },
+  "GRIMB010536": {
+    "hospital": "HOSPITAL IMSS BIENESTAR TLAPA",
+    "estado": "GUERRERO",
+    "lat": 17.564036,
+    "lon": -98.55466
+  },
+  "HGIMB002304": {
+    "hospital": "HOSPITAL GENERAL PACHUCA",
+    "estado": "HIDALGO",
+    "lat": 20.11376,
+    "lon": -98.722855
+  },
+  "HGIMB002572": {
+    "hospital": "HOSPITAL REGIONAL OTOMI TEPEHUA",
+    "estado": "HIDALGO",
+    "lat": 20.395194,
+    "lon": -98.203421
+  },
+  "MCIMB000226": {
+    "hospital": "TEPEXPAN DR. GUSTAVO BAZ PRADA",
+    "estado": "MEXICO",
+    "lat": 19.611498,
+    "lon": -98.9410275
+  },
+  "MCIMB000890": {
+    "hospital": "HOSPITAL MUNICIPAL SANTA CRUZ ATIZAPÁN BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.181763,
+    "lon": -99.490306
+  },
+  "MCIMB001351": {
+    "hospital": "HOSPITAL RAMÓN LÓPEZ RAYÓN BICENTENARIO COATEPEC HARINAS",
+    "estado": "MEXICO",
+    "lat": 18.92084,
+    "lon": -99.765492
+  },
+  "MCIMB001515": {
+    "hospital": "HOSPITAL GENERAL DE CHALCO",
+    "estado": "MEXICO",
+    "lat": 19.2680187,
+    "lon": -98.8936991
+  },
+  "MCIMB009215": {
+    "hospital": "HOSPITAL GENERAL LA PERLA NEZAHUALCOYOTL",
+    "estado": "MEXICO",
+    "lat": 19.387644,
+    "lon": -98.989264
+  },
+  "OCIMB000881": {
+    "hospital": "HG OAXACA DR. AURELIO VALDIVIESO",
+    "estado": "OAXACA",
+    "lat": 17.0820483,
+    "lon": -96.7181727
+  },
+  "OCIMB001330": {
+    "hospital": "H PSIQUIÁTRICO GRANJA CRUZ DEL SUR",
+    "estado": "OAXACA",
+    "lat": 16.912682,
+    "lon": -96.720198
+  },
+  "OCIMB001844": {
+    "hospital": "HG CUICATLAN DR. ALBERTO VARGAS MERINO",
+    "estado": "OAXACA",
+    "lat": 17.8082155,
+    "lon": -96.9594267
+  },
+  "OCIMB003133": {
+    "hospital": "HG SAN PABLO HUIXTEPEC DR. MANUEL VELASCO SUÁREZ",
+    "estado": "OAXACA",
+    "lat": 16.8166,
+    "lon": -96.7862
+  },
+  "OCIMB003401": {
+    "hospital": "HG POCHUTLA",
+    "estado": "OAXACA",
+    "lat": 15.7348654,
+    "lon": -96.4726566
+  },
+  "OCIMB003816": {
+    "hospital": "HC SANTA CATARINA JUQUILA",
+    "estado": "OAXACA",
+    "lat": 17.0490405,
+    "lon": -96.7316562
+  },
+  "OCIMB007181": {
+    "hospital": "HOSPITAL ESPECIALIZADO DE 30 CAMAS DE JUCHITAN",
+    "estado": "OAXACA",
+    "lat": 16.455001,
+    "lon": -95.026749
+  },
+  "OCIMB007572": {
+    "hospital": "HG CIUDAD IXTEPEC",
+    "estado": "OAXACA",
+    "lat": 16.5586412,
+    "lon": -95.1180696
+  },
+  "OCIMB007625": {
+    "hospital": "HG TEHUANTEPEC",
+    "estado": "OAXACA",
+    "lat": 16.2907818,
+    "lon": -95.2329182
+  },
+  "OCIMB008774": {
+    "hospital": "HC NEJAPA DE MADERO",
+    "estado": "OAXACA",
+    "lat": 16.599669,
+    "lon": -95.984734
+  },
+  "OCIMB008815": {
+    "hospital": "HG PUERTO ESCONDIDO",
+    "estado": "OAXACA",
+    "lat": 15.8801397,
+    "lon": -97.089251
+  },
+  "OCIMB008861": {
+    "hospital": "HC TEMASCAL",
+    "estado": "OAXACA",
+    "lat": 18.2405,
+    "lon": -96.4018
+  },
+  "OCIMB009071": {
+    "hospital": "HG PUTLA AMIGO DE LA NIÑEZ Y DE LA MADRE",
+    "estado": "OAXACA",
+    "lat": 17.0039694,
+    "lon": -97.9079899
+  },
+  "OCIMB009100": {
+    "hospital": "HC RÍO GRANDE",
+    "estado": "OAXACA",
+    "lat": 15.9898486,
+    "lon": -97.4153807
+  },
+  "OCIMB009416": {
+    "hospital": "HC TEOTITLÁN DE FLORES MAGÓN",
+    "estado": "OAXACA",
+    "lat": 18.130797,
+    "lon": -97.075311
+  },
+  "OCIMB009445": {
+    "hospital": "HC VILLA SOLA VEGA",
+    "estado": "OAXACA",
+    "lat": 16.529185,
+    "lon": -96.978974
+  },
+  "OCIMB009561": {
+    "hospital": "HC SAN PEDRO HUAMELULA",
+    "estado": "OAXACA",
+    "lat": 16.0188337,
+    "lon": -95.6663302
+  },
+  "OCIMB009631": {
+    "hospital": "HOSPITAL GENERAL DE LA MUJER Y LA NIÑEZ OAXAQUEÑA",
+    "estado": "OAXACA",
+    "lat": 16.912372,
+    "lon": -96.722317
+  },
+  "OCIMB009643": {
+    "hospital": "IXTLÁN DE JUÁREZ",
+    "estado": "OAXACA",
+    "lat": 17.3265975,
+    "lon": -96.48986
+  },
+  "OCIMB009660": {
+    "hospital": "HOSPITAL GENERAL DE SAN JUAN BAUTISTA TUXTEPEC",
+    "estado": "OAXACA",
+    "lat": 18.1124425,
+    "lon": -96.1374389
+  },
+  "QRIMB000025": {
+    "hospital": "HOSPITAL GENERAL DE FELIPE CARRILLO PUERTO",
+    "estado": "QUINTANA ROO",
+    "lat": 19.571196,
+    "lon": -88.0457058
+  },
+  "QRIMB001623": {
+    "hospital": "HOSPITAL IMSS-BIENESTAR TULUM",
+    "estado": "QUINTANA ROO",
+    "lat": 20.2068579,
+    "lon": -87.4701068
+  },
+  "QRIMB001956": {
+    "hospital": "HOSPITAL GENERAL DE PLAYA DEL CARMEN",
+    "estado": "QUINTANA ROO",
+    "lat": 20.6448025,
+    "lon": -87.0949994
+  },
+  "QRIMB001973": {
+    "hospital": "HOSPITAL GENERAL DE CANCÚN DR. JESÚS KUMATE RODRÍGUEZ",
+    "estado": "QUINTANA ROO",
+    "lat": 21.19531,
+    "lon": -86.87687
+  },
+  "SLIMB000195": {
+    "hospital": "HOSPITAL INTEGRAL ANGOSTURA",
+    "estado": "SINALOA",
+    "lat": 25.3680267,
+    "lon": -108.1564539
+  },
+  "SLIMB000241": {
+    "hospital": "HOSPITAL INTEGRAL BADIRAGUATO",
+    "estado": "SINALOA",
+    "lat": 25.3510847,
+    "lon": -107.5551293
+  },
+  "SLIMB000446": {
+    "hospital": "HOSPITAL INTEGRAL CONCORDIA",
+    "estado": "SINALOA",
+    "lat": 23.2853976,
+    "lon": -106.066862
+  },
+  "SLIMB000545": {
+    "hospital": "HOSPITAL INTEGRAL COSALA",
+    "estado": "SINALOA",
+    "lat": 24.4101324,
+    "lon": -106.6910791
+  },
+  "SLIMB000895": {
+    "hospital": "HOSPITAL INTEGRAL CHOIX",
+    "estado": "SINALOA",
+    "lat": 26.7128866,
+    "lon": -108.3234903
+  },
+  "SLIMB001554": {
+    "hospital": "HOSPITAL INTEGRAL MOCORITO",
+    "estado": "SINALOA",
+    "lat": 25.4819851,
+    "lon": -107.9231373
+  },
+  "SLIMB001711": {
+    "hospital": "HOSPITAL INTEGRAL DE EL ROSARIO",
+    "estado": "SINALOA",
+    "lat": 22.9949308,
+    "lon": -105.8566385
+  },
+  "SLIMB002184": {
+    "hospital": "HOSPITAL INTEGRAL NAVOLATO",
+    "estado": "SINALOA",
+    "lat": 24.7605446,
+    "lon": -107.6826079
+  },
+  "SLIMB002242": {
+    "hospital": "HOSPITAL INTEGRAL VALLE DEL CARRIZO",
+    "estado": "SINALOA",
+    "lat": 26.2662908,
+    "lon": -109.034642
+  },
+  "SLIMB002464": {
+    "hospital": "HOSPITAL INTEGRAL SAN IGNACIO",
+    "estado": "SINALOA",
+    "lat": 23.9446252,
+    "lon": -106.4231693
+  },
+  "SLIMB002476": {
+    "hospital": "HOSPITAL INTEGRAL VALLE DE SAN LORENZO",
+    "estado": "SINALOA",
+    "lat": 24.2915204,
+    "lon": -107.1508884
+  },
+  "SPIMB000170": {
+    "hospital": "HOSPITAL COMUNITARIO CIUDAD DEL MAÍZ",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.39957,
+    "lon": -99.606882
+  },
+  "SPIMB001063": {
+    "hospital": "HOSPITAL COMUNITARIO TAMAZUNCHALE",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 21.27728,
+    "lon": -98.75067
+  },
+  "SPIMB002801": {
+    "hospital": "HOSPITAL COMUNITARIO DE TAMUIN",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.0141944,
+    "lon": -98.7888333
+  },
+  "SRIMB001561": {
+    "hospital": "HOSPITAL GENERAL NOGALES",
+    "estado": "SONORA",
+    "lat": 31.309418,
+    "lon": -110.944518
+  },
+  "SRIMB002203": {
+    "hospital": "HOSPITAL GENERAL DEL ESTADO DE SONORA",
+    "estado": "SONORA",
+    "lat": 29.08175,
+    "lon": -111.003861
+  },
+  "TCIMB001870": {
+    "hospital": "HOSPITAL GENERAL DE HUIMANGUILLO DR. ADELFO S. AGUIRRE",
+    "estado": "TABASCO",
+    "lat": 17.826924,
+    "lon": -93.395583
+  },
+  "TCIMB002273": {
+    "hospital": "HOSPITAL COMUNITARIO DE JALAPA",
+    "estado": "TABASCO",
+    "lat": 17.7232288,
+    "lon": -92.8130051
+  },
+  "TCIMB002396": {
+    "hospital": "HOSPITAL COMUNITARIO DE JALPA DE MÈNDEZ",
+    "estado": "TABASCO",
+    "lat": 18.1798199,
+    "lon": -93.0588698
+  },
+  "TSIMB000082": {
+    "hospital": "HOSPITAL INTEGRAL ALDAMA",
+    "estado": "TAMAULIPAS",
+    "lat": 22.919282,
+    "lon": -98.074685
+  },
+  "TSIMB001091": {
+    "hospital": "HOSPITAL GENERAL NUEVO LAREDO",
+    "estado": "TAMAULIPAS",
+    "lat": 27.485904,
+    "lon": -99.504271
+  },
+  "TSIMB001535": {
+    "hospital": "HOSPITAL GENERAL SAN FERNANDO",
+    "estado": "TAMAULIPAS",
+    "lat": 24.853304,
+    "lon": -98.152894
+  },
+  "TSIMB002713": {
+    "hospital": "HOSPITAL GENERAL MATERNO INFANTIL DE REYNOSA",
+    "estado": "TAMAULIPAS",
+    "lat": 26.050745,
+    "lon": -98.379484
+  },
+  "TSIMB003075": {
+    "hospital": "HOSPITAL GENERAL RÍO BRAVO",
+    "estado": "TAMAULIPAS",
+    "lat": 25.994527,
+    "lon": -98.123613
+  },
+  "TSIMB003483": {
+    "hospital": "HOSPITAL INTEGRAL MIGUEL ALEMÁN",
+    "estado": "TAMAULIPAS",
+    "lat": 26.389622,
+    "lon": -99.070762
+  },
+  "VZIMB001881": {
+    "hospital": "HOSPITAL GENERAL HUATUSCO DR. DARÍO MENDEZ LIMA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.15187,
+    "lon": -96.9689
+  },
+  "VZIMB002844": {
+    "hospital": "HOSPITAL GENERAL DE MINATITLAN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.99026,
+    "lon": -94.5596
+  },
+  "VZIMB007930": {
+    "hospital": "HOSPITAL GENERAL COSOLEACAQUE",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.99222,
+    "lon": -94.6412
+  },
+  "ZSIMB000492": {
+    "hospital": "HOSPITAL COMUNITARIO JALPA (DR CALIXTO MEDINA MEDINA)",
+    "estado": "ZACATECAS",
+    "lat": 21.65171,
+    "lon": -102.971898
+  },
+  "ZSIMB000615": {
+    "hospital": "HOSPITAL COMUNITARIO JUAN ALDAMA",
+    "estado": "ZACATECAS",
+    "lat": 24.291384,
+    "lon": -103.402573
+  },
+  "ZSIMB000620": {
+    "hospital": "HOSPITAL COMUNITARIO JUCHIPILA",
+    "estado": "ZACATECAS",
+    "lat": 21.389231,
+    "lon": -103.122441
+  },
+  "ZSIMB000813": {
+    "hospital": "HOSPITAL COMUNITARIO NOCHISTLÁN DE MEJÍA",
+    "estado": "ZACATECAS",
+    "lat": 21.364123,
+    "lon": -102.823375
+  },
+  "ZSIMB000900": {
+    "hospital": "HOSPITAL COMUNITARIO OJOCALIENTE",
+    "estado": "ZACATECAS",
+    "lat": 22.584627,
+    "lon": -102.239395
+  },
+  "ZSIMB001653": {
+    "hospital": "HOSPITAL COMUNITARIO TRANCOSO",
+    "estado": "ZACATECAS",
+    "lat": 22.733816,
+    "lon": -102.364675
+  },
+  "TSIMB002520": {
+    "hospital": "HOSPITAL GENERAL DE TAMPICO DR. CARLOS CANSECO",
+    "estado": "TAMAULIPAS",
+    "lat": 22.253176,
+    "lon": -97.859497
+  },
+  "DFIMB000422": {
+    "hospital": "HOSPITAL PEDIÁTRICO VILLA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4870817,
+    "lon": -99.114262
+  },
+  "GRIMB000024": {
+    "hospital": "HOSP. GRAL. RENACIMIENTO",
+    "estado": "GUERRERO",
+    "lat": 16.89961,
+    "lon": -99.827546
+  },
+  "OCIMB002100": {
+    "hospital": "HG MARÍA LOMBARDO DE CASO",
+    "estado": "OAXACA",
+    "lat": 17.4463532,
+    "lon": -95.4308581
+  },
+  "GRIMB003961": {
+    "hospital": "HOSPITAL GENERAL DE HUITZUCO",
+    "estado": "GUERRERO",
+    "lat": 18.29651,
+    "lon": -99.330506
+  },
+  "OCIMB008651": {
+    "hospital": "HG SALINA CRUZ",
+    "estado": "OAXACA",
+    "lat": 16.241659,
+    "lon": -95.2099505
+  },
+  "MNIMB003976": {
+    "hospital": "HG LA PIEDAD",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 20.319359,
+    "lon": -102.018441
+  },
+  "SPIMB002125": {
+    "hospital": "HOSPITAL GENERAL DE MATEHUALA",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 23.66909,
+    "lon": -100.653531
+  },
+  "OCIMB007012": {
+    "hospital": "HOSPITAL GENERAL DR MACEDONIO BENITEZ FUENTES",
+    "estado": "OAXACA",
+    "lat": 16.4339807,
+    "lon": -95.0130315
+  },
+  "GRIMB005163": {
+    "hospital": "HOSPITAL GENERAL OMETEPEC",
+    "estado": "GUERRERO",
+    "lat": 16.689241,
+    "lon": -98.433141
+  },
+  "TSIMB002416": {
+    "hospital": "HOSPITAL GENERAL DE MATAMOROS",
+    "estado": "TAMAULIPAS",
+    "lat": 25.827131,
+    "lon": -97.532805
+  },
+  "CMIMB001141": {
+    "hospital": "HOSPITAL GENERAL DE MANZANILLO",
+    "estado": "COLIMA",
+    "lat": 19.116565,
+    "lon": -104.327259
+  },
+  "BCIMB000355": {
+    "hospital": "HOSPITAL GENERAL DE MEXICALI",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.644334,
+    "lon": -115.476271
+  },
+  "DFIMB000410": {
+    "hospital": "HOSPITAL PEDIÁTRICO SAN JUAN DE ARAGÓN",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.458007,
+    "lon": -99.0924319
+  },
+  "PLIMB007083": {
+    "hospital": "HOSPITAL GENERAL DE IZUCAR DE MATAMOROS",
+    "estado": "PUEBLA",
+    "lat": 18.5907244,
+    "lon": -98.4512447
+  },
+  "GRIMB004311": {
+    "hospital": "DR. BERNARDO SEPULVEDA GUTIÉRREZ",
+    "estado": "GUERRERO",
+    "lat": 17.648613,
+    "lon": -101.549035
+  },
+  "MNIMB003964": {
+    "hospital": "HG LOS REYES",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.603589,
+    "lon": -102.475351
+  },
+  "SRIMB000914": {
+    "hospital": "HOSPITAL INFANTIL DEL ESTADO DE SONORA",
+    "estado": "SONORA",
+    "lat": 29.1163811,
+    "lon": -110.9718024
+  },
+  "MNIMB002774": {
+    "hospital": "HOSPITAL GENERAL DR. PEDRO DANIEL MARTÍNEZ",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.390541,
+    "lon": -102.024055
+  },
+  "TCIMB000016": {
+    "hospital": "HOSPITAL GENERAL DE BALANCÁN",
+    "estado": "TABASCO",
+    "lat": 17.8119,
+    "lon": -91.5335
+  },
+  "VZIMB002972": {
+    "hospital": "HOSPITAL GENERAL DE MISANTLA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.92293,
+    "lon": -96.8515
+  },
+  "VZIMB006192": {
+    "hospital": "HOSPITAL GENERAL TLALIXCOYAN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.79976,
+    "lon": -96.057609
+  },
+  "ZSIMB000113": {
+    "hospital": "HOSPITAL GENERAL FRESNILLO (DR. JOSÉ HARO ÁVILA)",
+    "estado": "ZACATECAS",
+    "lat": 23.17238,
+    "lon": -102.912707
+  },
+  "SLIMB000014": {
+    "hospital": "HOSPITAL GENERAL DE CULIACÁN",
+    "estado": "SINALOA",
+    "lat": 24.8325414,
+    "lon": -107.3660201
+  },
+  "SLIMB003065": {
+    "hospital": "HOSPITAL GENERAL EL DORADO",
+    "estado": "SINALOA",
+    "lat": 24.3118742,
+    "lon": -107.3649591
+  },
+  "SPIMB000240": {
+    "hospital": "HOSPITAL GENERAL CD. VALLES",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 21.948257,
+    "lon": -98.993798
+  },
+  "TSIMB001931": {
+    "hospital": "HOSPITAL INFANTIL DE TAMAULIPAS",
+    "estado": "TAMAULIPAS",
+    "lat": 23.721794,
+    "lon": -99.163718
+  },
+  "CCIMB001531": {
+    "hospital": "HOSPITAL GENERAL DE ESCARCEGA DR. JANELL ROMERO AGUILAR",
+    "estado": "CAMPECHE",
+    "lat": 18.618552,
+    "lon": -90.744511
+  },
+  "MNIMB002931": {
+    "hospital": "HG ZAMORA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.989744,
+    "lon": -102.279183
+  },
+  "OCIMB001313": {
+    "hospital": "HE DE LA NIÑEZ OAXAQUEÑA",
+    "estado": "OAXACA",
+    "lat": 16.9472068,
+    "lon": -96.7101271
+  },
+  "SLIMB002481": {
+    "hospital": "HOSPITAL GENERAL LA CRUZ",
+    "estado": "SINALOA",
+    "lat": 23.9334366,
+    "lon": -106.8759673
+  },
+  "DFIMB000451": {
+    "hospital": "HOSPITAL GENERAL VILLA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4806216,
+    "lon": -99.1031447
+  },
+  "OCIMB004912": {
+    "hospital": "HG PINOTEPA PEDRO ESPINOZA RUEDA",
+    "estado": "OAXACA",
+    "lat": 16.3471943,
+    "lon": -98.0483392
+  },
+  "PLIMB000626": {
+    "hospital": "HOSPITAL GENERAL CIUDAD SERDÁN",
+    "estado": "PUEBLA",
+    "lat": 18.9890106,
+    "lon": -97.4496219
+  },
+  "PLIMB005012": {
+    "hospital": "HOSPITAL GENERAL DE ACATLÁN DE OSORIO",
+    "estado": "PUEBLA",
+    "lat": 18.185898,
+    "lon": -98.0564089
+  },
+  "TSIMB000316": {
+    "hospital": "HOSPITAL GENERAL CIVIL CIUDAD MADERO",
+    "estado": "TAMAULIPAS",
+    "lat": 22.254024,
+    "lon": -97.823416
+  },
+  "DFIMB000760": {
+    "hospital": "HOSPITAL PEDIÁTRICO IZTACALCO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4026553,
+    "lon": -99.1179666
+  },
+  "TSIMB001103": {
+    "hospital": "HOSPITAL GENERAL CIVIL NUEVO LAREDO",
+    "estado": "TAMAULIPAS",
+    "lat": 27.493243,
+    "lon": -99.531614
+  },
+  "VZIMB006315": {
+    "hospital": "HOSPITAL GENERAL DE OLUTA-ACAYUCAN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.9320003,
+    "lon": -94.9061527
+  },
+  "GRIMB009486": {
+    "hospital": "HOSPITAL GENERAL CHILAPA DE ÁLVAREZ PZC",
+    "estado": "GUERRERO",
+    "lat": 17.616918,
+    "lon": -99.17037
+  },
+  "CCIMB000172": {
+    "hospital": "H.G. MA. SOCORRO QUIROGA AGUILAR",
+    "estado": "CAMPECHE",
+    "lat": 18.646634,
+    "lon": -91.820543
+  },
+  "SLIMB000031": {
+    "hospital": "HOSPITAL GENERAL LOS MOCHIS",
+    "estado": "SINALOA",
+    "lat": 25.7710931,
+    "lon": -108.988561
+  },
+  "QRIMB000351": {
+    "hospital": "HOSPITAL GENERAL DE CHETUMAL",
+    "estado": "QUINTANA ROO",
+    "lat": 18.517,
+    "lon": -88.304
+  },
+  "SRIMB002594": {
+    "hospital": "HOSPITAL GENERAL DEL BAJO RIO MAYO",
+    "estado": "SONORA",
+    "lat": 26.8424712,
+    "lon": -109.6410047
+  },
+  "OCIMB000490": {
+    "hospital": "HG HUAJUAPAN ENF. MARÍA DEL PILAR SÁNCHEZ VILLAVICENCIO",
+    "estado": "OAXACA",
+    "lat": 17.8116425,
+    "lon": -97.7726134
+  },
+  "SLIMB002230": {
+    "hospital": "HOSPITAL PEDIÁTRICO DE SINALOA",
+    "estado": "SINALOA",
+    "lat": 24.798775,
+    "lon": -107.3994245
+  },
+  "VZIMB005533": {
+    "hospital": "HOSPITAL DE ALTA ESPECIALIDAD DE VERACRUZ",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.18562,
+    "lon": -96.1321
+  },
+  "PLIMB005700": {
+    "hospital": "HOSPITAL DE TRAUMATOLOGÍA Y ORTOPEDIA DOCTOR Y GENERAL RAFAEL MORENO VALLE",
+    "estado": "PUEBLA",
+    "lat": 19.0866662,
+    "lon": -98.1987049
+  },
+  "ZSIMB000533": {
+    "hospital": "HOSPITAL GENERAL JEREZ",
+    "estado": "ZACATECAS",
+    "lat": 22.63938,
+    "lon": -102.996528
+  },
+  "TCIMB005266": {
+    "hospital": "HOSPITAL GENERAL \"DR. DESIDERIO G. ROSADO CARBAJAL\"",
+    "estado": "TABASCO",
+    "lat": 18.2662319,
+    "lon": -93.2319501
+  },
+  "CSIMB003675": {
+    "hospital": "HOSPITAL GENERAL YAJALÓN \"DR. JOSE MANUEL VELASCO SILES\"",
+    "estado": "CHIAPAS",
+    "lat": 17.178397,
+    "lon": -92.33807
+  },
+  "MCIMB005942": {
+    "hospital": "HOSPITAL MUNICIPAL MARIANO MATAMOROS BICENTENARIO TENANGO DEL VALLE",
+    "estado": "MEXICO",
+    "lat": 19.10375,
+    "lon": -99.58497
+  },
+  "MCIMB012196": {
+    "hospital": "HOSPITAL MUNICIPAL JUAN ALDAMA VILLA NICOLÁS ROMERO",
+    "estado": "MEXICO",
+    "lat": 19.6398801,
+    "lon": -99.3775401
+  },
+  "MNIMB000353": {
+    "hospital": "HI COAHUAYANA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 18.703586,
+    "lon": -103.663438
+  },
+  "PLIMB003571": {
+    "hospital": "HOSPITAL COMUNITARIO ZAPOTITLAN DE MENDEZ",
+    "estado": "PUEBLA",
+    "lat": 20.0055208,
+    "lon": -97.7212531
+  },
+  "GRIMB004574": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO MALINALTEPEC",
+    "estado": "GUERRERO",
+    "lat": 17.243397,
+    "lon": -98.66884
+  },
+  "MCIMB002874": {
+    "hospital": "HOSPITAL MUNICIPAL XALATLACO MARIANO MATAMOROS",
+    "estado": "MEXICO",
+    "lat": 19.1727001,
+    "lon": -99.4183323
+  },
+  "OCIMB000386": {
+    "hospital": "HC TAMAZULAPAN",
+    "estado": "OAXACA",
+    "lat": 17.053614,
+    "lon": -96.073088
+  },
+  "SRIMB002355": {
+    "hospital": "HOSPITAL INTEGRAL PUERTO PEÑASCO",
+    "estado": "SONORA",
+    "lat": 31.341423,
+    "lon": -113.516337
+  },
+  "DFIMB002015": {
+    "hospital": "HOSPITAL PEDIÁTRICO LEGARIA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4507251,
+    "lon": -99.2028541
+  },
+  "PLIMB001121": {
+    "hospital": "HOSPITAL COMUNITARIO HUEHUETLA",
+    "estado": "PUEBLA",
+    "lat": 20.0959121,
+    "lon": -97.6243352
+  },
+  "TLIMB002100": {
+    "hospital": "HOSPITAL GENERAL DE NATIVITAS",
+    "estado": "TLAXCALA",
+    "lat": 19.2242266,
+    "lon": -98.3174848
+  },
+  "VZIMB003911": {
+    "hospital": "HOSPITAL GENERAL SAN ANDRÉS TUXTLA. DR. BERNARDO PEÑA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.44325,
+    "lon": -95.2089
+  },
+  "PLIMB000351": {
+    "hospital": "HOSPITAL COMUNITARIO DE AYOTOXCO",
+    "estado": "PUEBLA",
+    "lat": 20.0941645,
+    "lon": -97.4098384
+  },
+  "SPIMB002813": {
+    "hospital": "HOSPITAL BASICO COMUNITARIO DE XILITLA",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 21.37253,
+    "lon": -99.00603
+  },
+  "MCIMB007960": {
+    "hospital": "HOSPITAL MUNICIPAL SAN JUAN ZITLALTEPEC",
+    "estado": "MEXICO",
+    "lat": 19.815153,
+    "lon": -99.135655
+  },
+  "PLIMB002154": {
+    "hospital": "HOSPITAL COMUNITARIO SAN MARTÍN TEXMELUCAN (EL MORAL)",
+    "estado": "PUEBLA",
+    "lat": 19.2681702,
+    "lon": -98.43454
+  },
+  "PLIMB004020": {
+    "hospital": "HOSPITAL COMUNITARIO TLAOLA",
+    "estado": "PUEBLA",
+    "lat": 20.1374007,
+    "lon": -97.9288001
+  },
+  "PLIMB004925": {
+    "hospital": "HOSPITAL GENERAL DE TEZIUTLÁN",
+    "estado": "PUEBLA",
+    "lat": 19.8219503,
+    "lon": -97.3769416
+  },
+  "TCIMB003446": {
+    "hospital": "HOSPITAL GENERAL DE TEAPA DR. NICANDRO L. MELO",
+    "estado": "TABASCO",
+    "lat": 17.5591667,
+    "lon": -92.9502222
+  },
+  "TSIMB000012": {
+    "hospital": "HOSPITAL INTEGRAL ABASOLO",
+    "estado": "TAMAULIPAS",
+    "lat": 24.056052,
+    "lon": -98.376564
+  },
+  "BCIMB001702": {
+    "hospital": "HOSPITAL MATERNO INFANTIL",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.6239,
+    "lon": -115.3756
+  },
+  "CSIMB005891": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO OSTUACAN, CHIAPAS",
+    "estado": "CHIAPAS",
+    "lat": 17.407516,
+    "lon": -93.335205
+  },
+  "GRIMB009054": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO DE ZAPOTITLÁN TABLAS",
+    "estado": "GUERRERO",
+    "lat": 17.425325,
+    "lon": -98.779031
+  },
+  "HGIMB000431": {
+    "hospital": "HOSPITAL INTEGRAL ATLAPEXCO",
+    "estado": "HIDALGO",
+    "lat": 21.021042,
+    "lon": -98.348585
+  },
+  "HGIMB004800": {
+    "hospital": "HOSPITAL GENERAL DE APAN",
+    "estado": "HIDALGO",
+    "lat": 19.713632,
+    "lon": -98.465096
+  },
+  "MSIMB001861": {
+    "hospital": "HC DE OCUITUCO",
+    "estado": "MORELOS",
+    "lat": 18.8819898,
+    "lon": -98.7849473
+  },
+  "SPIMB001920": {
+    "hospital": "HOSPITAL COMUNITARIO EBANO",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.2149444,
+    "lon": -98.379061
+  },
+  "SRIMB001351": {
+    "hospital": "HOSPITAL COMUNITARIO MOCTEZUMA",
+    "estado": "SONORA",
+    "lat": 29.80223,
+    "lon": -109.6813356
+  },
+  "MCIMB009022": {
+    "hospital": "H.G. JILOTEPEC",
+    "estado": "MEXICO",
+    "lat": 19.954759,
+    "lon": -99.547046
+  },
+  "MNIMB002190": {
+    "hospital": "HOSPITAL GENERAL DE TACAMBARO MARIA ZENDEJAS",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.237169,
+    "lon": -101.455314
+  },
+  "PLIMB001780": {
+    "hospital": "HOSPITAL GENERAL DR EDUARDO VAZQUEZ N",
+    "estado": "PUEBLA",
+    "lat": 18.9862587,
+    "lon": -98.2421342
+  },
+  "PLIMB004056": {
+    "hospital": "HOSPITAL COMUNITARIO ACATZINGO",
+    "estado": "PUEBLA",
+    "lat": 18.9781869,
+    "lon": -97.7993229
+  },
+  "SRIMB000844": {
+    "hospital": "HOSPITAL GENERAL GUAYMAS",
+    "estado": "SONORA",
+    "lat": 27.9189894,
+    "lon": -110.8996277
+  },
+  "TLIMB000975": {
+    "hospital": "H.G.R. EMILIO SÁNCHEZ PIEDRAS",
+    "estado": "TLAXCALA",
+    "lat": 19.408775,
+    "lon": -98.1179722
+  },
+  "VZIMB007860": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE JOSÉ AZUETA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.08058,
+    "lon": -95.714206
+  },
+  "BSIMB000672": {
+    "hospital": "B. HOSPITAL GENERAL CON ESPECIALIDADES JUAN MARÍA DE SALVATIERRA",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 24.113297,
+    "lon": -110.318457
+  },
+  "CCIMB000942": {
+    "hospital": "HOSPITAL DE PALIZADA",
+    "estado": "CAMPECHE",
+    "lat": 18.255417,
+    "lon": -92.100193
+  },
+  "DFIMB000842": {
+    "hospital": "HOSPITAL GENERAL IZTAPALAPA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3443153,
+    "lon": -99.0274286
+  },
+  "GRIMB010401": {
+    "hospital": "HG ADOLFO PRIETO",
+    "estado": "GUERRERO",
+    "lat": 18.566141,
+    "lon": -99.6050986
+  },
+  "MCIMB011986": {
+    "hospital": "HOSPITAL MATERNO INFANTIL CHALCO JOSÉFA ORTÍZ DE DOMÍNGUEZ",
+    "estado": "MEXICO",
+    "lat": 19.213963,
+    "lon": -98.922724
+  },
+  "PLIMB001285": {
+    "hospital": "HOSPITAL COMUNITARIO IXTACAMAXTITLAN",
+    "estado": "PUEBLA",
+    "lat": 19.6228517,
+    "lon": -97.8182623
+  },
+  "VZIMB003322": {
+    "hospital": "HOSPITAL GENERAL PANUCO DR. MANUEL I ÁVILA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 22.04958,
+    "lon": -98.18101
+  },
+  "CSIMB001073": {
+    "hospital": "HOSPITAL GENERAL HUIXTLA",
+    "estado": "CHIAPAS",
+    "lat": 15.145903,
+    "lon": -92.457536
+  },
+  "DFIMB002266": {
+    "hospital": "HOSPITAL DE ESPECIALIDADES DE LA CIUDAD DE MEXICO DR. BELISARIO DOMÍNGUEZ",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3066411,
+    "lon": -99.0660984
+  },
+  "MCIMB001841": {
+    "hospital": "H.G. CHIMALHUACÁN",
+    "estado": "MEXICO",
+    "lat": 19.4196601,
+    "lon": -98.9751801
+  },
+  "MCIMB006893": {
+    "hospital": "HOSPITAL MUNICIPAL SAN PEDRO LIMÓN",
+    "estado": "MEXICO",
+    "lat": 18.571225,
+    "lon": -100.31328
+  },
+  "MCIMB012476": {
+    "hospital": "HOSPITAL GENERAL ATENCO “FRANCISCO ALTAMIRANO NÚÑEZ”",
+    "estado": "MEXICO",
+    "lat": 19.54379,
+    "lon": -98.91381
+  },
+  "TCIMB003265": {
+    "hospital": "HOSPITAL COMUNITARIO DE TACOTALPA DR. RAMÓN MEDINA",
+    "estado": "TABASCO",
+    "lat": 17.5932163,
+    "lon": -92.8305476
+  },
+  "CSIMB003622": {
+    "hospital": "HOSPITAL GENERAL DE REFORMA",
+    "estado": "CHIAPAS",
+    "lat": 17.853378,
+    "lon": -93.157189
+  },
+  "DFIMB000026": {
+    "hospital": "HOSPITAL PEDIÁTRICO AZCAPOTZALCO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4844068,
+    "lon": -99.185475
+  },
+  "DFIMB002662": {
+    "hospital": "HOSPITAL GENERAL TLÁHUAC",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.287391,
+    "lon": -99.052743
+  },
+  "GRIMB010524": {
+    "hospital": "HOSPITAL IMSS BIENESTAR AYUTLA",
+    "estado": "GUERRERO",
+    "lat": 16.983177,
+    "lon": -99.1272716
+  },
+  "HGIMB004952": {
+    "hospital": "HOSPITAL IMSS BIENESTAR METZTITLÁN",
+    "estado": "HIDALGO",
+    "lat": 20.5901538,
+    "lon": -98.7589014
+  },
+  "MCIMB011694": {
+    "hospital": "HOSPITAL MUNICIPAL XONACATLÁN VICENTE GUERRERO BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.390064,
+    "lon": -99.5425407
+  },
+  "NTIMB001724": {
+    "hospital": "HOSPITAL GENERAL SANTIAGO IXCUINTLA",
+    "estado": "NAYARIT",
+    "lat": 21.8123286,
+    "lon": -105.2089011
+  },
+  "PLIMB005613": {
+    "hospital": "HOSPITAL GENERAL DE ATLIXCO GONZALO RÍO ARRONTE",
+    "estado": "PUEBLA",
+    "lat": 18.9029045,
+    "lon": -98.415798
+  },
+  "TSIMB001943": {
+    "hospital": "HOSPITAL GENERAL CIVIL VICTORIA DR. JOSÉ MACÍAS HERNÁNDEZ",
+    "estado": "TAMAULIPAS",
+    "lat": 23.728095,
+    "lon": -99.157253
+  },
+  "VZIMB004384": {
+    "hospital": "HOSPITAL GENERAL TANTOYUCA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 21.33229,
+    "lon": -98.2191
+  },
+  "CCIMB000831": {
+    "hospital": "HOSPITAL COMUNITARIO DE HOPELCHEN",
+    "estado": "CAMPECHE",
+    "lat": 19.754539,
+    "lon": -89.847586
+  },
+  "CSIMB005582": {
+    "hospital": "HOSPITAL GENERAL BICENTENARIO VILLAFLORES",
+    "estado": "CHIAPAS",
+    "lat": 16.258402,
+    "lon": -93.265141
+  },
+  "HGIMB004573": {
+    "hospital": "HOSPITAL MATERNO INFANTIL",
+    "estado": "HIDALGO",
+    "lat": 20.117775,
+    "lon": -98.729856
+  },
+  "MCIMB009261": {
+    "hospital": "HOSPITAL GENERAL TULTITLAN SAN PABLO DE LAS SALINAS",
+    "estado": "MEXICO",
+    "lat": 19.6768501,
+    "lon": -99.0927601
+  },
+  "MCIMB012131": {
+    "hospital": "HOSPITAL MUNICIPAL HERMENEGILDO GALEANA JIQUIPILCO",
+    "estado": "MEXICO",
+    "lat": 19.567789,
+    "lon": -99.630524
+  },
+  "MCIMB012201": {
+    "hospital": "HOSPITAL MATERNO INFANTIL VICENTE GUERRERO CHIMALHUACÁN",
+    "estado": "MEXICO",
+    "lat": 19.4422201,
+    "lon": -98.9726375
+  },
+  "MNIMB003013": {
+    "hospital": "HG ZITACUARO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.432554,
+    "lon": -100.3694427
+  },
+  "PLIMB004102": {
+    "hospital": "HOSPITAL COMUNITARIO MECAPALAPA",
+    "estado": "PUEBLA",
+    "lat": 20.5314796,
+    "lon": -97.8516763
+  },
+  "PLIMB006103": {
+    "hospital": "HOSPITAL GENERAL DE ZACATLÁN",
+    "estado": "PUEBLA",
+    "lat": 19.919967,
+    "lon": -97.9625844
+  },
+  "BCIMB001796": {
+    "hospital": "HOSPITAL GENERAL TIJUANA ZONA ESTE",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.47195,
+    "lon": -116.84889
+  },
+  "CMIMB001445": {
+    "hospital": "INSTITUTO ESTATAL DE CANCEROLOGÍA LIC. CARLOS DE LA MADRID VIRGEN",
+    "estado": "COLIMA",
+    "lat": 19.2206624,
+    "lon": -103.7267644
+  },
+  "MCIMB000914": {
+    "hospital": "H.G. DR.SALVADOR GONZÁLEZ HERREJON",
+    "estado": "MEXICO",
+    "lat": 19.546222,
+    "lon": -99.237508
+  },
+  "MCIMB009425": {
+    "hospital": "HOSPITAL MUNICIPAL LERMA",
+    "estado": "MEXICO",
+    "lat": 19.326935,
+    "lon": -99.476313
+  },
+  "PLIMB005321": {
+    "hospital": "HOSPITAL GENERAL DE HUEJOTZINGO",
+    "estado": "PUEBLA",
+    "lat": 19.1392168,
+    "lon": -98.3804294
+  },
+  "SLIMB002254": {
+    "hospital": "HOSPITAL GENERAL DE MAZATLÁN",
+    "estado": "SINALOA",
+    "lat": 23.2919,
+    "lon": -106.4527
+  },
+  "TLIMB000555": {
+    "hospital": "HOSPITAL COMUNITARIO SAN BERNARDINO CONTLA",
+    "estado": "TLAXCALA",
+    "lat": 19.3337028,
+    "lon": -98.1694806
+  },
+  "VZIMB005393": {
+    "hospital": "HOSPITAL GENERAL TUXPAN DR. EMILIO ALCAZAR",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.95092,
+    "lon": -97.4003
+  },
+  "BSIMB000812": {
+    "hospital": "HOSPITAL GENERAL DE SANTA ROSALÍA",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 27.3472486,
+    "lon": -112.2728432
+  },
+  "CSIMB005524": {
+    "hospital": "H. B. C. DE FRONTERA COMALAPA",
+    "estado": "CHIAPAS",
+    "lat": 15.667289,
+    "lon": -92.1326
+  },
+  "HGIMB005005": {
+    "hospital": "HOSPITAL GENERAL DE TULANCINGO",
+    "estado": "HIDALGO",
+    "lat": 20.062166,
+    "lon": -98.440731
+  },
+  "PLIMB006016": {
+    "hospital": "HOSPITAL GENERAL DE TEPEACA",
+    "estado": "PUEBLA",
+    "lat": 18.9933433,
+    "lon": -97.9043529
+  },
+  "SRIMB002191": {
+    "hospital": "HOSPITAL COMUNITARIO DE MAGDALENA",
+    "estado": "SONORA",
+    "lat": 30.6420274,
+    "lon": -110.9547019
+  },
+  "TLIMB002095": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "TLAXCALA",
+    "lat": 19.3687028,
+    "lon": -98.2125199
+  },
+  "VZIMB000230": {
+    "hospital": "HOSPITAL GENERAL ALTOTONGA EUFROSINA CAMACHO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.76972,
+    "lon": -97.24809
+  },
+  "VZIMB000254": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE ALVARADO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.77045,
+    "lon": -95.7618
+  },
+  "DFIMB002575": {
+    "hospital": "HOSPITAL GENERAL DR. ENRIQUE CABRERA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3618836,
+    "lon": -99.2240659
+  },
+  "HGIMB004812": {
+    "hospital": "HOSPITAL GENERAL DE LA HUASTECA",
+    "estado": "HIDALGO",
+    "lat": 21.1046,
+    "lon": -98.4237
+  },
+  "MCIMB006946": {
+    "hospital": "H.G. DR. NICOLÁS SAN JUAN",
+    "estado": "MEXICO",
+    "lat": 19.316095,
+    "lon": -99.636675
+  },
+  "MCIMB009051": {
+    "hospital": "HOSPITAL MUNICIPAL ACAMBAY IGNACIO ALLENDE BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.9436158,
+    "lon": -99.8683684
+  },
+  "NTIMB002622": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO DE COMPOSTELA",
+    "estado": "NAYARIT",
+    "lat": 21.2409052,
+    "lon": -104.8913778
+  },
+  "OCIMB008634": {
+    "hospital": "HC LOMA BONITA",
+    "estado": "OAXACA",
+    "lat": 18.1202394,
+    "lon": -95.8855837
+  },
+  "SLIMB001134": {
+    "hospital": "HOSPITAL GENERAL GUASAVE",
+    "estado": "SINALOA",
+    "lat": 25.5530893,
+    "lon": -108.4751021
+  },
+  "CSIMB006125": {
+    "hospital": "H. B. C. DE SAN JUAN CHAMULA",
+    "estado": "CHIAPAS",
+    "lat": 16.782468,
+    "lon": -92.69619
+  },
+  "DFIMB002674": {
+    "hospital": "HOSPITAL GENERAL AJUSCO MEDIO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.2718124,
+    "lon": -99.2074896
+  },
+  "CMIMB000844": {
+    "hospital": "HOSPITAL GENERAL TECOMÁN DR. JOSÉ F. RIVAS GUZMÁN",
+    "estado": "COLIMA",
+    "lat": 18.906326,
+    "lon": -103.884075
+  },
+  "GRIMB000012": {
+    "hospital": "HG. COL. PROGRESO (CAAPS)",
+    "estado": "GUERRERO",
+    "lat": 16.8615,
+    "lon": -99.9013
+  },
+  "MCIMB010825": {
+    "hospital": "HOSPITAL MUNICIPAL IXTAPALUCA LEONA VICARIO BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.306516,
+    "lon": -98.8594601
+  },
+  "MNIMB000650": {
+    "hospital": "HI CHERAN",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.67704,
+    "lon": -101.95326
+  },
+  "MNIMB001292": {
+    "hospital": "HOSPITAL GENERAL LÁZARO CÁRDENAS",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 17.96696,
+    "lon": -102.20205
+  },
+  "PLIMB007112": {
+    "hospital": "HOSPITAL GENERAL DE CUETZALAN",
+    "estado": "PUEBLA",
+    "lat": 20.0098227,
+    "lon": -97.531135
+  },
+  "SRIMB001964": {
+    "hospital": "HOSPITAL COMUNITARIO URES",
+    "estado": "SONORA",
+    "lat": 29.424952,
+    "lon": -110.391015
+  },
+  "TLIMB001820": {
+    "hospital": "HOSPITAL GENERAL TLAXCALA LIC. ANSELMO CERVANTES HERNANDEZ",
+    "estado": "TLAXCALA",
+    "lat": 19.3698807,
+    "lon": -98.2164354
+  },
+  "VZIMB006163": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE ENTABLADERO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.27715,
+    "lon": -97.5482
+  },
+  "ZSIMB001846": {
+    "hospital": "HOSPITAL COMUNITARIO VILLA DE COS",
+    "estado": "ZACATECAS",
+    "lat": 23.282257,
+    "lon": -102.341605
+  },
+  "BCIMB000734": {
+    "hospital": "HOSPITAL GENERAL TIJUANA",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.5257079,
+    "lon": -117.0094107
+  },
+  "CSIMB001300": {
+    "hospital": "H. B. C. DE LAS MARGARITAS",
+    "estado": "CHIAPAS",
+    "lat": 16.320459,
+    "lon": -91.97701
+  },
+  "MCIMB002640": {
+    "hospital": "HOSPITAL GENERAL IXTLAHUACA VALENTIN GÓMEZ FARÍAS",
+    "estado": "MEXICO",
+    "lat": 19.569961,
+    "lon": -99.755819
+  },
+  "MNIMB000230": {
+    "hospital": "HI ARTEAGA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 18.35702,
+    "lon": -102.289435
+  },
+  "OCIMB009462": {
+    "hospital": "HC SANTA MARIA HUATULCO",
+    "estado": "OAXACA",
+    "lat": 15.8318727,
+    "lon": -96.3176232
+  },
+  "PLIMB005601": {
+    "hospital": "HOSPITAL INTEGRAL DE XICOTEPEC",
+    "estado": "PUEBLA",
+    "lat": 20.2566169,
+    "lon": -97.9651804
+  },
+  "VZIMB002511": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD SUCHILAPAN DEL RÍO. CARMEN BOUZAS DE LÓPEZ ARIAS",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.39063,
+    "lon": -94.9881
+  },
+  "BSIMB000643": {
+    "hospital": "HOSPITAL GENERAL DE CABO SAN LUCAS",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 22.9027676,
+    "lon": -109.9248226
+  },
+  "DFIMB002085": {
+    "hospital": "CLÍNICA HOSPITAL DE ESPECIALIDADES TOXICOLÓGICAS VENUSTIANO CARRANZA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4806538,
+    "lon": -99.1241371
+  },
+  "HGIMB002036": {
+    "hospital": "HOSPITAL INTEGRAL CINTA LARGA",
+    "estado": "HIDALGO",
+    "lat": 20.189068,
+    "lon": -99.22494
+  },
+  "MCIMB007540": {
+    "hospital": "HOSPITAL GUADALUPE VICTORIA BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.440959,
+    "lon": -99.996043
+  },
+  "MNIMB003923": {
+    "hospital": "HOSPITAL GENERAL PURUANDIRO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 20.127882,
+    "lon": -101.523548
+  },
+  "SPIMB000042": {
+    "hospital": "HOSPITAL COMUNITARIO AQUISMON",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 21.625724,
+    "lon": -99.016046
+  },
+  "SRIMB000050": {
+    "hospital": "HOSPITAL COMUNITARIO ALAMOS",
+    "estado": "SONORA",
+    "lat": 27.0263353,
+    "lon": -108.943254
+  },
+  "TSIMB003466": {
+    "hospital": "HOSPITAL GENERAL VALLE HERMOSO DR. RODOLFO TORRE CANTÙ",
+    "estado": "TAMAULIPAS",
+    "lat": 25.701958,
+    "lon": -97.815852
+  },
+  "VZIMB006175": {
+    "hospital": "HOSPITAL GENERAL DE TARIMOYA (VERACRUZ)",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.192801,
+    "lon": -96.1839
+  },
+  "ZSIMB002295": {
+    "hospital": "HOSPITAL GENERAL LORETO",
+    "estado": "ZACATECAS",
+    "lat": 22.256168,
+    "lon": -101.989743
+  },
+  "CSIMB006113": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO DE OXCHUC",
+    "estado": "CHIAPAS",
+    "lat": 16.790454,
+    "lon": -92.343531
+  },
+  "GRIMB009742": {
+    "hospital": "INSTITUTO ESTATAL DE CANCEROLOGÍA DR ARTURO BELTRÁN ORTEGA ",
+    "estado": "GUERRERO",
+    "lat": 16.873562,
+    "lon": -99.886388
+  },
+  "MNIMB001415": {
+    "hospital": "CENTRO ESTATAL DE ATENCION ONCOLOGICA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.6999058,
+    "lon": -101.1825135
+  },
+  "VZIMB008053": {
+    "hospital": "HOSPITAL GENERAL ÁLAMO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.88483,
+    "lon": -97.6537
+  },
+  "MNIMB001403": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.692886,
+    "lon": -101.154067
+  },
+  "MNIMB003911": {
+    "hospital": "HG MARAVATIO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.908398,
+    "lon": -100.4513
+  },
+  "MNIMB003935": {
+    "hospital": "HG CIUDAD HIDALGO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.677021,
+    "lon": -100.517276
+  },
+  "OCIMB000135": {
+    "hospital": "HC NOCHIXTLAN",
+    "estado": "OAXACA",
+    "lat": 17.4502814,
+    "lon": -97.2253456
+  },
+  "PLIMB004126": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "PUEBLA",
+    "lat": 18.9860572,
+    "lon": -98.2408335
+  },
+  "TCIMB003253": {
+    "hospital": "HOSPITAL GENERAL DE PARAÍSO",
+    "estado": "TABASCO",
+    "lat": 18.3882,
+    "lon": -93.2123
+  },
+  "VZIMB006134": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE TLAQUILPAN VISTA HERMOSA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.59207,
+    "lon": -97.1287
+  },
+  "BCIMB001352": {
+    "hospital": "HOSPITAL MATERNO INFANTIL DE TIJUANA",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.489581,
+    "lon": -116.92895
+  },
+  "CSIMB002683": {
+    "hospital": "H. B. C. DE TILA",
+    "estado": "CHIAPAS",
+    "lat": 17.313151,
+    "lon": -92.42834
+  },
+  "GRIMB007712": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO XOCHIHUEHUETLAN",
+    "estado": "GUERRERO",
+    "lat": 17.908495,
+    "lon": -98.486849
+  },
+  "HGIMB001686": {
+    "hospital": "HOSPITAL INTEGRAL JACALA",
+    "estado": "HIDALGO",
+    "lat": 21.010408,
+    "lon": -99.194832
+  },
+  "TCIMB000791": {
+    "hospital": "HOSPITAL REGIONAL DE ALTA ESPECIALIDAD DR. JUAN GRAHAM CASASUS",
+    "estado": "TABASCO",
+    "lat": 17.9788909,
+    "lon": -92.9862357
+  },
+  "VZIMB007102": {
+    "hospital": "HOSPITAL GENERAL PEROTE VERACRUZ",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.5784667,
+    "lon": -97.2421711
+  },
+  "CSIMB002753": {
+    "hospital": "HOSPITAL GENERAL DR. JUAN C. CORZO TONALÁ",
+    "estado": "CHIAPAS",
+    "lat": 16.09001,
+    "lon": -93.7448
+  },
+  "SLIMB001950": {
+    "hospital": "HOSPITAL INTEGRAL DE SINALOA DE LEYVA",
+    "estado": "SINALOA",
+    "lat": 25.8167987,
+    "lon": -108.2297748
+  },
+  "VZIMB002120": {
+    "hospital": "HOSPITAL COMUNITARIO DE IXHUATLAN DEL SURESTE",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.02811,
+    "lon": -94.39458
+  },
+  "GRIMB000934": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO ALCOZAUCA DE GUERRERO",
+    "estado": "GUERRERO",
+    "lat": 17.468739,
+    "lon": -98.386919
+  },
+  "MCIMB010236": {
+    "hospital": "CENTRO ESPECIALIZADO DE ATENCIÓN A PERSONAS CON DISCAPACIDAD VISUAL",
+    "estado": "MEXICO",
+    "lat": 19.470444,
+    "lon": -99.239059
+  },
+  "MNIMB003940": {
+    "hospital": "HC TUZANTLA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.234168,
+    "lon": -100.551917
+  },
+  "PLIMB004131": {
+    "hospital": "HOSPITAL COMUNITARIO VICENTE GUERRERO",
+    "estado": "PUEBLA",
+    "lat": 18.5302936,
+    "lon": -97.2062243
+  },
+  "SRIMB001404": {
+    "hospital": "HOSPITAL GENERAL NAVOJOA",
+    "estado": "SONORA",
+    "lat": 27.0600812,
+    "lon": -109.4399338
+  },
+  "CSIMB003692": {
+    "hospital": "HOSPITAL BASICO COMUNITARIO SIMOJOVEL",
+    "estado": "CHIAPAS",
+    "lat": 17.134392,
+    "lon": -92.719602
+  },
+  "DFIMB000031": {
+    "hospital": "HOSPITAL MATERNO INFANTIL DR. NICOLÁS M. CEDILLO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.497986,
+    "lon": -99.2031943
+  },
+  "MCIMB004443": {
+    "hospital": "HOSPITAL MUNICIPAL OTUMBA BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.70285,
+    "lon": -98.763813
+  },
+  "MCIMB009775": {
+    "hospital": "HOSPITAL GENERAL DE AXAPUSCO",
+    "estado": "MEXICO",
+    "lat": 19.733024,
+    "lon": -98.769851
+  },
+  "MNIMB001601": {
+    "hospital": "HI NUEVA ITALIA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.0292562,
+    "lon": -102.088395
+  },
+  "NTIMB002745": {
+    "hospital": "HOSPITAL COMUNITARIO TUXPAN",
+    "estado": "NAYARIT",
+    "lat": 21.9470953,
+    "lon": -105.3119832
+  },
+  "VZIMB004710": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE TEMPOAL",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 21.51899,
+    "lon": -98.3955
+  },
+  "BCIMB000676": {
+    "hospital": "HOSPITAL GENERAL DE TECATE",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.5575292,
+    "lon": -116.6319713
+  },
+  "GRIMB002030": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO COAHUAYUTLA DE GUERRERO",
+    "estado": "GUERRERO",
+    "lat": 18.312177,
+    "lon": -101.737381
+  },
+  "HGIMB000151": {
+    "hospital": "HOSPITAL GENERAL ACTOPAN",
+    "estado": "HIDALGO",
+    "lat": 20.262789,
+    "lon": -98.939827
+  },
+  "NTIMB002646": {
+    "hospital": "HOSPITAL BASICO COMUNITARIO LAS VARAS",
+    "estado": "NAYARIT",
+    "lat": 21.189,
+    "lon": -105.134699
+  },
+  "VZIMB000826": {
+    "hospital": "HOSPITAL REGIONAL DE COATZACOALCOS DR.VALENTIN GÓMEZ FARIAS",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.144901,
+    "lon": -94.4244
+  },
+  "VZIMB003276": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD OZULUAMA DE MASCAREÑAS",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 21.65119,
+    "lon": -97.8548
+  },
+  "VZIMB006023": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD LA LAGUNA POBLADO 6",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.27778,
+    "lon": -94.5034
+  },
+  "CSIMB005536": {
+    "hospital": "H. B. C. DE CHALCHIHUITÁN",
+    "estado": "CHIAPAS",
+    "lat": 16.957888,
+    "lon": -92.619907
+  },
+  "PLIMB005070": {
+    "hospital": "HOSPITAL GENERAL TLATLAUQUITEPEC",
+    "estado": "PUEBLA",
+    "lat": 19.8410029,
+    "lon": -97.4984892
+  },
+  "QRIMB000013": {
+    "hospital": "HOSPITAL GENERAL DE COZUMEL",
+    "estado": "QUINTANA ROO",
+    "lat": 20.5017462,
+    "lon": -86.9534488
+  },
+  "VZIMB002325": {
+    "hospital": "CENTRO ESTATAL DE CANCEROLOGÍA DR. MIGUEL DORANTES MESA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.544702,
+    "lon": -96.923411
+  },
+  "VZIMB002342": {
+    "hospital": "HOSPITAL REGIONAL DE XALAPA DR. LUIS F. NACHÓN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.525544,
+    "lon": -96.921021
+  },
+  "VZIMB003870": {
+    "hospital": "HOSPITAL REGIONAL RÍO BLANCO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.83506,
+    "lon": -97.12501
+  },
+  "MCIMB002331": {
+    "hospital": "HOSPITAL SANTOS DEGOLLADO BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.359231,
+    "lon": -99.353081
+  },
+  "MCIMB007231": {
+    "hospital": "HOSPITAL GENERAL VALLE DE BRAVO",
+    "estado": "MEXICO",
+    "lat": 19.203205,
+    "lon": -100.13526
+  },
+  "MNIMB003952": {
+    "hospital": "HC CARACUARO-NOCUPETARO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.0373,
+    "lon": -101.139718
+  },
+  "MSIMB002351": {
+    "hospital": "HOSPITAL GENERAL DE AXOCHIAPAN",
+    "estado": "MORELOS",
+    "lat": 18.4884468,
+    "lon": -98.7625018
+  },
+  "NTIMB001246": {
+    "hospital": "HOSPITAL CIVIL DR. ANTONIO GONZÁLEZ GUEVARA",
+    "estado": "NAYARIT",
+    "lat": 21.5010461,
+    "lon": -104.897629
+  },
+  "PLIMB002516": {
+    "hospital": "HOSPITAL GENERAL TEHUACAN",
+    "estado": "PUEBLA",
+    "lat": 18.4480425,
+    "lon": -97.419533
+  },
+  "PLIMB004720": {
+    "hospital": "HOSPITAL DE LA MUJER Y NEONATOLOGÍA",
+    "estado": "PUEBLA",
+    "lat": 18.4769823,
+    "lon": -97.4396876
+  },
+  "PLIMB007095": {
+    "hospital": "HOSPITAL COMUNITARIO ZACAPALA",
+    "estado": "PUEBLA",
+    "lat": 18.5983453,
+    "lon": -98.0651325
+  },
+  "CSIMB004725": {
+    "hospital": "H. B. C. DE SANTO DOMINGO",
+    "estado": "CHIAPAS",
+    "lat": 17.0232,
+    "lon": -91.4195
+  },
+  "HGIMB001394": {
+    "hospital": "HOSPITAL GENERAL HUICHAPAN",
+    "estado": "HIDALGO",
+    "lat": 20.3757128,
+    "lon": -99.654174
+  },
+  "MCIMB002005": {
+    "hospital": "H.G. DR. JOSÉ MARÍA RODRÍGUEZ",
+    "estado": "MEXICO",
+    "lat": 19.5145331,
+    "lon": -99.0381083
+  },
+  "PLIMB004954": {
+    "hospital": "HOSPITAL INTEGRAL SAN JOSÉ CHIAPA",
+    "estado": "PUEBLA",
+    "lat": 19.2480984,
+    "lon": -97.7565864
+  },
+  "MCIMB003743": {
+    "hospital": "H.G. DR. MAXIMILIANO RUÍZ CASTAÑEDA",
+    "estado": "MEXICO",
+    "lat": 19.468121,
+    "lon": -99.234602
+  },
+  "PLIMB004732": {
+    "hospital": "HOSPITAL INTEGRAL ZACAPOAXTLA",
+    "estado": "PUEBLA",
+    "lat": 19.8998131,
+    "lon": -97.5891252
+  },
+  "TCIMB003586": {
+    "hospital": "HOSPITAL GENERAL DE TENOSIQUE",
+    "estado": "TABASCO",
+    "lat": 17.4692,
+    "lon": -91.4114
+  },
+  "BSIMB000346": {
+    "hospital": "HOSPITAL GENERAL RAÚL A. CARRILLO",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 23.0617522,
+    "lon": -109.7082831
+  },
+  "CSIMB000460": {
+    "hospital": "HOSPITAL GENERAL MARÍA IGNACIA GANDULFO COMITAN",
+    "estado": "CHIAPAS",
+    "lat": 16.246124,
+    "lon": -92.129627
+  },
+  "CSIMB002234": {
+    "hospital": "HOSPITAL DE LA MUJER SAN CRISTÓBAL DE LAS CASAS",
+    "estado": "CHIAPAS",
+    "lat": 16.733136,
+    "lon": -92.636849
+  },
+  "CSIMB004713": {
+    "hospital": "H. B. C. DE LARRAINZAR",
+    "estado": "CHIAPAS",
+    "lat": 16.879071,
+    "lon": -92.714878
+  },
+  "PLIMB001710": {
+    "hospital": "HOSPITAL COMUNITARIO CUACNOPALAN",
+    "estado": "PUEBLA",
+    "lat": 18.824774,
+    "lon": -97.509792
+  },
+  "SPIMB002970": {
+    "hospital": "HOSPITAL GENERAL DE SOLEDAD DE GRACIANO SÁNCHEZ",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.164571,
+    "lon": -100.938266
+  },
+  "TLIMB000181": {
+    "hospital": "HOSPITAL COMUNITARIO EL CARMEN TEQUEXQUITLA",
+    "estado": "TLAXCALA",
+    "lat": 19.3265101,
+    "lon": -97.6474589
+  },
+  "VZIMB006151": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE LLANO DE EN MEDIO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.78488,
+    "lon": -98.0078
+  },
+  "VZIMB007732": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE NAOLINCO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.66252,
+    "lon": -96.8684
+  },
+  "ZSIMB002481": {
+    "hospital": "HOSPITAL GENERAL ZACATECAS LUZ GONZÁLEZ COSIO",
+    "estado": "ZACATECAS",
+    "lat": 22.778268,
+    "lon": -102.619871
+  },
+  "CSIMB003646": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO 12 CAMAS \"BERRIOZABAL\"",
+    "estado": "CHIAPAS",
+    "lat": 16.807813,
+    "lon": -93.279999
+  },
+  "DFIMB002003": {
+    "hospital": "HOSPITAL PEDIÁTRICO TACUBAYA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4025483,
+    "lon": -99.1908109
+  },
+  "HGIMB001481": {
+    "hospital": "HOSPITAL GENERAL DEL VALLE DEL MEZQUITAL IXMIQUILPAN",
+    "estado": "HIDALGO",
+    "lat": 20.433787,
+    "lon": -99.155446
+  },
+  "NTIMB002523": {
+    "hospital": "HOSPITAL BASICO COMUNITARIO DE TONDOROQUE",
+    "estado": "NAYARIT",
+    "lat": 20.7461011,
+    "lon": -105.2986692
+  },
+  "VZIMB006105": {
+    "hospital": "HOSPITAL GENERAL DE CARDEL",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.3669236,
+    "lon": -96.3714025
+  },
+  "VZIMB007365": {
+    "hospital": "HOSPITAL GENERAL DE BOCA DEL RIO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.10332,
+    "lon": -96.108657
+  },
+  "CSIMB001884": {
+    "hospital": "HOSPITAL GENERAL PICHUCALCO",
+    "estado": "CHIAPAS",
+    "lat": 17.51385,
+    "lon": -93.120507
+  },
+  "MCIMB008042": {
+    "hospital": "H.G. DR. FERNANDO QUIROZ GUTIÉRREZ",
+    "estado": "MEXICO",
+    "lat": 19.273453,
+    "lon": -98.941742
+  },
+  "MCIMB012073": {
+    "hospital": "HOSPITAL GENERAL HUEYPOXTLA HERMENEGILDO GALEANA BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.919259,
+    "lon": -99.069467
+  },
+  "MSIMB001844": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "MORELOS",
+    "lat": 18.8838,
+    "lon": -99.08
+  },
+  "PLIMB003706": {
+    "hospital": "HOSPITAL COMUNITARIO ZOQUITLAN",
+    "estado": "PUEBLA",
+    "lat": 18.3380671,
+    "lon": -97.0348081
+  },
+  "VZIMB001922": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE HUAYACOCOTLA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.53659,
+    "lon": -98.4834
+  },
+  "BCIMB001422": {
+    "hospital": "HOSPITAL GENERAL PLAYAS DE ROSARITO",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 32.3636,
+    "lon": -117.0554
+  },
+  "DFIMB001706": {
+    "hospital": "HOSPITAL MATERNO PEDIÁTRICO XOCHIMILCO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.2549659,
+    "lon": -99.1045
+  },
+  "MCIMB008824": {
+    "hospital": "HOSPITAL MUNICIPAL TECAMAC LIC. CÉSAR CAMACHO QUIROZ",
+    "estado": "MEXICO",
+    "lat": 19.746403,
+    "lon": -98.971475
+  },
+  "PLIMB000602": {
+    "hospital": "HOSPITAL COMUNITARIO CUYOACO",
+    "estado": "PUEBLA",
+    "lat": 19.5999521,
+    "lon": -97.6151535
+  },
+  "TCIMB001561": {
+    "hospital": "HOSPITAL GENERAL DE CUNDUACAN",
+    "estado": "TABASCO",
+    "lat": 18.0685953,
+    "lon": -93.1726956
+  },
+  "VZIMB005306": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD TLAPACOYAN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.96385,
+    "lon": -97.2189
+  },
+  "CSIMB006241": {
+    "hospital": "H. B. C. DE OCOSINGO",
+    "estado": "CHIAPAS",
+    "lat": 16.896883,
+    "lon": -92.063021
+  },
+  "GRIMB001436": {
+    "hospital": "DR. JUVENTINO RODRÍGUEZ GARCÍA",
+    "estado": "GUERRERO",
+    "lat": 17.203736,
+    "lon": -100.440024
+  },
+  "MCIMB009536": {
+    "hospital": "HOSPITAL GENERAL CHIMALHUACÁN SAN AGUSTÍN",
+    "estado": "MEXICO",
+    "lat": 19.3870401,
+    "lon": -98.960401
+  },
+  "MCIMB009734": {
+    "hospital": "HOSPITAL MUNICIPAL VILLA DEL CARBON",
+    "estado": "MEXICO",
+    "lat": 19.728026,
+    "lon": -99.479425
+  },
+  "NTIMB000015": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "NAYARIT",
+    "lat": 21.4807495,
+    "lon": -104.8459279
+  },
+  "NTIMB002202": {
+    "hospital": "HOSPITAL INTEGRAL PUENTE DE CAMOTLÁN",
+    "estado": "NAYARIT",
+    "lat": 21.697759,
+    "lon": -104.08296
+  },
+  "OCIMB008190": {
+    "hospital": "HC TAMAZOLA",
+    "estado": "OAXACA",
+    "lat": 17.6637331,
+    "lon": -98.2227641
+  },
+  "PLIMB006885": {
+    "hospital": "HOSPITAL GENERAL HUAUCHINANGO",
+    "estado": "PUEBLA",
+    "lat": 20.1863111,
+    "lon": -98.0691812
+  },
+  "QRIMB001582": {
+    "hospital": "HOSPITAL INTEGRAL DE ISLA MUJERES",
+    "estado": "QUINTANA ROO",
+    "lat": 21.220455,
+    "lon": -86.727023
+  },
+  "SPIMB002574": {
+    "hospital": "HOSPITAL REGIONAL DE ALTA ESPECIALIDAD DR.IGNACIO MORONES PRIETO",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.147998,
+    "lon": -101.014679
+  },
+  "SLIMB003053": {
+    "hospital": "HOSPITAL GENERAL ESCUINAPA",
+    "estado": "SINALOA",
+    "lat": 22.8314778,
+    "lon": -105.7773345
+  },
+  "GRIMB009906": {
+    "hospital": "H.B.C. TELOLOAPAN",
+    "estado": "GUERRERO",
+    "lat": 18.355843,
+    "lon": -99.869639
+  },
+  "PLIMB001536": {
+    "hospital": "HOSPITAL GENERAL DE LIBRES",
+    "estado": "PUEBLA",
+    "lat": 19.4576439,
+    "lon": -97.6802648
+  },
+  "TCIMB000190": {
+    "hospital": "HOSPITAL GENERAL DE CÁRDENAS",
+    "estado": "TABASCO",
+    "lat": 17.9905424,
+    "lon": -93.3827863
+  },
+  "TCIMB002920": {
+    "hospital": "HOSPITAL GENERAL DE VILLA BENITO JUÁREZ",
+    "estado": "TABASCO",
+    "lat": 17.8447,
+    "lon": -92.5293
+  },
+  "VZIMB002675": {
+    "hospital": "HOSPITAL GENERAL MARTÍNEZ DE LA TORRE",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.08089,
+    "lon": -97.0481
+  },
+  "VZIMB004775": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE TEOCELO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.38645,
+    "lon": -96.9732
+  },
+  "CCIMB000674": {
+    "hospital": "HOSPITAL COMUNITARIO DE CANDELARIA",
+    "estado": "CAMPECHE",
+    "lat": 18.18522,
+    "lon": -91.037132
+  },
+  "PLIMB004085": {
+    "hospital": "HOSPITAL COMUNITARIO TLACOTEPEC DE BENITO JUÁREZ",
+    "estado": "PUEBLA",
+    "lat": 18.655071,
+    "lon": -97.6316441
+  },
+  "PLIMB004242": {
+    "hospital": "HOSPITAL INTEGRAL GUADALUPE VICTORIA",
+    "estado": "PUEBLA",
+    "lat": 19.2875574,
+    "lon": -97.3324242
+  },
+  "TCIMB002961": {
+    "hospital": "HOSPITAL COMUNITARIO DE NACAJUCA",
+    "estado": "TABASCO",
+    "lat": 18.1662513,
+    "lon": -93.0166572
+  },
+  "TLIMB001050": {
+    "hospital": "HOSPITAL COMUNITARIO ZACATELCO",
+    "estado": "TLAXCALA",
+    "lat": 19.2029556,
+    "lon": -98.2491111
+  },
+  "VZIMB000790": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD COATEPEC",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.449101,
+    "lon": -96.959187
+  },
+  "VZIMB003766": {
+    "hospital": "HOSPITAL REGIONAL POZA RICA DE HIDALGO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.55418,
+    "lon": -97.43901
+  },
+  "DFIMB002114": {
+    "hospital": "HOSPITAL GENERAL BALBUENA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4242218,
+    "lon": -99.1170464
+  },
+  "MCIMB012085": {
+    "hospital": "HOSPITAL MATERNO INFANTIL JOSÉ MARÍA MORELOS Y PAVÓN BICENTENARIO SAN JOSÉ DEL RINCÓN",
+    "estado": "MEXICO",
+    "lat": 19.657679,
+    "lon": -100.12159
+  },
+  "NTIMB000551": {
+    "hospital": "HOSPITAL GENERAL ROSAMORADA",
+    "estado": "NAYARIT",
+    "lat": 22.1150969,
+    "lon": -105.2094934
+  },
+  "PLIMB005555": {
+    "hospital": "HOSPITAL INTEGRAL PALMAR DE BRAVO",
+    "estado": "PUEBLA",
+    "lat": 18.8269626,
+    "lon": -97.5376842
+  },
+  "SPIMB000643": {
+    "hospital": "HOSPITAL COMUNITARIO SALINAS DE HIDALGO",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.61885,
+    "lon": -101.72012
+  },
+  "HGIMB004795": {
+    "hospital": "HOSPITAL INTEGRAL DE TLANCHINOL",
+    "estado": "HIDALGO",
+    "lat": 20.998835,
+    "lon": -98.653302
+  },
+  "MCIMB004344": {
+    "hospital": "HOSPITAL IGNACIO LÓPEZ RAYÓN BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.803249,
+    "lon": -100.129387
+  },
+  "OCIMB008873": {
+    "hospital": "HC SANTOS REYES NOPALA",
+    "estado": "OAXACA",
+    "lat": 16.1005772,
+    "lon": -97.1441745
+  },
+  "PLIMB005205": {
+    "hospital": "HOSPITAL DE LA NIÑEZ POBLANA",
+    "estado": "PUEBLA",
+    "lat": 19.0350132,
+    "lon": -98.2443939
+  },
+  "PLIMB007416": {
+    "hospital": "HOSPITAL INTEGRAL VENUSTIANO CARRANZA",
+    "estado": "PUEBLA",
+    "lat": 20.477244,
+    "lon": -97.68538
+  },
+  "ZSIMB002126": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "ZACATECAS",
+    "lat": 22.744225,
+    "lon": -102.500206
+  },
+  "CSIMB000151": {
+    "hospital": "H. B. C. DE ÁNGEL ALBINO CORZO",
+    "estado": "CHIAPAS",
+    "lat": 15.872464,
+    "lon": -92.71695
+  },
+  "MSIMB000806": {
+    "hospital": "HG DE JOJUTLA DR. ERNESTO MEANA SAN ROMÁN",
+    "estado": "MORELOS",
+    "lat": 18.6177,
+    "lon": -99.1907
+  },
+  "QRIMB001174": {
+    "hospital": "HOSPITAL INTEGRAL DE JOSÉ MARÍA MORELOS",
+    "estado": "QUINTANA ROO",
+    "lat": 19.7463701,
+    "lon": -88.7058779
+  },
+  "MCIMB009203": {
+    "hospital": "HOSPITAL GENERAL LAS AMÉRICAS",
+    "estado": "MEXICO",
+    "lat": 19.5936922,
+    "lon": -99.0188783
+  },
+  "NTIMB000020": {
+    "hospital": "HOSPITAL INTEGRAL ACAPONETA",
+    "estado": "NAYARIT",
+    "lat": 22.4898682,
+    "lon": -105.3677335
+  },
+  "SPIMB000585": {
+    "hospital": "HOSPITAL GENERAL DE RÍOVERDE",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 21.9196964,
+    "lon": -99.9918851
+  },
+  "VZIMB001000": {
+    "hospital": "HOSPITAL GENERAL COSAMALOAPAN DR. VÍCTOR MANUEL PITALUA GONZÁLEZ",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.3657752,
+    "lon": -95.7966594
+  },
+  "VZIMB006122": {
+    "hospital": "HOSPITAL COMUNITARIO DE TONALAPAN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.14835,
+    "lon": -94.79163
+  },
+  "ZSIMB001834": {
+    "hospital": "HOSPITAL COMUNITARIO VÍCTOR ROSALES",
+    "estado": "ZACATECAS",
+    "lat": 22.936183,
+    "lon": -102.695306
+  },
+  "CCIMB001164": {
+    "hospital": "HOSPITAL INTEGRAL XPUJIL",
+    "estado": "CAMPECHE",
+    "lat": 18.516774,
+    "lon": -89.395938
+  },
+  "MCIMB004694": {
+    "hospital": "HOSPITAL GENERAL SAN FELIPE DEL PROGRESO",
+    "estado": "MEXICO",
+    "lat": 19.717727,
+    "lon": -99.9537
+  },
+  "PLIMB007170": {
+    "hospital": "HOSPITAL GENERAL TECAMACHALCO",
+    "estado": "PUEBLA",
+    "lat": 18.8793149,
+    "lon": -97.7141117
+  },
+  "MNIMB004751": {
+    "hospital": "HOSPITAL COMUNITARIO MARUATA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 18.2738165,
+    "lon": -103.341942
+  },
+  "MCIMB002244": {
+    "hospital": "HOSPITAL MUNICIPAL HUEHUETOCA",
+    "estado": "MEXICO",
+    "lat": 19.8287,
+    "lon": -99.2308
+  },
+  "MCIMB010294": {
+    "hospital": "HOSPITAL MUNICIPAL MALINALCO PEDRO ASCENCIO DE ALQUISIRAS",
+    "estado": "MEXICO",
+    "lat": 18.947174,
+    "lon": -99.491534
+  },
+  "SRIMB002360": {
+    "hospital": "HOSPITAL GENERAL DE AGUA PRIETA",
+    "estado": "SONORA",
+    "lat": 31.319126,
+    "lon": -109.5827257
+  },
+  "TLIMB001395": {
+    "hospital": "HOSPITAL GENERAL DE SAN PABLO DEL MONTE",
+    "estado": "TLAXCALA",
+    "lat": 19.1268755,
+    "lon": -98.2006896
+  },
+  "CCIMB000966": {
+    "hospital": "HOSPITAL DE SABANCUY",
+    "estado": "CAMPECHE",
+    "lat": 18.968286,
+    "lon": -91.175034
+  },
+  "CSIMB001732": {
+    "hospital": "HOSPITAL GENERAL PALENQUE",
+    "estado": "CHIAPAS",
+    "lat": 17.507697,
+    "lon": -91.988442
+  },
+  "CSIMB004631": {
+    "hospital": "H. B. C. DE REVOLUCIÓN MEXICANA",
+    "estado": "CHIAPAS",
+    "lat": 16.166713,
+    "lon": -93.079977
+  },
+  "CSIMB005500": {
+    "hospital": "HOSPITAL DE LAS CULTURAS SAN CRISTOBAL DE LAS CASAS",
+    "estado": "CHIAPAS",
+    "lat": 16.723703,
+    "lon": -92.652269
+  },
+  "MCIMB012254": {
+    "hospital": "HOSPITAL MATERNO INFANTIL GUADALUPE VICTORIA ATIZAPÁN DE ZARAGOZA",
+    "estado": "MEXICO",
+    "lat": 19.5973,
+    "lon": -99.263184
+  },
+  "MSIMB001820": {
+    "hospital": "HC PUENTE DE IXTLA DR. FERNANDO R. VIZCARRA",
+    "estado": "MORELOS",
+    "lat": 18.61573,
+    "lon": -99.32647
+  },
+  "TSIMB001260": {
+    "hospital": "HOSPITAL GENERAL REYNOSA DR. JOSÉ MARÍA CANTÚ GARZA",
+    "estado": "TAMAULIPAS",
+    "lat": 26.055749,
+    "lon": -98.296918
+  },
+  "DFIMB000434": {
+    "hospital": "HOSPITAL MATERNO INFANTIL CUAUTEPEC",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.5397233,
+    "lon": -99.1410398
+  },
+  "DFIMB001933": {
+    "hospital": "HOSPITAL GENERAL DR. GREGORIO SALAS FLORES",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.437637,
+    "lon": -99.129455
+  },
+  "MCIMB006181": {
+    "hospital": "HM TEPETLIXPA HERMENEGILDO GALEANA, BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.029802,
+    "lon": -98.817108
+  },
+  "MCIMB007465": {
+    "hospital": "HOSPITAL MUNICIPAL BICENTENARIO HERMENEGILDO GALEANA VILLA GUERRERO",
+    "estado": "MEXICO",
+    "lat": 18.957221,
+    "lon": -99.640535
+  },
+  "MSIMB002112": {
+    "hospital": "HC DE JONACATEPEC",
+    "estado": "MORELOS",
+    "lat": 18.6702237,
+    "lon": -98.8065608
+  },
+  "PLIMB003093": {
+    "hospital": "HOSPITAL COMUNITARIO TULCINGO DE VALLE",
+    "estado": "PUEBLA",
+    "lat": 18.0352215,
+    "lon": -98.4459989
+  },
+  "SPIMB002965": {
+    "hospital": "HOSPITAL DE LA NIÑEZ Y LA MUJER DR. ALBERTO LÓPEZ HERMOSA",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.116164,
+    "lon": -100.98585
+  },
+  "VZIMB003701": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD PLAYA VICENTE",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.8307198,
+    "lon": -95.8073
+  },
+  "VZIMB008946": {
+    "hospital": "HOSPITAL MATERNO INFANTIL DE COATZACOALCOS",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.146144,
+    "lon": -94.511622
+  },
+  "GRIMB006370": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO TECPAN DE GALEANA",
+    "estado": "GUERRERO",
+    "lat": 17.220575,
+    "lon": -100.630533
+  },
+  "HGIMB004841": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO HUEHUETLA",
+    "estado": "HIDALGO",
+    "lat": 20.461626,
+    "lon": -98.068826
+  },
+  "MNIMB003532": {
+    "hospital": "HOSPITAL GENERAL ZACAPU",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.7711757,
+    "lon": -101.752934
+  },
+  "MNIMB003544": {
+    "hospital": "HOSPITAL GENERAL PATZCUARO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.530025,
+    "lon": -101.577988
+  },
+  "MSIMB002235": {
+    "hospital": "HOSPITAL DEL NIÑO MORELENSE",
+    "estado": "MORELOS",
+    "lat": 18.8436,
+    "lon": -99.2022
+  },
+  "SRIMB002174": {
+    "hospital": "HOSPITAL GENERAL DE CABORCA",
+    "estado": "SONORA",
+    "lat": 30.7043483,
+    "lon": -112.1791726
+  },
+  "DFIMB002020": {
+    "hospital": "HOSPITAL GENERAL DR. RUBÉN LEÑERO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.45112,
+    "lon": -99.169315
+  },
+  "GRIMB005320": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO PETATLAN",
+    "estado": "GUERRERO",
+    "lat": 17.536346,
+    "lon": -101.270502
+  },
+  "MCIMB006275": {
+    "hospital": "HOSPITAL JUAN ALDAMA BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 18.925803,
+    "lon": -99.942142
+  },
+  "MCIMB009676": {
+    "hospital": "HOSPITAL MATERNO DE TEXCOCO",
+    "estado": "MEXICO",
+    "lat": 19.4543294,
+    "lon": -98.8725738
+  },
+  "PLIMB005910": {
+    "hospital": "HOSPITAL GENERAL DE LA ZONA NORTE BICENTENARIO DE LA INDEPENDENCIA",
+    "estado": "PUEBLA",
+    "lat": 19.079308,
+    "lon": -98.1852166
+  },
+  "QRIMB001606": {
+    "hospital": "HOSPITAL DE ONCOLOGÍA IMSS-BIENESTAR CHETUMAL",
+    "estado": "QUINTANA ROO",
+    "lat": 18.5077,
+    "lon": -88.347433
+  },
+  "CSIMB003680": {
+    "hospital": "HOSPITAL GENERAL DE TAPACHULA",
+    "estado": "CHIAPAS",
+    "lat": 14.8425185,
+    "lon": -92.3183761
+  },
+  "MCIMB002565": {
+    "hospital": "ZOQUIAPAN DR. PEDRO LÓPEZ",
+    "estado": "MEXICO",
+    "lat": 19.319448,
+    "lon": -98.852671
+  },
+  "MCIMB009063": {
+    "hospital": "HOSPITAL GENERAL ATLACOMULCO",
+    "estado": "MEXICO",
+    "lat": 19.789366,
+    "lon": -99.882702
+  },
+  "MSIMB000292": {
+    "hospital": "HOSPITAL GENERAL DE CUAUTLA",
+    "estado": "MORELOS",
+    "lat": 18.8455,
+    "lon": -98.9391
+  },
+  "TLIMB002136": {
+    "hospital": "HOSPITAL GENERAL DE HUAMANTLA",
+    "estado": "TLAXCALA",
+    "lat": 19.3063,
+    "lon": -97.9407917
+  },
+  "VZIMB001794": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE GUTIÉRREZ ZAMORA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.45738,
+    "lon": -97.0872
+  },
+  "VZIMB007575": {
+    "hospital": "HOSPITAL GENERAL ISLA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.0376261,
+    "lon": -95.530038
+  },
+  "BCIMB000010": {
+    "hospital": "HOSPITAL GENERAL DE ENSENADA",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 31.825117,
+    "lon": -116.600282
+  },
+  "BSIMB000503": {
+    "hospital": "HOSPITAL COMUNITARIO DE LORETO",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 26.007202,
+    "lon": -111.364929
+  },
+  "CSIMB005483": {
+    "hospital": "H. B. C. DR. RAFAEL ALFARO GONZÁLEZ PIJIJIAPAN",
+    "estado": "CHIAPAS",
+    "lat": 15.6710722,
+    "lon": -93.2117136
+  },
+  "MCIMB009162": {
+    "hospital": "HOSPITAL MUNICIPAL TEMOAYA",
+    "estado": "MEXICO",
+    "lat": 19.467863,
+    "lon": -99.605932
+  },
+  "MCIMB009186": {
+    "hospital": "HOSPITAL MUNICIPAL ZACUALPAN",
+    "estado": "MEXICO",
+    "lat": 18.720703,
+    "lon": -99.781158
+  },
+  "MSIMB000386": {
+    "hospital": "HG DE CUERNAVACA DR. JOSE G. PARRES",
+    "estado": "MORELOS",
+    "lat": 18.9359,
+    "lon": -99.2335
+  },
+  "QRIMB001285": {
+    "hospital": "HOSPITAL INTEGRAL DE KANTUNILKÍN",
+    "estado": "QUINTANA ROO",
+    "lat": 21.105786,
+    "lon": -87.4861219
+  },
+  "BCIMB000623": {
+    "hospital": "HOSPITAL COMUNITARIO SAN FELIPE",
+    "estado": "BAJA CALIFORNIA",
+    "lat": 31.0231062,
+    "lon": -114.839476
+  },
+  "CSIMB003716": {
+    "hospital": "HOSPITAL BASICO COMUNITARIO DE CHIAPA DE CORZO",
+    "estado": "CHIAPAS",
+    "lat": 16.720225,
+    "lon": -93.012051
+  },
+  "MSIMB001856": {
+    "hospital": "HOSPITAL GENERAL DE TEMIXCO",
+    "estado": "MORELOS",
+    "lat": 18.8368311,
+    "lon": -99.2390247
+  },
+  "NTIMB002634": {
+    "hospital": "HOSPITAL BASICO COMUNITARIO DE TECUALA",
+    "estado": "NAYARIT",
+    "lat": 22.409665,
+    "lon": -105.450584
+  },
+  "PLIMB000100": {
+    "hospital": "HOSPITAL COMUNITARIO AHUACATLÁN",
+    "estado": "PUEBLA",
+    "lat": 20.0071107,
+    "lon": -97.8550735
+  },
+  "SRIMB000453": {
+    "hospital": "HOSPITAL GENERAL CD. OBREGÓN",
+    "estado": "SONORA",
+    "lat": 27.4833703,
+    "lon": -109.9548751
+  },
+  "SRIMB002186": {
+    "hospital": "HOSPITAL GENERAL DE CANANEA",
+    "estado": "SONORA",
+    "lat": 30.998306,
+    "lon": -110.25402
+  },
+  "TLIMB001890": {
+    "hospital": "HOSPITAL INFANTIL DE TLAXCALA",
+    "estado": "TLAXCALA",
+    "lat": 19.3683333,
+    "lon": -98.2113333
+  },
+  "VZIMB006146": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE TEZONAPA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.61581,
+    "lon": -96.69601
+  },
+  "HGIMB004561": {
+    "hospital": "HOSPITAL ZIMAPÁN",
+    "estado": "HIDALGO",
+    "lat": 20.69099,
+    "lon": -99.33337
+  },
+  "MCIMB012143": {
+    "hospital": "HOSPITAL MATERNO INFANTIL MIGUEL HIDALGO Y COSTILLA LOS REYES LA PAZ",
+    "estado": "MEXICO",
+    "lat": 19.374755,
+    "lon": -98.944597
+  },
+  "PLIMB004860": {
+    "hospital": "HOSPITAL GENERAL DE CHOLULA",
+    "estado": "PUEBLA",
+    "lat": 19.0168621,
+    "lon": -98.2659138
+  },
+  "SLIMB002493": {
+    "hospital": "HOSPITAL DE LA MUJER",
+    "estado": "SINALOA",
+    "lat": 24.795667,
+    "lon": -107.450432
+  },
+  "CSIMB004643": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO, TAPILULA",
+    "estado": "CHIAPAS",
+    "lat": 17.255878,
+    "lon": -93.017017
+  },
+  "MCIMB005102": {
+    "hospital": "HOSPITAL JOSÉ MARÍA COSS BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 18.858986,
+    "lon": -99.967138
+  },
+  "MCIMB005225": {
+    "hospital": "HOSPITAL GENERAL MIGUEL HIDALGO Y COSTILLA BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 18.90351,
+    "lon": -100.15848
+  },
+  "MCIMB011945": {
+    "hospital": "H.G. TEXCOCO GUADALUPE VICTORIA BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 19.514057,
+    "lon": -98.871977
+  },
+  "MNIMB003981": {
+    "hospital": "HOSPITAL COMUNITARIO DE LA HUACANA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 18.950931,
+    "lon": -101.819063
+  },
+  "VZIMB000983": {
+    "hospital": "HOSPITAL GENERAL CORDOBA YANGA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.87951,
+    "lon": -96.9201
+  },
+  "VZIMB004944": {
+    "hospital": "HOSPITAL GENERAL DE TIERRA BLANCA JESÚS GARCÍA CORONA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.44178,
+    "lon": -96.34721
+  },
+  "ZSIMB001320": {
+    "hospital": "HOSPITAL COMUNITARIO VALPARAÍSO",
+    "estado": "ZACATECAS",
+    "lat": 22.775388,
+    "lon": -103.582405
+  },
+  "DFIMB002090": {
+    "hospital": "HOSPITAL MATERNO INFANTIL INGUARÁN",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4806538,
+    "lon": -99.1241371
+  },
+  "MCIMB009174": {
+    "hospital": "HOSPITAL GENERAL IXTAPAN DE LA SAL",
+    "estado": "MEXICO",
+    "lat": 18.81888,
+    "lon": -99.668328
+  },
+  "NTIMB001654": {
+    "hospital": "HOSPITAL GENERAL SAN FRANCISCO",
+    "estado": "NAYARIT",
+    "lat": 20.9007233,
+    "lon": -105.4103064
+  },
+  "OCIMB008803": {
+    "hospital": "HC VALLE NACIONAL",
+    "estado": "OAXACA",
+    "lat": 17.773565,
+    "lon": -96.31399
+  },
+  "PLIMB007136": {
+    "hospital": "HOSPITAL COMUNITARIO DE TETELA DE OCAMPO",
+    "estado": "PUEBLA",
+    "lat": 19.818607,
+    "lon": -97.813686
+  },
+  "TCIMB002611": {
+    "hospital": "HOSPITAL GENERAL DE MACUSPANA",
+    "estado": "TABASCO",
+    "lat": 17.7594599,
+    "lon": -92.5929806
+  },
+  "VZIMB002330": {
+    "hospital": "CENTRO DE ALTA ESPECIALIDAD DR. RAFAEL LUCIO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.551728,
+    "lon": -96.935888
+  },
+  "VZIMB007592": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DR. PEDRO CORONEL PÉREZ",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 17.90343,
+    "lon": -94.11201
+  },
+  "DFIMB001921": {
+    "hospital": "HOSPITAL PEDIÁTRICO PERALVILLO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.4597085,
+    "lon": -99.1413134
+  },
+  "GRIMB009491": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE TLACOAPA",
+    "estado": "GUERRERO",
+    "lat": 17.259172,
+    "lon": -98.748244
+  },
+  "MCIMB009145": {
+    "hospital": "CENTRO MÉDICO LIC. ADOLFO LÓPEZ MATEOS",
+    "estado": "MEXICO",
+    "lat": 19.319684,
+    "lon": -99.633146
+  },
+  "MCIMB012271": {
+    "hospital": "H.G. VALENTÍN GÓMEZ FARÍAS (SAN FRANCISCO ZENTLALPAN)",
+    "estado": "MEXICO",
+    "lat": 19.144895,
+    "lon": -98.785051
+  },
+  "MNIMB003590": {
+    "hospital": "HOSPITAL GENERAL DR MIGUEL SILVA",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.731491,
+    "lon": -101.105271
+  },
+  "NTIMB000510": {
+    "hospital": "HOSPITAL MIXTO JESÚS MARÍA",
+    "estado": "NAYARIT",
+    "lat": 22.256482,
+    "lon": -104.5171004
+  },
+  "MCIMB010842": {
+    "hospital": "SANTA MARÍA TETITLA",
+    "estado": "MEXICO",
+    "lat": 19.421739,
+    "lon": -99.556624
+  },
+  "MSIMB001243": {
+    "hospital": "HG DE TETECALA DR. RODOLFO BECERRIL DE LA PAZ",
+    "estado": "MORELOS",
+    "lat": 18.7307958,
+    "lon": -99.3897781
+  },
+  "PLIMB006004": {
+    "hospital": "HOSPITAL COMUNITARIO DR. MIGUEL ANGEL COBOS MARIN",
+    "estado": "PUEBLA",
+    "lat": 18.4510558,
+    "lon": -97.8328769
+  },
+  "TCIMB005271": {
+    "hospital": "HOSPITAL DR. ARCENIO FILIGRANA ZUBIETA",
+    "estado": "TABASCO",
+    "lat": 18.1012,
+    "lon": -92.1283
+  },
+  "VZIMB003491": {
+    "hospital": "HOSPITAL GENERAL PAPANTLA DR. JOSÉ BUILL BELENGUER",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 20.45033,
+    "lon": -97.3290431
+  },
+  "ZSIMB001233": {
+    "hospital": "HOSPITAL COMUNITARIO TABASCO",
+    "estado": "ZACATECAS",
+    "lat": 21.86311,
+    "lon": -102.911353
+  },
+  "MCIMB003895": {
+    "hospital": "H.G. DR. GUSTAVO BAZ PRADA",
+    "estado": "MEXICO",
+    "lat": 19.422298,
+    "lon": -99.0149201
+  },
+  "MCIMB006951": {
+    "hospital": "HOSPITAL MATERNO PERINATAL MÓNICA PRETELINI SÁENZ",
+    "estado": "MEXICO",
+    "lat": 19.27244,
+    "lon": -99.656937
+  },
+  "MCIMB008556": {
+    "hospital": "HOSPITAL VALERIO TRUJANO BICENTENARIO",
+    "estado": "MEXICO",
+    "lat": 18.92166,
+    "lon": -100.29931
+  },
+  "PLIMB002492": {
+    "hospital": "HOSPITAL COMUNITARIO TECOMATLAN",
+    "estado": "PUEBLA",
+    "lat": 18.1173863,
+    "lon": -98.3135009
+  },
+  "TSIMB001955": {
+    "hospital": "HOSPITAL GENERAL DR. NORBERTO TREVIÑO ZAPATA",
+    "estado": "TAMAULIPAS",
+    "lat": 23.748326,
+    "lon": -99.137855
+  },
+  "MCIMB012114": {
+    "hospital": "HOSPITAL MUNICIPAL TEMASCALTEPEC",
+    "estado": "MEXICO",
+    "lat": 19.051632,
+    "lon": -100.020031
+  },
+  "OCIMB000350": {
+    "hospital": "HC HOSPITAL INTEGRAL COMUNITARIO CHALCATONGO",
+    "estado": "OAXACA",
+    "lat": 17.024463,
+    "lon": -97.570828
+  },
+  "PLIMB005794": {
+    "hospital": "HOSPITAL COMUNITARIO QUIMIXTLAN",
+    "estado": "PUEBLA",
+    "lat": 19.2565865,
+    "lon": -97.1398923
+  },
+  "QRIMB000421": {
+    "hospital": "HOSPITAL INTEGRAL DE BACALAR",
+    "estado": "QUINTANA ROO",
+    "lat": 18.6783936,
+    "lon": -88.388763
+  },
+  "QRIMB001611": {
+    "hospital": "HOSPITAL IMSS-BIENESTAR NICOLÁS BRAVO",
+    "estado": "QUINTANA ROO",
+    "lat": 18.4538848,
+    "lon": -88.9324957
+  },
+  "DFIMB002650": {
+    "hospital": "CLÍNICA HOSPITAL EMILIANO ZAPATA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3395041,
+    "lon": -98.9784611
+  },
+  "MCIMB010224": {
+    "hospital": "HOSPITAL MUNICIPAL DE CHICONCUAC",
+    "estado": "MEXICO",
+    "lat": 19.543561,
+    "lon": -98.897241
+  },
+  "OCIMB003500": {
+    "hospital": "HC SAN PEDRO TAPANATEPEC",
+    "estado": "OAXACA",
+    "lat": 16.370761,
+    "lon": -94.191479
+  },
+  "OCIMB008045": {
+    "hospital": "HC LA PAZ TEOJOMULCO-TECMECULAN",
+    "estado": "OAXACA",
+    "lat": 16.5888,
+    "lon": -97.2256
+  },
+  "SRIMB001766": {
+    "hospital": "HOSPITAL GENERAL DE SAN LUIS RÍO COLORADO",
+    "estado": "SONORA",
+    "lat": 32.47005,
+    "lon": -114.7779322
+  },
+  "TCIMB005505": {
+    "hospital": "HOSPITAL COMUNITARIO DE FRONTERA",
+    "estado": "TABASCO",
+    "lat": 18.54206,
+    "lon": -92.644353
+  },
+  "TSIMB002643": {
+    "hospital": "HOSPITAL GENERAL DE CD. MANTE DR. EMILIO MARTÍNEZ MANAUTOU",
+    "estado": "TAMAULIPAS",
+    "lat": 22.727022,
+    "lon": -98.969549
+  },
+  "ZSIMB002015": {
+    "hospital": "HOSPITAL COMUNITARIO SOMBRERETE",
+    "estado": "ZACATECAS",
+    "lat": 23.648572,
+    "lon": -103.65657
+  },
+  "PLIMB005263": {
+    "hospital": "HOSPITAL INTEGRAL ACAJETE-TEPETZALA",
+    "estado": "PUEBLA",
+    "lat": 19.1155883,
+    "lon": -97.9475172
+  },
+  "TLIMB002025": {
+    "hospital": "HOSPITAL GENERAL DE CALPULALPAN",
+    "estado": "TLAXCALA",
+    "lat": 19.5825618,
+    "lon": -98.5367416
+  },
+  "PLIMB004073": {
+    "hospital": "HOSPITAL COMUNITARIO AJALPAN",
+    "estado": "PUEBLA",
+    "lat": 18.379176,
+    "lon": -97.2745992
+  },
+  "QRIMB000346": {
+    "hospital": "HOSPITAL MATERNO INFANTIL MORELOS",
+    "estado": "QUINTANA ROO",
+    "lat": 18.502269,
+    "lon": -88.298131
+  },
+  "TLIMB001412": {
+    "hospital": "HOSPITAL COMUNITARIO TLAXCO",
+    "estado": "TLAXCALA",
+    "lat": 19.6195083,
+    "lon": -98.1279306
+  },
+  "CSIMB002980": {
+    "hospital": "HOSPITAL REGIONAL DR. RAFAEL PASCASIO GAMBOA TUXTLA",
+    "estado": "CHIAPAS",
+    "lat": 16.745825,
+    "lon": -93.116884
+  },
+  "DFIMB000446": {
+    "hospital": "HOSPITAL GENERAL DE TICOMÁN",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.5145133,
+    "lon": -99.1378196
+  },
+  "DFIMB001822": {
+    "hospital": "HOSPITAL GENERAL XOCO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3598136,
+    "lon": -99.1632394
+  },
+  "OCIMB007864": {
+    "hospital": "HC TLACOTEPEC",
+    "estado": "OAXACA",
+    "lat": 16.5149143,
+    "lon": -97.3861741
+  },
+  "PLIMB007305": {
+    "hospital": "HOSPITAL COMUNITARIO PAHUATLÁN DE VALLE",
+    "estado": "PUEBLA",
+    "lat": 20.2778678,
+    "lon": -98.1575433
+  },
+  "SRIMB000016": {
+    "hospital": "HOSPITAL COMUNITARIO VICAM SWITCH",
+    "estado": "SONORA",
+    "lat": 27.64722,
+    "lon": -110.29603
+  },
+  "DFIMB000830": {
+    "hospital": "HOSPITAL PEDIÁTRICO IZTAPALAPA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.3565418,
+    "lon": -99.1075918
+  },
+  "GRIMB002812": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO CUAJINICUILAPA",
+    "estado": "GUERRERO",
+    "lat": 16.480389,
+    "lon": -98.414088
+  },
+  "MCIMB001486": {
+    "hospital": "H.G. JOSÉ VICENTE VILLADA",
+    "estado": "MEXICO",
+    "lat": 19.664501,
+    "lon": -99.178701
+  },
+  "MNIMB004734": {
+    "hospital": "HG APATZINGAN",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.064998,
+    "lon": -102.325361
+  },
+  "PLIMB000433": {
+    "hospital": "HOSPITAL COMUNITARIO COXCATLAN",
+    "estado": "PUEBLA",
+    "lat": 18.2680968,
+    "lon": -97.1570819
+  },
+  "PLIMB004143": {
+    "hospital": "HOSPITAL COMUNITARIO TLACOTEPEC DE PORFIRÍO DÍAZ",
+    "estado": "PUEBLA",
+    "lat": 18.4747572,
+    "lon": -96.8641611
+  },
+  "TCIMB001841": {
+    "hospital": "HOSPITAL GENERAL DE EMILIANO ZAPATA",
+    "estado": "TABASCO",
+    "lat": 17.741221,
+    "lon": -91.782673
+  },
+  "VZIMB004046": {
+    "hospital": "HOSPITAL GENERAL DE SANTIAGO TUXTLA",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.45825,
+    "lon": -95.3078
+  },
+  "VZIMB005171": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD TLACOTALPAN",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.61155,
+    "lon": -95.65668
+  },
+  "GRIMB001120": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO ARCELIA",
+    "estado": "GUERRERO",
+    "lat": 18.322121,
+    "lon": -100.287227
+  },
+  "MNIMB002091": {
+    "hospital": "HOSPITAL GENERAL SAHUAYO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 20.039827,
+    "lon": -102.718266
+  },
+  "NTIMB000353": {
+    "hospital": "HOSPITAL INTEGRAL IXTLÁN DEL RÍO",
+    "estado": "NAYARIT",
+    "lat": 21.0370861,
+    "lon": -104.3780574
+  },
+  "SPIMB001804": {
+    "hospital": "HOSPITAL COMUNITARIO VILLA DE ARISTA",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.63949,
+    "lon": -100.83897
+  },
+  "BSIMB000754": {
+    "hospital": "HOSPITAL GENERAL DE CIUDAD CONSTITUCIÓN",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 25.0183828,
+    "lon": -111.6618657
+  },
+  "DFIMB001385": {
+    "hospital": "HOSPITAL MATERNO INFANTIL TLÁHUAC",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.2652517,
+    "lon": -98.9980989
+  },
+  "CMIMB001153": {
+    "hospital": "HOSPITAL MATERNO INFANTIL",
+    "estado": "COLIMA",
+    "lat": 19.2783157,
+    "lon": -103.7510125
+  },
+  "MCIMB005860": {
+    "hospital": "H.G. TENANCINGO",
+    "estado": "MEXICO",
+    "lat": 18.961405,
+    "lon": -99.585693
+  },
+  "TCIMB005020": {
+    "hospital": "HOSPITAL COMUNITARIO VILLA LA VENTA",
+    "estado": "TABASCO",
+    "lat": 18.088884,
+    "lon": -94.040238
+  },
+  "VZIMB000691": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD CATEMACO",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 18.42124,
+    "lon": -95.1014
+  },
+  "VZIMB006180": {
+    "hospital": "HOSPITAL DE LA COMUNIDAD DE CERRO AZUL",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 21.18905,
+    "lon": -97.73672
+  },
+  "CSIMB003926": {
+    "hospital": "HOSPITAL BÁSICO COMUNITARIO DE AMATÁN",
+    "estado": "CHIAPAS",
+    "lat": 17.37796,
+    "lon": -92.811238
+  },
+  "DFIMB000183": {
+    "hospital": "HOSPITAL PEDIÁTRICO COYOACÁN",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.345626,
+    "lon": -99.1678512
+  },
+  "DFIMB001151": {
+    "hospital": "HOSPITAL GENERAL MILPA ALTA",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.2009898,
+    "lon": -99.0111074
+  },
+  "DFIMB001694": {
+    "hospital": "CLÍNICA HOSPITAL DE ESPECIALIDADES TOXICOLÓGICAS XOCHIMILCO",
+    "estado": "CIUDAD DE MEXICO",
+    "lat": 19.2642,
+    "lon": -99.114
+  },
+  "HGIMB004824": {
+    "hospital": "HOSPITAL GENERAL TULA",
+    "estado": "HIDALGO",
+    "lat": 20.040681,
+    "lon": -99.342061
+  },
+  "MNIMB003660": {
+    "hospital": "HOSPITAL INFANTIL DE MORELIA \"EVA SAMANO DE LÓPEZ MATEOS\"",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.732402,
+    "lon": -101.102766
+  },
+  "MCIMB000243": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO JOSÉ SAYAGO",
+    "estado": "MEXICO",
+    "lat": 19.611483,
+    "lon": -98.944548
+  },
+  "MCIMB000231": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO DR. ADOLFO M. NIETO TEPEXPAN",
+    "estado": "MEXICO",
+    "lat": 19.6119964,
+    "lon": -98.9519469
+  },
+  "MCIMB002570": {
+    "hospital": "H. ZOQUIAPAN GRANJA LA SALUD",
+    "estado": "MEXICO",
+    "lat": 19.3164906,
+    "lon": -98.8542207
+  },
+  "SPIMB000976": {
+    "hospital": "CLÍNICA PSIQUIÁTRICA DR. EVERARDO NEUMANN PEÑA",
+    "estado": "SAN LUIS POTOSI",
+    "lat": 22.2094949,
+    "lon": -100.9015162
+  },
+  "VZIMB002354": {
+    "hospital": "INSTITUTO VERACRUZANO DE SALUD MENTAL DR. RAFAEL VELASCO FERNANDEZ",
+    "estado": "VERACRUZ DE IGNACIO DE LA LLAVE",
+    "lat": 19.5456727,
+    "lon": -96.9234292
+  },
+  "ZSIMB002213": {
+    "hospital": "HOSPITAL DE ESPECIALIDADES DE SALUD MENTAL",
+    "estado": "ZACATECAS",
+    "lat": 22.930294,
+    "lon": -102.684899
+  },
+  "MNIMB001420": {
+    "hospital": "H PSIQ DR. JOSÉ TORRES OROZCO",
+    "estado": "MICHOACAN DE OCAMPO",
+    "lat": 19.6930439,
+    "lon": -101.1554807
+  },
+  "PLIMB001792": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO DR. RAFAEL SERRANO",
+    "estado": "PUEBLA",
+    "lat": 18.9881491,
+    "lon": -98.1825848
+  },
+  "BSIMB000783": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO DE BAJA CALIFORNIA SUR",
+    "estado": "BAJA CALIFORNIA SUR",
+    "lat": 24.096708,
+    "lon": -110.398409
+  },
+  "TSIMB002532": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO DE TAMPICO",
+    "estado": "TAMAULIPAS",
+    "lat": 22.252885,
+    "lon": -97.858569
+  },
+  "HGIMB005034": {
+    "hospital": "VILLA OCARANZA",
+    "estado": "HIDALGO",
+    "lat": 19.901111,
+    "lon": -98.909167
+  },
+  "SRIMB000926": {
+    "hospital": "HOSPITAL PSIQUIÁTRICO CRUZ DEL NORTE HILLO",
+    "estado": "SONORA",
+    "lat": 29.0813168,
+    "lon": -111.0050473
+  }
+}

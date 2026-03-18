@@ -1,0 +1,20 @@
+        listo - solo agregamos las existencias, es decir no agregamso los registros sin existencias
+-seria bueno agregar la demanda
+        -agregar tiempos de recorrido de una unidad a otra?
+        listo -como hacer zoom seleccionando el poligono del estado?
+- cambiar los marcadores a algo 3d 
+- al hacer clic en una unidad se debe mostrar algo como el inventario
+        -cuando tenemos seleccionada una clave y queremos movernos a una entidad con un clic avaces no 
+    se mueve porque esa entidad no tiene ese medicamento
+-ocultar el cuadro de selectores y herramientas
+- ocultar numero de existencias a nivel nacional solo aparecen cuando se seleccione una entidad
+- buscador por unidad?
+-Cuando creamos isocronas, que la unidad origen se marque, para resaltar
+-el poligono de la entidad interfiere con el color de las isocronas
+
+
+Nuevas herramientas:
+-Tilesets API & Mapbox Tiling Service (MTS) para ingresar las 10k unidades
+-Optimization API (Logística de última milla) , el problema del viajero, planeador de rutas
+-matrix api, cuales unidades estan a menos de 4 horas del almacen
+- 

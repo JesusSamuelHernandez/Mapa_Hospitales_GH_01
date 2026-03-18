@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mapa de Abasto - IMSS BIENESTAR</title>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Botón toggle panel izquierdo -->
+    <button id="btn-toggle-panel" title="Mostrar/ocultar panel">◀</button>
+
+    <!-- Panel izquierdo: selectores -->
+    <div id="console">
+        <h1>Control de Existencias</h1>
+
+        <div class="session">
+            <h2>1. Seleccionar Medicamento</h2>
+            <div class="autocomplete-wrapper">
+                <input type="text" id="busqueda-med" placeholder="Buscar clave o descripción..." autocomplete="off">
+                <div id="lista-med" class="lista-sugerencias" style="display:none;"></div>
+            </div>
+            <div id="med-seleccionado" style="display:none;">
+                <span id="med-seleccionado-texto"></span>
+                <button id="btn-limpiar-med" title="Quitar selección">×</button>
+            </div>
+            <select id="selector-medicamento" style="display:none;">
+                <option value="">Vista General (Todos los hospitales)</option>
+            </select>
+        </div>
+
+        <div class="session">
+            <h2>2. Seleccionar Estado</h2>
+            <select id="selector-estado">
+                <option value="">Todos los estados</option>
+            </select>
+            <button id="btn-todos-estados" style="display:none;">← Todos los estados</button>
+        </div>
+
+        <div class="session">
+            <button id="btn-restablecer">Restablecer filtros</button>
+        </div>
+    </div>
+
+    <!-- Controles derechos: menú de herramientas -->
+    <div id="controles-derecha">
+        <button id="btn-menu-derecho" title="Herramientas">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="panel-menu-derecho">
+            <button id="btn-modo" class="menu-item">
+                <span class="menu-icono"><i data-lucide="moon"></i></span>
+                <span class="menu-label">Cambio de Tema</span>
+            </button>
+            <button id="btn-ruta" class="menu-item">
+                <span class="menu-icono"><i data-lucide="map"></i></span>
+                <span class="menu-label">Rutas</span>
+            </button>
+            <button id="btn-isocronas" class="menu-item">
+                <span class="menu-icono"><i data-lucide="timer"></i></span>
+                <span class="menu-label">Isócronas</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Panel de resultados (derecha, colapsable) -->
+    <div id="panel-resultados">
+        <div id="panel-resultados-header">
+            <span id="contador">Cargando datos del sistema...</span>
+            <button id="btn-toggle-resultados" title="Colapsar">▲</button>
+        </div>
+        <div id="panel-resultados-contenido">
+
+            <div id="leyenda-semaforo" style="display:none;">
+                <h2>Cobertura</h2>
+                <div class="leyenda-item"><span class="dot dot-verde"></span> >= 0.75 meses</div>
+                <div class="leyenda-item"><span class="dot dot-amarillo"></span> 0.50 – 0.74 meses</div>
+                <div class="leyenda-item"><span class="dot dot-rojo"></span> <= 0.49 meses</div>
+                <div class="leyenda-item"><span class="dot dot-gris"></span> Sin demanda</div>
+            </div>
+
+            <div id="panel-ruta" style="display:none;">
+                <h2>Ruta entre hospitales</h2>
+                <div id="ruta-estado" class="ruta-estado-texto"></div>
+                <div id="ruta-info" style="display:none;">
+                    <div class="ruta-dato">📏 Distancia: <strong id="ruta-distancia">-</strong></div>
+                    <div class="ruta-dato">⏱ Tiempo est.: <strong id="ruta-tiempo">-</strong></div>
+                </div>
+                <button id="btn-limpiar-ruta">✕ Limpiar ruta</button>
+            </div>
+
+            <div id="panel-isocronas" style="display:none;">
+                <h2>Logística de Traslados</h2>
+                <div class="toggle-isocrona">
+                    <button id="btn-tipo-estandar" class="toggle-iso-btn activo">Cobertura Estándar</button>
+                    <button id="btn-tipo-manual" class="toggle-iso-btn">Modo Manual</button>
+                </div>
+                <div id="input-tiempo-manual" style="display:none;">
+                    <label class="iso-label">Tiempo de traslado (min):</label>
+                    <input type="number" id="tiempo-manual" min="5" max="60" placeholder="5 – 60 min">
+                </div>
+                <div id="isocrona-estado" class="ruta-estado-texto">Haz clic en una unidad médica.</div>
+                <div id="isocrona-leyenda" class="iso-leyenda">
+                    <div class="iso-leyenda-item"><span class="iso-dot" style="background:#50b0b0;"></span> 15 min</div>
+                    <div class="iso-leyenda-item"><span class="iso-dot" style="background:#76e2e2;"></span> 30 min</div>
+                    <div class="iso-leyenda-item"><span class="iso-dot" style="background:#b4f8f8;"></span> 59 min</div>
+                </div>
+                <button id="btn-limpiar-isocrona">✕ Limpiar isócronas</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tour de bienvenida -->
+    <div id="ob-overlay"></div>
+    <div id="ob-highlight"></div>
+    <div id="ob-card">
+        <div id="ob-icon"></div>
+        <div id="ob-title"></div>
+        <div id="ob-body"></div>
+        <div id="ob-images"></div>
+        <div id="ob-footer">
+            <button id="ob-skip">Omitir tour</button>
+            <span id="ob-progress"></span>
+            <button id="ob-next">Siguiente →</button>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
