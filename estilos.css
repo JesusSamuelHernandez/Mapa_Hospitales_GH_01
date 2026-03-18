@@ -36,7 +36,8 @@ body {
     -webkit-backdrop-filter: none;
     border: none;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
-    z-index: 10;
+    z-index: 9000;
+    pointer-events: auto;
     border-radius: 24px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     max-height: calc(100vh - 40px);
@@ -106,7 +107,7 @@ select {
     cursor: pointer;
 }
 
-.autocomplete-wrapper { position: relative; }
+.autocomplete-wrapper { position: relative; pointer-events: auto; }
 
 #busqueda-med {
     width: 100%;
@@ -118,6 +119,8 @@ select {
     color: #555;
     box-sizing: border-box;
     outline: none;
+    pointer-events: auto;
+    touch-action: manipulation;
     transition: border-color 0.2s;
 }
 

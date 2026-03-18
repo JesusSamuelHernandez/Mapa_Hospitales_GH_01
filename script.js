@@ -95,6 +95,7 @@ map.on('load', async () => {
                 item.className = 'sugerencia-item';
                 item.innerHTML = `<span class="clave-tag">${op.value}</span>${op.desc}`;
                 item.addEventListener('mousedown', () => seleccionarMed(op));
+                item.addEventListener('touchend', (e) => { e.preventDefault(); e.stopPropagation(); seleccionarMed(op); });
                 listaMed.appendChild(item);
             });
             listaMed.style.display = 'block';
@@ -122,6 +123,9 @@ map.on('load', async () => {
         inputBusqueda.addEventListener('input', (e) => mostrarSugerencias(e.target.value));
         inputBusqueda.addEventListener('blur', () => setTimeout(() => { listaMed.style.display = 'none'; }, 150));
         inputBusqueda.addEventListener('focus', (e) => { if (e.target.value) mostrarSugerencias(e.target.value); });
+        // Evita que Mapbox capture los eventos táctiles del input en móvil
+        inputBusqueda.addEventListener('touchstart', (e) => e.stopPropagation(), { passive: true });
+        inputBusqueda.addEventListener('click',      (e) => e.stopPropagation());
         btnLimpiar.addEventListener('click', limpiarMed);
 
         document.getElementById('btn-restablecer').addEventListener('click', () => {
