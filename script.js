@@ -864,8 +864,8 @@ function iniciarTour() {
     const STEPS = [
         {
             icon: '🗺️',
-            title: 'Sistema de Abasto IMSS BIENESTAR',
-            body: 'Este mapa te permite consultar las existencias de medicamentos en las <strong>568 unidades médicas</strong> del programa. Te mostramos cómo usarlo en 4 pasos.',
+            title: 'Sistema de Abasto',
+            body: '(LOS DATOS CONTENIDOS EN ESTE MAPA SON MERAMENTE DE EJEMPLO NO REPRESENTAN LA REALIDAD DE LA UNIDADES MÉDICAS)Este mapa te permite consultar las existencias de medicamentos en las unidades médicas. Te mostramos cómo usarlo en 4 pasos.',
             selector: null
         },
         {
