@@ -165,7 +165,7 @@ map.on('load', async () => {
         document.getElementById('btn-ruta').addEventListener('click', toggleModoRuta);
         document.getElementById('btn-limpiar-ruta').addEventListener('click', () => limpiarRuta(true));
         document.getElementById('btn-isocronas').addEventListener('click', toggleModoIsocronas);
-        document.getElementById('btn-limpiar-isocrona').addEventListener('click', limpiarIsocronas);
+        document.getElementById('btn-limpiar-isocrona').addEventListener('click', desactivarModoIsocronas);
         document.getElementById('btn-tipo-estandar').addEventListener('click', () => setTipoIsocrona(true));
         document.getElementById('btn-tipo-manual').addEventListener('click', () => setTipoIsocrona(false));
         document.getElementById('selector-estado').addEventListener('change', () => {
@@ -214,7 +214,11 @@ map.on('style.load', () => {
         if (infoEl) infoEl.style.display = 'none';
         if (modoRuta) actualizarPanelRuta();
         clearTimeout(isocrona_debounceTimer);
-        if (modoIsocronas) document.getElementById('isocrona-estado').textContent = 'Haz clic en una unidad médica.';
+        if (modoIsocronas) {
+            const isoStyleEl = document.getElementById('isocrona-estado');
+            isoStyleEl.textContent = 'Haz clic en una unidad médica.';
+            isoStyleEl.classList.add('waiting-click');
+        }
         inicializarCapas();
     }
 });
@@ -642,6 +646,7 @@ function desactivarModoRuta() {
     limpiarRuta(false);
     document.getElementById('panel-ruta').style.display = 'none';
     document.getElementById('btn-ruta').classList.remove('activo');
+    document.getElementById('ruta-estado').classList.remove('waiting-click');
 }
 
 function seleccionarHospitalRuta(hospital) {
@@ -654,7 +659,9 @@ function seleccionarHospitalRuta(hospital) {
     } else if (!destinoRuta) {
         // Validar que origen y destino sean distintos
         if (hospital.clues === origenRuta.clues) {
-            document.getElementById('ruta-estado').textContent = 'El origen y el destino no pueden ser el mismo hospital.';
+            const elErr = document.getElementById('ruta-estado');
+            elErr.textContent = 'El origen y el destino no pueden ser el mismo hospital.';
+            elErr.classList.remove('waiting-click');
             return;
         }
         destinoRuta = hospital;
@@ -681,7 +688,9 @@ async function calcularRuta() {
 
     // Límite de peticiones por sesión
     if (contadorPeticionesRuta >= MAX_PETICIONES_RUTA) {
-        document.getElementById('ruta-estado').textContent = `Límite de ${MAX_PETICIONES_RUTA} cálculos por sesión alcanzado. Recarga la página para continuar.`;
+        const elLim = document.getElementById('ruta-estado');
+        elLim.textContent = `Límite de ${MAX_PETICIONES_RUTA} cálculos por sesión alcanzado. Recarga la página para continuar.`;
+        elLim.classList.remove('waiting-click');
         return;
     }
     contadorPeticionesRuta++;
@@ -690,7 +699,9 @@ async function calcularRuta() {
     const [lon2, lat2] = destinoRuta.coords;
     const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${lon1},${lat1};${lon2},${lat2}?geometries=geojson&language=es&access_token=${mapboxgl.accessToken}`;
 
-    document.getElementById('ruta-estado').textContent = 'Calculando ruta...';
+    const elRuta = document.getElementById('ruta-estado');
+    elRuta.textContent = 'Calculando ruta...';
+    elRuta.classList.remove('waiting-click');
 
     try {
         const res  = await fetch(url);
@@ -698,6 +709,7 @@ async function calcularRuta() {
 
         if (!data.routes || !data.routes.length) {
             document.getElementById('ruta-estado').textContent = 'No se encontró ruta entre estos puntos.';
+            document.getElementById('ruta-estado').classList.remove('waiting-click');
             return;
         }
 
@@ -723,6 +735,7 @@ async function calcularRuta() {
     } catch (err) {
         console.error('Error calculando ruta:', err);
         document.getElementById('ruta-estado').textContent = 'Error al calcular la ruta.';
+        document.getElementById('ruta-estado').classList.remove('waiting-click');
     }
 }
 
@@ -749,10 +762,13 @@ function actualizarPanelRuta() {
     if (!el) return;
     if (!origenRuta) {
         el.textContent = 'Haz clic en un hospital de origen.';
+        el.classList.add('waiting-click');
     } else if (!destinoRuta) {
         el.textContent = `Origen: ${origenRuta.nombre}. Ahora selecciona el destino.`;
+        el.classList.add('waiting-click');
     } else {
         el.textContent = `${origenRuta.nombre} → ${destinoRuta.nombre}`;
+        el.classList.remove('waiting-click');
     }
 }
 
@@ -770,7 +786,9 @@ function activarModoIsocronas() {
     document.getElementById('btn-isocronas').classList.add('activo');
     document.getElementById('panel-menu-derecho').classList.remove('visible');
     expandirResultados();
-    document.getElementById('isocrona-estado').textContent = 'Haz clic en una unidad médica.';
+    const isoEl = document.getElementById('isocrona-estado');
+    isoEl.textContent = 'Haz clic en una unidad médica.';
+    isoEl.classList.add('waiting-click');
 }
 
 function expandirResultados() {
@@ -786,6 +804,7 @@ function desactivarModoIsocronas() {
     limpiarIsocronas();
     document.getElementById('panel-isocronas').style.display = 'none';
     document.getElementById('btn-isocronas').classList.remove('activo');
+    document.getElementById('isocrona-estado').classList.remove('waiting-click');
 }
 
 function setTipoIsocrona(esEstandar) {
@@ -794,7 +813,9 @@ function setTipoIsocrona(esEstandar) {
     document.getElementById('btn-tipo-manual').classList.toggle('activo', !esEstandar);
     document.getElementById('input-tiempo-manual').style.display = esEstandar ? 'none' : 'block';
     document.getElementById('isocrona-leyenda').style.display = esEstandar ? 'flex' : 'none';
-    document.getElementById('isocrona-estado').textContent = 'Haz clic en una unidad médica.';
+    const isoTipoEl = document.getElementById('isocrona-estado');
+    isoTipoEl.textContent = 'Haz clic en una unidad médica.';
+    isoTipoEl.classList.add('waiting-click');
     limpiarIsocronas();
 }
 
@@ -802,13 +823,15 @@ function manejarClickIsocronas(coords, nombreHospital) {
     if (!tipoIsocronaEstandar) {
         const tiempo = parseInt(document.getElementById('tiempo-manual').value);
         if (!tiempo || tiempo < 5) {
-            document.getElementById('isocrona-estado').textContent =
-                'Debe establecer el tiempo de traslado antes de seleccionar una unidad.';
+            const elV = document.getElementById('isocrona-estado');
+            elV.textContent = 'Debe establecer el tiempo de traslado antes de seleccionar una unidad.';
+            elV.classList.remove('waiting-click');
             return;
         }
         if (tiempo > 60) {
-            document.getElementById('isocrona-estado').textContent =
-                'Para traslados mayores a 60 min, use la herramienta de cálculo de ruta punto a punto.';
+            const elV = document.getElementById('isocrona-estado');
+            elV.textContent = 'Para traslados mayores a 60 min, use la herramienta de cálculo de ruta punto a punto.';
+            elV.classList.remove('waiting-click');
             return;
         }
     }
@@ -818,8 +841,9 @@ function manejarClickIsocronas(coords, nombreHospital) {
 
 async function calcularIsocronas(coords, nombreHospital) {
     if (contadorPeticionesRuta >= MAX_PETICIONES_RUTA) {
-        document.getElementById('isocrona-estado').textContent =
-            `Límite de ${MAX_PETICIONES_RUTA} peticiones por sesión alcanzado.`;
+        const elLimIso = document.getElementById('isocrona-estado');
+        elLimIso.textContent = `Límite de ${MAX_PETICIONES_RUTA} peticiones por sesión alcanzado.`;
+        elLimIso.classList.remove('waiting-click');
         return;
     }
     contadorPeticionesRuta++;
@@ -829,7 +853,9 @@ async function calcularIsocronas(coords, nombreHospital) {
         ? '15,30,59'
         : document.getElementById('tiempo-manual').value;
 
-    document.getElementById('isocrona-estado').textContent = 'Generando isócronas...';
+    const isoCalcEl = document.getElementById('isocrona-estado');
+    isoCalcEl.textContent = 'Generando isócronas...';
+    isoCalcEl.classList.remove('waiting-click');
 
     const url = `https://api.mapbox.com/isochrone/v1/mapbox/driving/${lon},${lat}` +
                 `?contours_minutes=${tiempos}&polygons=true&access_token=${mapboxgl.accessToken}`;
@@ -839,17 +865,29 @@ async function calcularIsocronas(coords, nombreHospital) {
 
         if (!data.features || !data.features.length) {
             document.getElementById('isocrona-estado').textContent = 'No se pudo generar la isócrona.';
+            document.getElementById('isocrona-estado').classList.remove('waiting-click');
             return;
         }
 
         map.getSource('isocrona-src').setData(data);
-        document.getElementById('isocrona-estado').textContent = tipoIsocronaEstandar
+        const isoResEl = document.getElementById('isocrona-estado');
+        isoResEl.textContent = tipoIsocronaEstandar
             ? `Isócronas desde: ${nombreHospital}`
             : `${tiempos} min desde: ${nombreHospital}`;
+        isoResEl.classList.remove('waiting-click');
+
+        // Zoom al área cubierta por las isócronas
+        const allCoords = data.features.flatMap(f => f.geometry.coordinates[0]);
+        const isoBounds = allCoords.reduce(
+            (b, c) => b.extend(c),
+            new mapboxgl.LngLatBounds(allCoords[0], allCoords[0])
+        );
+        map.fitBounds(isoBounds, { padding: 60, pitch: 30, duration: 1000 });
 
     } catch (err) {
         console.error('Error generando isócronas:', err);
         document.getElementById('isocrona-estado').textContent = 'Error al generar la isócrona.';
+        document.getElementById('isocrona-estado').classList.remove('waiting-click');
     }
 }
 
@@ -858,7 +896,9 @@ function limpiarIsocronas() {
     const src = map.getSource('isocrona-src');
     if (src) src.setData({ type: 'FeatureCollection', features: [] });
     if (modoIsocronas) {
-        document.getElementById('isocrona-estado').textContent = 'Haz clic en una unidad médica.';
+        const isoLimpEl = document.getElementById('isocrona-estado');
+        isoLimpEl.textContent = 'Haz clic en una unidad médica.';
+        isoLimpEl.classList.add('waiting-click');
     }
 }
 

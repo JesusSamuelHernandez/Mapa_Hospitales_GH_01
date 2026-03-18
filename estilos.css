@@ -221,10 +221,12 @@ select {
     flex-direction: column;
     align-items: flex-end;
     gap: 6px;
+    pointer-events: none; /* el contenedor no intercepta eventos; los hijos los reactivarán */
 }
 
 /* Botón hamburguesa derecho */
 #btn-menu-derecho {
+    pointer-events: auto;
     width: 44px;
     height: 44px;
     background: #f4f4f9;
@@ -427,6 +429,27 @@ select {
     margin-bottom: 10px;
     min-height: 2.4em;
     line-height: 1.4;
+}
+
+.waiting-click {
+    color: #e53e3e !important;
+    font-weight: 600;
+    animation: glow-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { text-shadow: 0 0 4px rgba(229, 62, 62, 0.25); }
+    50%       { text-shadow: 0 0 10px rgba(229, 62, 62, 0.75), 0 0 20px rgba(229, 62, 62, 0.35); }
+}
+
+body.modo-oscuro .waiting-click {
+    color: #fc8181 !important;
+    animation: glow-pulse-dark 1.4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse-dark {
+    0%, 100% { text-shadow: 0 0 4px rgba(252, 129, 129, 0.25); }
+    50%       { text-shadow: 0 0 10px rgba(252, 129, 129, 0.75), 0 0 20px rgba(252, 129, 129, 0.35); }
 }
 
 .ruta-dato { font-size: 0.87rem; color: #2d3748; padding: 3px 0; }
