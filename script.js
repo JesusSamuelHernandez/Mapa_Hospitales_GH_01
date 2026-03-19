@@ -340,6 +340,31 @@ function inicializarCapas() {
         paint: { 'line-color': '#00d4ff', 'line-width': 6, 'line-opacity': 0.9 }
     });
 
+    // --- CAPA DE ETIQUETAS DE HOSPITALES ---
+    map.addSource('pines-labels-src', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] }
+    });
+    map.addLayer({
+        id: 'pines-labels',
+        type: 'symbol',
+        source: 'pines-labels-src',
+        layout: {
+            'text-field': ['get', 'nombre'],
+            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+            'text-size': 12,
+            'text-anchor': 'bottom',
+            'text-offset': [0, -5],
+            'text-allow-overlap': false,
+            'visibility': 'none'
+        },
+        paint: {
+            'text-color': '#1a202c',
+            'text-halo-color': 'rgba(255,255,255,0.9)',
+            'text-halo-width': 2
+        }
+    });
+
     // Los hospitales se renderizan como DOM pins en renderizarPines()
     // Event listeners de estados — solo se registran una vez
     if (!listenersCapasConfigurados) {
@@ -473,6 +498,10 @@ function aplicarFiltros() {
 
     renderizarPines(resultantes);
 
+    if (map.getLayer('pines-labels')) {
+        map.setLayoutProperty('pines-labels', 'visibility', nombreEdo ? 'visible' : 'none');
+    }
+
     document.getElementById('leyenda-semaforo').style.display = claveMed ? 'block' : 'none';
     actualizarContador(resultantes.length);
     actualizarBtnTodosEstados();
@@ -490,8 +519,8 @@ function colorSemaforoPins(cobertura) {
 
 function crearPinSVG(colorBase, stock) {
     const stockTexto = stock !== undefined && stock !== null ? String(stock) : '';
-    const fontSize   = stockTexto.length > 2 ? '18' : '24';
-    return `<svg viewBox="0 0 100 120" width="40" height="50" style="display:block;cursor:pointer;">
+    const fontSize   = stockTexto.length > 2 ? '22' : '28';
+    return `<svg viewBox="0 0 100 120" width="52" height="65" style="display:block;cursor:pointer;">
       <path d="M50 5 C28 5 10 23 10 45 C10 72 50 115 50 115 L50 45 C50 23 50 5 50 5 Z" fill="${colorBase}" opacity="0.85"/>
       <path d="M50 5 C72 5 90 23 90 45 C90 72 50 115 50 115 L50 45 C50 23 50 5 50 5 Z" fill="${colorBase}"/>
       <circle cx="50" cy="45" r="25" fill="white"/>
@@ -503,11 +532,17 @@ function limpiarPines() {
     marcadoresPines.forEach(m => m.remove());
     marcadoresPines = [];
     if (pinPopup) { pinPopup.remove(); }
+    if (map.getSource('pines-labels-src')) {
+        map.getSource('pines-labels-src').setData({ type: 'FeatureCollection', features: [] });
+    }
 }
 
 function renderizarPines(features) {
     limpiarPines();
-    if (!pinPopup) pinPopup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: [0, -50] });
+    if (map.getSource('pines-labels-src')) {
+        map.getSource('pines-labels-src').setData({ type: 'FeatureCollection', features });
+    }
+    if (!pinPopup) pinPopup = new mapboxgl.Popup({ closeButton: true, closeOnClick: true, offset: [0, -50] });
 
     features.forEach(feature => {
         const prop   = feature.properties;
@@ -518,15 +553,12 @@ function renderizarPines(features) {
         el.style.zIndex = '2';
         el.innerHTML = crearPinSVG(color, prop.stockActual);
 
-        // Click para modo ruta / isócronas
+        // Click para modo ruta / isócronas o para mostrar popup
         el.addEventListener('click', (e) => {
             e.stopPropagation();
-            if (modoRuta) seleccionarHospitalRuta({ clues: prop.clues, nombre: prop.nombre, coords });
-            else if (modoIsocronas) manejarClickIsocronas(coords, prop.nombre);
-        });
+            if (modoRuta) { seleccionarHospitalRuta({ clues: prop.clues, nombre: prop.nombre, coords }); return; }
+            if (modoIsocronas) { manejarClickIsocronas(coords, prop.nombre); return; }
 
-        // Popup al pasar el cursor
-        el.addEventListener('mouseenter', () => {
             let stockHtml = '';
             if (prop.stockActual !== undefined && prop.stockActual !== null) {
                 const coberturaTexto = prop.cobertura < 0 ? 'Sin demanda' : `${prop.cobertura} meses`;
@@ -544,8 +576,6 @@ function renderizarPines(features) {
             </div>`;
             pinPopup.setLngLat(coords).setHTML(html).addTo(map);
         });
-
-        el.addEventListener('mouseleave', () => pinPopup.remove());
 
         const marker = new mapboxgl.Marker(el, { anchor: 'bottom' })
             .setLngLat(coords)
