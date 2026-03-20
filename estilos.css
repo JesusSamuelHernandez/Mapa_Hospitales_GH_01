@@ -548,6 +548,18 @@ body.modo-oscuro .cercanas-item-tiempo { color: #a78bfa; }
 .iso-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
 
 /* =========================================================
+   PIN ORIGEN — HERRAMIENTA UNIDADES CERCANAS
+   ========================================================= */
+@keyframes pinOrigenGlow {
+    from { filter: drop-shadow(0 0 4px rgba(124, 92, 191, 0.9)); }
+    to   { filter: drop-shadow(0 0 14px rgba(124, 92, 191, 1)) drop-shadow(0 0 24px rgba(124, 92, 191, 0.5)); }
+}
+.pin-origen-cercanas {
+    animation: pinOrigenGlow 0.9s ease-in-out infinite alternate;
+    z-index: 10 !important;
+}
+
+/* =========================================================
    POPUPS MAPBOX
    ========================================================= */
 .mapboxgl-popup { z-index: 5; }

@@ -42,6 +42,7 @@ let modoIsocronas = false;
 
 // Unidades visibles (filtradas por estado actual) — usadas por herramienta de cercanía
 let unidadesVisibles = [];
+let pinOrigenCercanas = null;   // elemento DOM del pin resaltado como origen
 let tipoIsocronaEstandar = true;  // true = estándar (15/30/59), false = manual
 let isocrona_debounceTimer = null;
 
@@ -408,12 +409,6 @@ function inicializarCapas() {
             }
         });
 
-        // Clic general en el mapa para herramienta de unidades cercanas
-        map.on('click', (e) => {
-            if (!modoUnidadesCercanas) return;
-            calcularUnidadesCercanas([e.lngLat.lng, e.lngLat.lat]);
-        });
-
         listenersCapasConfigurados = true;
     }
 
@@ -574,11 +569,18 @@ function renderizarPines(features) {
         el.style.zIndex = '2';
         el.innerHTML = crearPinSVG(color, prop.stockActual);
 
-        // Click para modo ruta / isócronas o para mostrar popup
+        // Click para modo ruta / isócronas / unidades cercanas o para mostrar popup
         el.addEventListener('click', (e) => {
             e.stopPropagation();
             if (modoRuta) { seleccionarHospitalRuta({ clues: prop.clues, nombre: prop.nombre, coords }); return; }
             if (modoIsocronas) { manejarClickIsocronas(coords, prop.nombre); return; }
+            if (modoUnidadesCercanas) {
+                limpiarResaltadoOrigen();
+                el.classList.add('pin-origen-cercanas');
+                pinOrigenCercanas = el;
+                calcularUnidadesCercanas(coords, prop.clues);
+                return;
+            }
 
             let stockHtml = '';
             if (prop.stockActual !== undefined && prop.stockActual !== null) {
@@ -966,17 +968,30 @@ function activarModoCercanas() {
     if (modoRuta) desactivarModoRuta();
     if (modoIsocronas) desactivarModoIsocronas();
     modoUnidadesCercanas = true;
+    // Limpiar resultados del ciclo anterior
+    document.getElementById('cercanas-lista').innerHTML = '';
+    if (map.getLayer('pines-labels')) {
+        map.setLayoutProperty('pines-labels', 'text-field', ['get', 'nombre']);
+    }
     document.getElementById('panel-cercanas').style.display = 'block';
     document.getElementById('btn-cercanas').classList.add('activo');
     document.getElementById('panel-menu-derecho').classList.remove('visible');
     expandirResultados();
     const el = document.getElementById('cercanas-estado');
-    el.textContent = 'Haz clic en el mapa para encontrar unidades cercanas.';
+    el.textContent = 'Haz clic en una unidad médica como origen.';
     el.classList.add('waiting-click');
+}
+
+function limpiarResaltadoOrigen() {
+    if (pinOrigenCercanas) {
+        pinOrigenCercanas.classList.remove('pin-origen-cercanas');
+        pinOrigenCercanas = null;
+    }
 }
 
 function desactivarModoCercanas() {
     modoUnidadesCercanas = false;
+    limpiarResaltadoOrigen();
     document.getElementById('panel-cercanas').style.display = 'none';
     document.getElementById('btn-cercanas').classList.remove('activo');
     document.getElementById('cercanas-estado').classList.remove('waiting-click');
@@ -996,7 +1011,7 @@ function distanciaEuclidea([lon1, lat1], [lon2, lat2]) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
-async function calcularUnidadesCercanas(clickCoords) {
+async function calcularUnidadesCercanas(clickCoords, origenClues) {
     if (!unidadesVisibles.length) return;
 
     if (contadorPeticionesMatrix >= MAX_PETICIONES_MATRIX) {
@@ -1008,8 +1023,9 @@ async function calcularUnidadesCercanas(clickCoords) {
         return;
     }
 
-    // 1. Ordenar por distancia euclídea y tomar las más cercanas
+    // 1. Excluir origen, ordenar por distancia euclídea y tomar las más cercanas
     const candidatas = unidadesVisibles
+        .filter(u => u.clues !== origenClues)
         .map(u => ({ ...u, distEuclid: distanciaEuclidea(clickCoords, u.coords) }))
         .sort((a, b) => a.distEuclid - b.distEuclid)
         .slice(0, MAX_DESTINOS_MATRIX);
@@ -1073,8 +1089,12 @@ function mostrarResultadosCercanas(resultados) {
     const elEstado = document.getElementById('cercanas-estado');
     const elLista  = document.getElementById('cercanas-lista');
 
-    // 1. Actualizar mensaje de estado
-    elEstado.textContent = `${resultados.length} unidades encontradas. Haz clic de nuevo para recalcular.`;
+    // 1. Desactivar modo de escucha — los clics en pines vuelven al popup normal
+    modoUnidadesCercanas = false;
+    document.getElementById('btn-cercanas').classList.remove('activo');
+
+    // 2. Actualizar mensaje de estado
+    elEstado.textContent = `${resultados.length} unidades encontradas. Presiona el botón para un nuevo cálculo.`;
     elEstado.classList.remove('waiting-click');
 
     // 2. Actualizar etiquetas del mapa con el tiempo de conducción
