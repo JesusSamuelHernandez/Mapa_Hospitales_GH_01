@@ -39,6 +39,9 @@ const MAX_PETICIONES_RUTA = 50;
 
 // Isócronas
 let modoIsocronas = false;
+
+// Unidades visibles (filtradas por estado actual) — usadas por herramienta de cercanía
+let unidadesVisibles = [];
 let tipoIsocronaEstandar = true;  // true = estándar (15/30/59), false = manual
 let isocrona_debounceTimer = null;
 
@@ -166,6 +169,8 @@ map.on('load', async () => {
         document.getElementById('btn-limpiar-ruta').addEventListener('click', () => limpiarRuta(true));
         document.getElementById('btn-isocronas').addEventListener('click', toggleModoIsocronas);
         document.getElementById('btn-limpiar-isocrona').addEventListener('click', desactivarModoIsocronas);
+        document.getElementById('btn-cercanas').addEventListener('click', toggleModoCercanas);
+        document.getElementById('btn-limpiar-cercanas').addEventListener('click', desactivarModoCercanas);
         document.getElementById('btn-tipo-estandar').addEventListener('click', () => setTipoIsocrona(true));
         document.getElementById('btn-tipo-manual').addEventListener('click', () => setTipoIsocrona(false));
         document.getElementById('selector-estado').addEventListener('change', () => {
@@ -388,6 +393,7 @@ function inicializarCapas() {
         });
 
         map.on('click', 'estados-fill', (e) => {
+            if (modoUnidadesCercanas) return;
             if (!e.features.length) return;
             const nomgeo = e.features[0].properties.NOMGEO;
             const selectorEdo = document.getElementById('selector-estado');
@@ -400,6 +406,12 @@ function inicializarCapas() {
                 aplicarFiltros();
                 actualizarBtnTodosEstados();
             }
+        });
+
+        // Clic general en el mapa para herramienta de unidades cercanas
+        map.on('click', (e) => {
+            if (!modoUnidadesCercanas) return;
+            calcularUnidadesCercanas([e.lngLat.lng, e.lngLat.lat]);
         });
 
         listenersCapasConfigurados = true;
@@ -466,6 +478,7 @@ function aplicarFiltros() {
 
     if (!claveMed && !nombreEdo) {
         limpiarPines();
+        unidadesVisibles = [];
         document.getElementById('leyenda-semaforo').style.display = 'none';
         actualizarContador(-1);
         actualizarBtnTodosEstados();
@@ -495,6 +508,14 @@ function aplicarFiltros() {
     } else {
         map.flyTo({ center: [-99.1332, 19.4326], zoom: 4.5, duration: 800 });
     }
+
+    // Actualizar arreglo de unidades visibles para herramienta de cercanía
+    unidadesVisibles = resultantes.map(f => ({
+        clues:  f.properties.clues,
+        nombre: f.properties.nombre,
+        estado: f.properties.estado,
+        coords: f.geometry.coordinates   // [lon, lat]
+    }));
 
     renderizarPines(resultantes);
 
@@ -930,6 +951,163 @@ function limpiarIsocronas() {
         isoLimpEl.textContent = 'Haz clic en una unidad médica.';
         isoLimpEl.classList.add('waiting-click');
     }
+}
+
+// ─── HERRAMIENTA: UNIDADES CERCANAS (Matrix API) ──────────────────────────────
+
+let modoUnidadesCercanas = false;
+
+function toggleModoCercanas() {
+    if (modoUnidadesCercanas) desactivarModoCercanas();
+    else activarModoCercanas();
+}
+
+function activarModoCercanas() {
+    if (modoRuta) desactivarModoRuta();
+    if (modoIsocronas) desactivarModoIsocronas();
+    modoUnidadesCercanas = true;
+    document.getElementById('panel-cercanas').style.display = 'block';
+    document.getElementById('btn-cercanas').classList.add('activo');
+    document.getElementById('panel-menu-derecho').classList.remove('visible');
+    expandirResultados();
+    const el = document.getElementById('cercanas-estado');
+    el.textContent = 'Haz clic en el mapa para encontrar unidades cercanas.';
+    el.classList.add('waiting-click');
+}
+
+function desactivarModoCercanas() {
+    modoUnidadesCercanas = false;
+    document.getElementById('panel-cercanas').style.display = 'none';
+    document.getElementById('btn-cercanas').classList.remove('activo');
+    document.getElementById('cercanas-estado').classList.remove('waiting-click');
+    document.getElementById('cercanas-lista').innerHTML = '';
+    // Restaurar etiquetas con nombre de hospital
+    if (map.getLayer('pines-labels')) {
+        map.setLayoutProperty('pines-labels', 'text-field', ['get', 'nombre']);
+    }
+}
+let contadorPeticionesMatrix = 0;
+const MAX_PETICIONES_MATRIX = 30;
+const MAX_DESTINOS_MATRIX   = 24;   // límite de la Matrix API (1 origen + 24 destinos = 25 coords)
+
+function distanciaEuclidea([lon1, lat1], [lon2, lat2]) {
+    const dx = lon1 - lon2;
+    const dy = lat1 - lat2;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+async function calcularUnidadesCercanas(clickCoords) {
+    if (!unidadesVisibles.length) return;
+
+    if (contadorPeticionesMatrix >= MAX_PETICIONES_MATRIX) {
+        const el = document.getElementById('cercanas-estado');
+        if (el) {
+            el.textContent = `Límite de ${MAX_PETICIONES_MATRIX} consultas por sesión alcanzado. Recarga la página para continuar.`;
+            el.classList.remove('waiting-click');
+        }
+        return;
+    }
+
+    // 1. Ordenar por distancia euclídea y tomar las más cercanas
+    const candidatas = unidadesVisibles
+        .map(u => ({ ...u, distEuclid: distanciaEuclidea(clickCoords, u.coords) }))
+        .sort((a, b) => a.distEuclid - b.distEuclid)
+        .slice(0, MAX_DESTINOS_MATRIX);
+
+    // 2. Construir string de coordenadas: punto de clic + candidatas
+    const coordsStr = [clickCoords, ...candidatas.map(u => u.coords)]
+        .map(([lon, lat]) => `${lon},${lat}`)
+        .join(';');
+
+    const elEstado = document.getElementById('cercanas-estado');
+    if (elEstado) {
+        elEstado.textContent = `Calculando rutas para ${candidatas.length} unidades...`;
+        elEstado.classList.add('waiting-click');
+    }
+
+    contadorPeticionesMatrix++;
+
+    // 3. Llamar a la Matrix API — sources=0 (el clic), destinations=resto
+    const destinosIdx = candidatas.map((_, i) => i + 1).join(';');
+    const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${coordsStr}` +
+                `?sources=0&destinations=${destinosIdx}&annotations=duration&access_token=${mapboxgl.accessToken}`;
+
+    try {
+        const res  = await fetch(url);
+        const data = await res.json();
+
+        if (!data.durations || !data.durations[0]) {
+            if (elEstado) {
+                elEstado.textContent = 'No se pudo obtener los tiempos de conducción.';
+                elEstado.classList.remove('waiting-click');
+            }
+            return;
+        }
+
+        // 4. Combinar resultados: agregar duración real a cada candidata, ordenar por tiempo
+        const resultados = candidatas
+            .map((u, i) => ({ ...u, duracionSeg: data.durations[0][i] }))
+            .filter(u => u.duracionSeg !== null)
+            .sort((a, b) => a.duracionSeg - b.duracionSeg);
+
+        mostrarResultadosCercanas(resultados);
+
+    } catch (err) {
+        console.error('Error en Matrix API:', err);
+        if (elEstado) {
+            elEstado.textContent = 'Error al consultar la Matrix API.';
+            elEstado.classList.remove('waiting-click');
+        }
+    }
+}
+
+function formatearTiempo(seg) {
+    const min = Math.round(seg / 60);
+    if (min < 60) return `${min} min`;
+    const h = Math.floor(min / 60);
+    const m = min % 60;
+    return m > 0 ? `${h}h ${m}min` : `${h}h`;
+}
+
+function mostrarResultadosCercanas(resultados) {
+    const elEstado = document.getElementById('cercanas-estado');
+    const elLista  = document.getElementById('cercanas-lista');
+
+    // 1. Actualizar mensaje de estado
+    elEstado.textContent = `${resultados.length} unidades encontradas. Haz clic de nuevo para recalcular.`;
+    elEstado.classList.remove('waiting-click');
+
+    // 2. Actualizar etiquetas del mapa con el tiempo de conducción
+    if (map.getSource('pines-labels-src') && map.getLayer('pines-labels')) {
+        const tiempoMap = {};
+        resultados.forEach(u => { tiempoMap[u.clues] = formatearTiempo(u.duracionSeg); });
+
+        const features = unidadesVisibles.map(u => ({
+            type: 'Feature',
+            geometry: { type: 'Point', coordinates: u.coords },
+            properties: {
+                clues:       u.clues,
+                nombre:      u.nombre,
+                estado:      u.estado,
+                tiempoLabel: tiempoMap[u.clues] || null
+            }
+        }));
+        map.getSource('pines-labels-src').setData({ type: 'FeatureCollection', features });
+        map.setLayoutProperty('pines-labels', 'text-field',
+            ['coalesce', ['get', 'tiempoLabel'], '']
+        );
+        map.setLayoutProperty('pines-labels', 'visibility', 'visible');
+    }
+
+    // 3. Renderizar lista ordenada en el panel
+    elLista.innerHTML = '';
+    resultados.forEach(u => {
+        const item = document.createElement('div');
+        item.className = 'cercanas-item';
+        item.innerHTML = `<span class="cercanas-item-nombre" title="${u.nombre}">${u.nombre}</span>
+                          <span class="cercanas-item-tiempo">${formatearTiempo(u.duracionSeg)}</span>`;
+        elLista.appendChild(item);
+    });
 }
 
 // ─── TOUR DE BIENVENIDA (implementación propia, sin librerías) ─────────────────

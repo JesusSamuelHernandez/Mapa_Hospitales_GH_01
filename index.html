@@ -67,6 +67,10 @@
                 <span class="menu-icono"><i data-lucide="timer"></i></span>
                 <span class="menu-label">Isócronas</span>
             </button>
+            <button id="btn-cercanas" class="menu-item">
+                <span class="menu-icono"><i data-lucide="search"></i></span>
+                <span class="menu-label">Unidades Cercanas</span>
+            </button>
         </div>
     </div>
 
@@ -113,6 +117,13 @@
                     <div class="iso-leyenda-item"><span class="iso-dot" style="background:#b4f8f8;"></span> 59 min</div>
                 </div>
                 <button id="btn-limpiar-isocrona">✕ Limpiar isócronas</button>
+            </div>
+
+            <div id="panel-cercanas" style="display:none;">
+                <h2>Unidades más cercanas</h2>
+                <div id="cercanas-estado" class="ruta-estado-texto waiting-click">Haz clic en el mapa para encontrar unidades cercanas.</div>
+                <button id="btn-limpiar-cercanas">✕ Cerrar herramienta</button>
+                <div id="cercanas-lista"></div>
             </div>
 
         </div>

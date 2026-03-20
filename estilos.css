@@ -456,7 +456,8 @@ body.modo-oscuro .waiting-click {
 .ruta-dato strong { color: #7c5cbf; }
 
 #btn-limpiar-ruta,
-#btn-limpiar-isocrona {
+#btn-limpiar-isocrona,
+#btn-limpiar-cercanas {
     display: block;
     width: 100%;
     margin-top: 8px;
@@ -470,7 +471,36 @@ body.modo-oscuro .waiting-click {
     transition: all 0.2s;
 }
 #btn-limpiar-ruta:hover,
-#btn-limpiar-isocrona:hover { background-color: #fff5f5; border-color: #fc8181; color: #e53e3e; }
+#btn-limpiar-isocrona:hover,
+#btn-limpiar-cercanas:hover { background-color: #fff5f5; border-color: #fc8181; color: #e53e3e; }
+
+/* =========================================================
+   PANEL DE UNIDADES CERCANAS
+   ========================================================= */
+#panel-cercanas {
+    border-top: 1px solid rgba(157, 125, 253, 0.25);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#cercanas-lista { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+
+.cercanas-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    background: #f7f4ff;
+    border: 1px solid rgba(157, 125, 253, 0.2);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #2d3748;
+}
+.cercanas-item-nombre { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 8px; }
+.cercanas-item-tiempo { font-weight: 700; color: #7c5cbf; white-space: nowrap; }
+
+body.modo-oscuro .cercanas-item { background: rgba(157, 125, 253, 0.08); border-color: rgba(157, 125, 253, 0.2); color: #e2e8f0; }
+body.modo-oscuro .cercanas-item-tiempo { color: #a78bfa; }
 
 /* =========================================================
    PANEL DE ISÓCRONAS
