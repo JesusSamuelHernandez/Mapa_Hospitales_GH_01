@@ -1,11 +1,18 @@
 // CONFIGURACIÓN INICIAL
 mapboxgl.accessToken = CONFIG.MAPBOX_TOKEN;
 
-let modoOscuro = localStorage.getItem('modoOscuro') === 'true';
+const TEMAS = [
+    { style: 'mapbox://styles/mapbox/light-v11',   oscuro: false, icono: 'moon'  },
+    { style: 'mapbox://styles/mapbox/dark-v11',    oscuro: true,  icono: 'map'   },
+    { style: 'mapbox://styles/mapbox/streets-v12', oscuro: false, icono: 'sun'   },
+];
+let temaIdx   = parseInt(localStorage.getItem('temaIdx'), 10);
+if (![0, 1, 2].includes(temaIdx)) temaIdx = 0;
+let modoOscuro = TEMAS[temaIdx].oscuro;
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: modoOscuro ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/light-v11',
+    style: TEMAS[temaIdx].style,
     center: [-99.1332, 19.4326],
     zoom: 4.5,
     pitch: 45,
@@ -419,9 +426,10 @@ function inicializarCapas() {
 // ─── MODO OSCURO / CLARO ──────────────────────────────────────────────────────
 
 function toggleModo() {
-    modoOscuro = !modoOscuro;
-    localStorage.setItem('modoOscuro', modoOscuro);
-    map.setStyle(modoOscuro ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/light-v11');
+    temaIdx    = (temaIdx + 1) % TEMAS.length;
+    modoOscuro = TEMAS[temaIdx].oscuro;
+    localStorage.setItem('temaIdx', temaIdx);
+    map.setStyle(TEMAS[temaIdx].style);
     document.body.classList.toggle('modo-oscuro', modoOscuro);
     actualizarBtnModo();
 }
@@ -436,7 +444,7 @@ function actualizarBtnTodosEstados() {
 function actualizarBtnModo() {
     const icon = document.querySelector('#btn-modo .menu-icono i');
     if (!icon) return;
-    icon.setAttribute('data-lucide', modoOscuro ? 'sun' : 'moon');
+    icon.setAttribute('data-lucide', TEMAS[temaIdx].icono);
     if (window.lucide) lucide.createIcons();
 }
 
