@@ -26,7 +26,10 @@ let datosHospitales = {};
 let datosMedicamentos = {};
 let datosExistencias = [];
 let datosEstadosGeo = null;
-let hoveredEstadoId = null;
+let hoveredEstadoId      = null;
+let selectedEstadoId     = null;
+let lineaSeleccionadaId  = null;
+let lineaPopup           = null;
 let datosListos = false;
 let listenersCapasConfigurados = false;
 
@@ -285,7 +288,11 @@ function inicializarCapas() {
         source: 'estados-src',
         paint: {
             'fill-color': colorLinea,
-            'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.15, 0]
+            'fill-opacity': ['case',
+                ['boolean', ['feature-state', 'select'], false], 0.3,
+                ['boolean', ['feature-state', 'hover'],  false], 0.15,
+                0
+            ]
         }
     });
 
@@ -295,8 +302,16 @@ function inicializarCapas() {
         source: 'estados-src',
         paint: {
             'line-color': colorLinea,
-            'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.5, 0.8],
-            'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.9, 0.25]
+            'line-width': ['case',
+                ['boolean', ['feature-state', 'select'], false], 3,
+                ['boolean', ['feature-state', 'hover'],  false], 2.5,
+                0.8
+            ],
+            'line-opacity': ['case',
+                ['boolean', ['feature-state', 'select'], false], 1,
+                ['boolean', ['feature-state', 'hover'],  false], 0.9,
+                0.25
+            ]
         }
     });
 
@@ -353,6 +368,48 @@ function inicializarCapas() {
         paint: { 'line-color': '#00d4ff', 'line-width': 6, 'line-opacity': 0.9 }
     });
 
+    // --- CAPAS DE CONEXIONES (Unidades Cercanas) ---
+    map.addSource('lineas-cercanas-source', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] }
+    });
+    // Brillo exterior
+    map.addLayer({
+        id: 'lineas-cercanas-glow',
+        type: 'line',
+        source: 'lineas-cercanas-source',
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-color': '#00ffff', 'line-width': 7, 'line-opacity': 0.1 }
+    });
+    // Neón intermedio
+    map.addLayer({
+        id: 'lineas-cercanas-neon',
+        type: 'line',
+        source: 'lineas-cercanas-source',
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-color': '#00ffff', 'line-width': 3, 'line-opacity': 0.4 }
+    });
+    // Línea principal (interior)
+    map.addLayer({
+        id: 'lineas-cercanas-main',
+        type: 'line',
+        source: 'lineas-cercanas-source',
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-color': '#e0ffff', 'line-width': 1, 'line-opacity': 0.9 }
+    });
+    // Resaltado al seleccionar (controlado por feature-state)
+    map.addLayer({
+        id: 'lineas-cercanas-highlight',
+        type: 'line',
+        source: 'lineas-cercanas-source',
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+            'line-color': '#ffffff',
+            'line-width': 4,
+            'line-opacity': ['case', ['boolean', ['feature-state', 'seleccionada'], false], 1, 0]
+        }
+    });
+
     // --- CAPA DE ETIQUETAS DE HOSPITALES ---
     map.addSource('pines-labels-src', {
         type: 'geojson',
@@ -401,7 +458,6 @@ function inicializarCapas() {
         });
 
         map.on('click', 'estados-fill', (e) => {
-            if (modoUnidadesCercanas) return;
             if (!e.features.length) return;
             const nomgeo = e.features[0].properties.NOMGEO;
             const selectorEdo = document.getElementById('selector-estado');
@@ -415,6 +471,53 @@ function inicializarCapas() {
                 actualizarBtnTodosEstados();
             }
         });
+
+        // --- CLICK EN LÍNEAS DE CONEXIÓN ---
+        map.on('click', 'lineas-cercanas-main', (e) => {
+            e.stopPropagation();
+            if (!e.features.length) return;
+
+            const feat   = e.features[0];
+            const featId = feat.id;
+            const prop   = feat.properties;
+
+            // Quitar resaltado anterior
+            if (lineaSeleccionadaId !== null) {
+                map.setFeatureState({ source: 'lineas-cercanas-source', id: lineaSeleccionadaId }, { seleccionada: false });
+            }
+
+            // Si es la misma línea → deseleccionar y cerrar popup
+            if (lineaSeleccionadaId === featId) {
+                lineaSeleccionadaId = null;
+                if (lineaPopup) { lineaPopup.remove(); lineaPopup = null; }
+                return;
+            }
+
+            // Nueva línea seleccionada
+            lineaSeleccionadaId = featId;
+            map.setFeatureState({ source: 'lineas-cercanas-source', id: lineaSeleccionadaId }, { seleccionada: true });
+
+            const html = `<div style="font-family:'Segoe UI',sans-serif;padding:10px 12px;min-width:200px;">
+                <div style="font-size:0.75rem;color:#718096;margin-bottom:4px;">ORIGEN</div>
+                <div style="font-size:0.9rem;font-weight:bold;color:#1a202c;margin-bottom:8px;">${prop.origenNombre}</div>
+                <div style="font-size:0.75rem;color:#718096;margin-bottom:4px;">DESTINO</div>
+                <div style="font-size:0.9rem;font-weight:bold;color:#1a202c;margin-bottom:6px;">${prop.destinoNombre}</div>
+                <div style="font-size:0.85rem;color:#718096;">Estado: ${prop.destinoEstado}</div>
+                <div style="font-size:1rem;font-weight:bold;color:#6366f1;margin-top:6px;">${prop.tiempo}</div>
+            </div>`;
+
+            if (!lineaPopup) lineaPopup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 10 });
+            lineaPopup.setLngLat(e.lngLat).setHTML(html).addTo(map);
+            lineaPopup.once('close', () => {
+                if (lineaSeleccionadaId !== null) {
+                    map.setFeatureState({ source: 'lineas-cercanas-source', id: lineaSeleccionadaId }, { seleccionada: false });
+                    lineaSeleccionadaId = null;
+                }
+            });
+        });
+
+        map.on('mouseenter', 'lineas-cercanas-main', () => { map.getCanvas().style.cursor = 'pointer'; });
+        map.on('mouseleave', 'lineas-cercanas-main', () => { map.getCanvas().style.cursor = '';        });
 
         listenersCapasConfigurados = true;
     }
@@ -480,6 +583,7 @@ function aplicarFiltros() {
     const nombreEdo = document.getElementById('selector-estado').value;
 
     if (!claveMed && !nombreEdo) {
+        seleccionarEstado(null);
         limpiarPines();
         unidadesVisibles = [];
         document.getElementById('leyenda-semaforo').style.display = 'none';
@@ -508,7 +612,9 @@ function aplicarFiltros() {
     if (nombreEdo) {
         resultantes = resultantes.filter(f => f.properties.estado === nombreEdo);
         fitBoundsEstado(nombreEdo);
+        seleccionarEstado(encontrarIdEstado(nombreEdo));
     } else {
+        seleccionarEstado(null);
         map.flyTo({ center: [-99.1332, 19.4326], zoom: 4.5, duration: 800 });
     }
 
@@ -653,6 +759,25 @@ function actualizarSelectorEstados(claveMed) {
     }
 }
 
+function encontrarIdEstado(nombreEdo) {
+    if (!datosEstadosGeo || !nombreEdo) return null;
+    const norm = normalizarEstado(nombreEdo);
+    const feature = datosEstadosGeo.features.find(f =>
+        normalizarEstado(f.properties.NOMGEO) === norm
+    );
+    return feature ? feature.properties.fid : null;
+}
+
+function seleccionarEstado(id) {
+    if (selectedEstadoId !== null) {
+        map.setFeatureState({ source: 'estados-src', id: selectedEstadoId }, { select: false });
+    }
+    selectedEstadoId = id;
+    if (selectedEstadoId !== null) {
+        map.setFeatureState({ source: 'estados-src', id: selectedEstadoId }, { select: true });
+    }
+}
+
 function normalizarEstado(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase().trim();
 }
@@ -692,7 +817,8 @@ function toggleModoRuta() {
 }
 
 function activarModoRuta() {
-    if (modoIsocronas) desactivarModoIsocronas();
+    if (modoIsocronas)       desactivarModoIsocronas();
+    if (modoUnidadesCercanas) desactivarModoCercanas();
     modoRuta = true;
     limpiarRuta(false);
     document.getElementById('panel-ruta').style.display = 'block';
@@ -841,7 +967,8 @@ function toggleModoIsocronas() {
 }
 
 function activarModoIsocronas() {
-    if (modoRuta) desactivarModoRuta();
+    if (modoRuta)            desactivarModoRuta();
+    if (modoUnidadesCercanas) desactivarModoCercanas();
     modoIsocronas = true;
     document.getElementById('panel-isocronas').style.display = 'block';
     document.getElementById('btn-isocronas').classList.add('activo');
@@ -997,8 +1124,22 @@ function limpiarResaltadoOrigen() {
     }
 }
 
+function limpiarLineasCercanas() {
+    if (lineaPopup) { lineaPopup.remove(); lineaPopup = null; }
+    if (lineaSeleccionadaId !== null) {
+        if (map.getSource('lineas-cercanas-source')) {
+            map.setFeatureState({ source: 'lineas-cercanas-source', id: lineaSeleccionadaId }, { seleccionada: false });
+        }
+        lineaSeleccionadaId = null;
+    }
+    if (map.getSource('lineas-cercanas-source')) {
+        map.getSource('lineas-cercanas-source').setData({ type: 'FeatureCollection', features: [] });
+    }
+}
+
 function desactivarModoCercanas() {
     modoUnidadesCercanas = false;
+    limpiarLineasCercanas();
     limpiarResaltadoOrigen();
     document.getElementById('panel-cercanas').style.display = 'none';
     document.getElementById('btn-cercanas').classList.remove('activo');
@@ -1074,7 +1215,7 @@ async function calcularUnidadesCercanas(clickCoords, origenClues) {
             .filter(u => u.duracionSeg !== null)
             .sort((a, b) => a.duracionSeg - b.duracionSeg);
 
-        mostrarResultadosCercanas(resultados);
+        mostrarResultadosCercanas(resultados, clickCoords, origenClues);
 
     } catch (err) {
         console.error('Error en Matrix API:', err);
@@ -1093,7 +1234,7 @@ function formatearTiempo(seg) {
     return m > 0 ? `${h}h ${m}min` : `${h}h`;
 }
 
-function mostrarResultadosCercanas(resultados) {
+function mostrarResultadosCercanas(resultados, origenCoords, origenClues) {
     const elEstado = document.getElementById('cercanas-estado');
     const elLista  = document.getElementById('cercanas-lista');
 
@@ -1127,7 +1268,27 @@ function mostrarResultadosCercanas(resultados) {
         map.setLayoutProperty('pines-labels', 'visibility', 'visible');
     }
 
-    // 3. Renderizar lista ordenada en el panel
+    // 3. Dibujar líneas de conexión origen → destinos
+    if (map.getSource('lineas-cercanas-source') && origenCoords) {
+        const origenInfo = unidadesVisibles.find(u => u.clues === origenClues) || { nombre: 'Origen', clues: origenClues };
+        limpiarLineasCercanas();
+        const lineas = resultados.map((u, i) => ({
+            type: 'Feature',
+            id: i,
+            geometry: { type: 'LineString', coordinates: [origenCoords, u.coords] },
+            properties: {
+                origenNombre:  origenInfo.nombre,
+                origenClues:   origenInfo.clues,
+                destinoNombre: u.nombre,
+                destinoClues:  u.clues,
+                destinoEstado: u.estado,
+                tiempo:        formatearTiempo(u.duracionSeg)
+            }
+        }));
+        map.getSource('lineas-cercanas-source').setData({ type: 'FeatureCollection', features: lineas });
+    }
+
+    // 4. Renderizar lista ordenada en el panel
     elLista.innerHTML = '';
     resultados.forEach(u => {
         const item = document.createElement('div');
