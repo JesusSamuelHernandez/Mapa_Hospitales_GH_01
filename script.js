@@ -27,9 +27,12 @@ let datosMedicamentos = {};
 let datosExistencias = [];
 let datosEstadosGeo = null;
 let hoveredEstadoId      = null;
-let selectedEstadoId     = null;
+let selectedEstadoIds    = new Set();
+let estadosSeleccionados = [];
 let lineaSeleccionadaId  = null;
 let lineaPopup           = null;
+let redCercanaActiva     = false;
+let datosPinesRed        = [];
 let datosListos = false;
 let listenersCapasConfigurados = false;
 
@@ -126,6 +129,7 @@ map.on('load', async () => {
         }
 
         function limpiarMed() {
+            if (redCercanaActiva) desactivarModoCercanas();
             selectorMed.value = '';
             inputBusqueda.value = '';
             listaMed.style.display = 'none';
@@ -148,8 +152,10 @@ map.on('load', async () => {
             listaMed.style.display = 'none';
             medSeleccionado.style.display = 'none';
             actualizarSelectorEstados('');
+            estadosSeleccionados = [];
             document.getElementById('selector-estado').value = '';
             aplicarFiltros();
+            actualizarUIEstados();
             map.flyTo({ center: [-99.1332, 19.4326], zoom: 4.5, pitch: 0, bearing: 0, duration: 1000 });
         });
 
@@ -184,16 +190,19 @@ map.on('load', async () => {
         document.getElementById('btn-limpiar-cercanas').addEventListener('click', desactivarModoCercanas);
         document.getElementById('btn-tipo-estandar').addEventListener('click', () => setTipoIsocrona(true));
         document.getElementById('btn-tipo-manual').addEventListener('click', () => setTipoIsocrona(false));
-        document.getElementById('selector-estado').addEventListener('change', () => {
+        document.getElementById('selector-estado').addEventListener('change', (e) => {
+            const val = e.target.value;
+            estadosSeleccionados = val ? [val] : [];
             aplicarFiltros();
-            actualizarBtnTodosEstados();
+            actualizarUIEstados();
         });
         document.getElementById('selector-medicamento').addEventListener('change', aplicarFiltros);
 
         document.getElementById('btn-todos-estados').addEventListener('click', () => {
+            estadosSeleccionados = [];
             document.getElementById('selector-estado').value = '';
             aplicarFiltros();
-            actualizarBtnTodosEstados();
+            actualizarUIEstados();
             map.flyTo({ center: [-99.1332, 19.4326], zoom: 4.5, pitch: 0, bearing: 0, duration: 1000 });
         });
 
@@ -409,6 +418,39 @@ function inicializarCapas() {
             'line-opacity': ['case', ['boolean', ['feature-state', 'seleccionada'], false], 1, 0]
         }
     });
+    // Hitbox invisible para facilitar el clic en líneas delgadas
+    map.addLayer({
+        id: 'lineas-cercanas-hitbox',
+        type: 'line',
+        source: 'lineas-cercanas-source',
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-width': 15, 'line-opacity': 0 }
+    });
+
+    // --- ETIQUETAS DE TIEMPO (Unidades Cercanas) ---
+    map.addSource('puntos-cercanos-source', {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] }
+    });
+    map.addLayer({
+        id: 'tiempo-viaje-labels',
+        type: 'symbol',
+        source: 'puntos-cercanos-source',
+        layout: {
+            'text-field': ['get', 'tiempoFormateado'],
+            'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+            'text-size': 12,
+            'text-anchor': 'top',
+            'text-offset': [0, 0.6],
+            'text-allow-overlap': false,
+            'visibility': 'none'
+        },
+        paint: {
+            'text-color': '#00ffff',
+            'text-halo-color': 'rgba(0,0,0,0.8)',
+            'text-halo-width': 1.5
+        }
+    });
 
     // --- CAPA DE ETIQUETAS DE HOSPITALES ---
     map.addSource('pines-labels-src', {
@@ -459,21 +501,28 @@ function inicializarCapas() {
 
         map.on('click', 'estados-fill', (e) => {
             if (!e.features.length) return;
-            const nomgeo = e.features[0].properties.NOMGEO;
-            const selectorEdo = document.getElementById('selector-estado');
+            const nomgeo     = e.features[0].properties.NOMGEO;
             const normNomgeo = normalizarEstado(nomgeo);
+            const selectorEdo = document.getElementById('selector-estado');
             const opcion = Array.from(selectorEdo.options).find(opt =>
                 normalizarEstado(opt.value) === normNomgeo
             );
-            if (opcion) {
-                selectorEdo.value = opcion.value;
-                aplicarFiltros();
-                actualizarBtnTodosEstados();
+            if (!opcion || !opcion.value) return;
+            const nombreEstado = opcion.value;
+
+            if (e.originalEvent.ctrlKey) {
+                const idx = estadosSeleccionados.indexOf(nombreEstado);
+                if (idx === -1) estadosSeleccionados.push(nombreEstado);
+                else            estadosSeleccionados.splice(idx, 1);
+            } else {
+                estadosSeleccionados = [nombreEstado];
             }
+            aplicarFiltros();
+            actualizarUIEstados();
         });
 
         // --- CLICK EN LÍNEAS DE CONEXIÓN ---
-        map.on('click', 'lineas-cercanas-main', (e) => {
+        map.on('click', 'lineas-cercanas-hitbox', (e) => {
             e.stopPropagation();
             if (!e.features.length) return;
 
@@ -516,8 +565,8 @@ function inicializarCapas() {
             });
         });
 
-        map.on('mouseenter', 'lineas-cercanas-main', () => { map.getCanvas().style.cursor = 'pointer'; });
-        map.on('mouseleave', 'lineas-cercanas-main', () => { map.getCanvas().style.cursor = '';        });
+        map.on('mouseenter', 'lineas-cercanas-hitbox', () => { map.getCanvas().style.cursor = 'pointer'; });
+        map.on('mouseleave', 'lineas-cercanas-hitbox', () => { map.getCanvas().style.cursor = '';        });
 
         listenersCapasConfigurados = true;
     }
@@ -540,8 +589,7 @@ function toggleModo() {
 function actualizarBtnTodosEstados() {
     const btn = document.getElementById('btn-todos-estados');
     if (!btn) return;
-    const valor = document.getElementById('selector-estado').value;
-    btn.style.display = valor ? 'block' : 'none';
+    btn.style.display = estadosSeleccionados.length > 0 ? 'block' : 'none';
 }
 
 function actualizarBtnModo() {
@@ -578,62 +626,78 @@ function generarFeatures(nodos) {
     }));
 }
 
+function enriquecerFeaturesConStock(features) {
+    const claveMed = document.getElementById('selector-medicamento').value;
+    if (!claveMed) return features;
+    const conStock = datosExistencias.filter(ex => ex.clave_cnis === claveMed);
+    const mapaStock = {};
+    conStock.forEach(ex => { mapaStock[ex.clues] = { existencia: ex.existencia, cobertura: ex.cobertura }; });
+    return features
+        .filter(f => mapaStock[f.properties.clues] !== undefined)
+        .map(f => {
+            f.properties.stockActual = mapaStock[f.properties.clues].existencia;
+            f.properties.cobertura   = mapaStock[f.properties.clues].cobertura;
+            f.properties.medNombre   = datosMedicamentos[claveMed];
+            return f;
+        });
+}
+
 function aplicarFiltros() {
     const claveMed = document.getElementById('selector-medicamento').value;
-    const nombreEdo = document.getElementById('selector-estado').value;
 
-    if (!claveMed && !nombreEdo) {
-        seleccionarEstado(null);
+    if (!claveMed && estadosSeleccionados.length === 0) {
+        sincronizarResaltadosEstados([]);
         limpiarPines();
         unidadesVisibles = [];
         document.getElementById('leyenda-semaforo').style.display = 'none';
         actualizarContador(-1);
         actualizarBtnTodosEstados();
+        // Sincronizar dropdown
+        document.getElementById('selector-estado').value = '';
         return;
     }
 
     let resultantes = generarFeatures(datosHospitales);
+    resultantes = enriquecerFeaturesConStock(resultantes);
 
-    if (claveMed) {
-        const conStock = datosExistencias.filter(ex => ex.clave_cnis === claveMed);
-        const mapaStock = {};
-        conStock.forEach(ex => mapaStock[ex.clues] = { existencia: ex.existencia, cobertura: ex.cobertura });
-
-        resultantes = resultantes
-            .filter(f => mapaStock[f.properties.clues] !== undefined)
-            .map(f => {
-                f.properties.stockActual = mapaStock[f.properties.clues].existencia;
-                f.properties.cobertura = mapaStock[f.properties.clues].cobertura;
-                f.properties.medNombre = datosMedicamentos[claveMed];
-                return f;
-            });
-    }
-
-    if (nombreEdo) {
-        resultantes = resultantes.filter(f => f.properties.estado === nombreEdo);
-        fitBoundsEstado(nombreEdo);
-        seleccionarEstado(encontrarIdEstado(nombreEdo));
+    if (estadosSeleccionados.length > 0) {
+        resultantes = resultantes.filter(f => estadosSeleccionados.includes(f.properties.estado));
+        fitBoundsEstados(estadosSeleccionados);
+        sincronizarResaltadosEstados(estadosSeleccionados);
     } else {
-        seleccionarEstado(null);
+        sincronizarResaltadosEstados([]);
         map.flyTo({ center: [-99.1332, 19.4326], zoom: 4.5, duration: 800 });
     }
 
     // Actualizar arreglo de unidades visibles para herramienta de cercanía
     unidadesVisibles = resultantes.map(f => ({
-        clues:  f.properties.clues,
-        nombre: f.properties.nombre,
-        estado: f.properties.estado,
-        coords: f.geometry.coordinates   // [lon, lat]
+        clues:       f.properties.clues,
+        nombre:      f.properties.nombre,
+        estado:      f.properties.estado,
+        coords:      f.geometry.coordinates,
+        stockActual: f.properties.stockActual,
+        cobertura:   f.properties.cobertura,
+        medNombre:   f.properties.medNombre
     }));
+
+    // Fusionar pines de la red activa con los del filtro de estado
+    if (redCercanaActiva) {
+        const cluesEnRed = new Set(datosPinesRed.map(p => p.properties.clues));
+        const resultantesSinDuplicados = resultantes.filter(r => !cluesEnRed.has(r.properties.clues));
+        resultantes = [...datosPinesRed, ...resultantesSinDuplicados];
+    }
 
     renderizarPines(resultantes);
 
     if (map.getLayer('pines-labels')) {
-        map.setLayoutProperty('pines-labels', 'visibility', nombreEdo ? 'visible' : 'none');
+        map.setLayoutProperty('pines-labels', 'visibility', estadosSeleccionados.length > 0 ? 'visible' : 'none');
     }
 
     document.getElementById('leyenda-semaforo').style.display = claveMed ? 'block' : 'none';
     actualizarContador(resultantes.length);
+    // Sincronizar dropdown con la selección
+    const selectorEdo = document.getElementById('selector-estado');
+    selectorEdo.value = estadosSeleccionados.length === 1 ? estadosSeleccionados[0] : '';
     actualizarBtnTodosEstados();
 }
 
@@ -768,14 +832,54 @@ function encontrarIdEstado(nombreEdo) {
     return feature ? feature.properties.fid : null;
 }
 
-function seleccionarEstado(id) {
-    if (selectedEstadoId !== null) {
-        map.setFeatureState({ source: 'estados-src', id: selectedEstadoId }, { select: false });
-    }
-    selectedEstadoId = id;
-    if (selectedEstadoId !== null) {
-        map.setFeatureState({ source: 'estados-src', id: selectedEstadoId }, { select: true });
-    }
+function sincronizarResaltadosEstados(nombres) {
+    selectedEstadoIds.forEach(id => {
+        map.setFeatureState({ source: 'estados-src', id }, { select: false });
+    });
+    selectedEstadoIds = new Set();
+    nombres.forEach(nombre => {
+        const id = encontrarIdEstado(nombre);
+        if (id !== null) {
+            map.setFeatureState({ source: 'estados-src', id }, { select: true });
+            selectedEstadoIds.add(id);
+        }
+    });
+}
+
+function fitBoundsEstados(nombres) {
+    if (nombres.length === 0) return;
+    if (nombres.length === 1) { fitBoundsEstado(nombres[0]); return; }
+    if (!datosEstadosGeo) return;
+    let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+    nombres.forEach(nombre => {
+        const norm = normalizarEstado(nombre);
+        const feat = datosEstadosGeo.features.find(f => normalizarEstado(f.properties.NOMGEO) === norm);
+        if (!feat) return;
+        const procesarAnillo = ring => ring.forEach(([lng, lat]) => {
+            if (lng < minLng) minLng = lng; if (lat < minLat) minLat = lat;
+            if (lng > maxLng) maxLng = lng; if (lat > maxLat) maxLat = lat;
+        });
+        if (feat.geometry.type === 'MultiPolygon') feat.geometry.coordinates.forEach(p => p.forEach(procesarAnillo));
+        else feat.geometry.coordinates.forEach(procesarAnillo);
+    });
+    if (minLng !== Infinity) map.fitBounds([[minLng, minLat], [maxLng, maxLat]], { padding: 60, pitch: 50, duration: 1000 });
+}
+
+function actualizarUIEstados() {
+    const contenedor = document.getElementById('etiquetas-estados-seleccionados');
+    if (!contenedor) return;
+    contenedor.innerHTML = '';
+    estadosSeleccionados.forEach(nombre => {
+        const tag = document.createElement('span');
+        tag.className = 'etiqueta-estado';
+        tag.innerHTML = `${nombre} <button class="etiqueta-cerrar" title="Quitar">&times;</button>`;
+        tag.querySelector('.etiqueta-cerrar').addEventListener('click', () => {
+            estadosSeleccionados = estadosSeleccionados.filter(e => e !== nombre);
+            aplicarFiltros();
+            actualizarUIEstados();
+        });
+        contenedor.appendChild(tag);
+    });
 }
 
 function normalizarEstado(str) {
@@ -1105,9 +1209,6 @@ function activarModoCercanas() {
     modoUnidadesCercanas = true;
     // Limpiar resultados del ciclo anterior
     document.getElementById('cercanas-lista').innerHTML = '';
-    if (map.getLayer('pines-labels')) {
-        map.setLayoutProperty('pines-labels', 'text-field', ['get', 'nombre']);
-    }
     document.getElementById('panel-cercanas').style.display = 'block';
     document.getElementById('btn-cercanas').classList.add('activo');
     document.getElementById('panel-menu-derecho').classList.remove('visible');
@@ -1145,9 +1246,14 @@ function desactivarModoCercanas() {
     document.getElementById('btn-cercanas').classList.remove('activo');
     document.getElementById('cercanas-estado').classList.remove('waiting-click');
     document.getElementById('cercanas-lista').innerHTML = '';
-    // Restaurar etiquetas con nombre de hospital
-    if (map.getLayer('pines-labels')) {
-        map.setLayoutProperty('pines-labels', 'text-field', ['get', 'nombre']);
+    redCercanaActiva = false;
+    datosPinesRed    = [];
+    // Limpiar etiquetas de tiempo
+    if (map.getSource('puntos-cercanos-source')) {
+        map.getSource('puntos-cercanos-source').setData({ type: 'FeatureCollection', features: [] });
+    }
+    if (map.getLayer('tiempo-viaje-labels')) {
+        map.setLayoutProperty('tiempo-viaje-labels', 'visibility', 'none');
     }
 }
 let contadorPeticionesMatrix = 0;
@@ -1246,31 +1352,36 @@ function mostrarResultadosCercanas(resultados, origenCoords, origenClues) {
     elEstado.textContent = `${resultados.length} unidades encontradas. Presiona el botón para un nuevo cálculo.`;
     elEstado.classList.remove('waiting-click');
 
-    // 2. Actualizar etiquetas del mapa con el tiempo de conducción
-    if (map.getSource('pines-labels-src') && map.getLayer('pines-labels')) {
-        const tiempoMap = {};
-        resultados.forEach(u => { tiempoMap[u.clues] = formatearTiempo(u.duracionSeg); });
-
-        const features = unidadesVisibles.map(u => ({
+    // 2. Etiquetas de tiempo sobre los pines destino (capa dedicada)
+    if (map.getSource('puntos-cercanos-source')) {
+        const puntosConTiempo = resultados.map(u => ({
             type: 'Feature',
             geometry: { type: 'Point', coordinates: u.coords },
-            properties: {
-                clues:       u.clues,
-                nombre:      u.nombre,
-                estado:      u.estado,
-                tiempoLabel: tiempoMap[u.clues] || null
-            }
+            properties: { clues: u.clues, tiempoFormateado: formatearTiempo(u.duracionSeg) }
         }));
-        map.getSource('pines-labels-src').setData({ type: 'FeatureCollection', features });
-        map.setLayoutProperty('pines-labels', 'text-field',
-            ['coalesce', ['get', 'tiempoLabel'], '']
-        );
-        map.setLayoutProperty('pines-labels', 'visibility', 'visible');
+        map.getSource('puntos-cercanos-source').setData({ type: 'FeatureCollection', features: puntosConTiempo });
+        if (map.getLayer('tiempo-viaje-labels')) {
+            map.setLayoutProperty('tiempo-viaje-labels', 'visibility', 'visible');
+        }
     }
 
-    // 3. Dibujar líneas de conexión origen → destinos
+    // 3. Persistir estado de la red para fusión con futuros filtros de estado
+    redCercanaActiva = true;
+    const origenInfo = unidadesVisibles.find(u => u.clues === origenClues) || { nombre: 'Origen', clues: origenClues, estado: '' };
+    datosPinesRed = [
+        { type: 'Feature', geometry: { type: 'Point', coordinates: origenCoords },
+          properties: { clues: origenClues, nombre: origenInfo.nombre, estado: origenInfo.estado,
+                        stockActual: origenInfo.stockActual, cobertura: origenInfo.cobertura, medNombre: origenInfo.medNombre } },
+        ...resultados.map(u => ({
+            type: 'Feature',
+            geometry: { type: 'Point', coordinates: u.coords },
+            properties: { clues: u.clues, nombre: u.nombre, estado: u.estado,
+                          stockActual: u.stockActual, cobertura: u.cobertura, medNombre: u.medNombre }
+        }))
+    ];
+
+    // 4. Dibujar líneas de conexión origen → destinos
     if (map.getSource('lineas-cercanas-source') && origenCoords) {
-        const origenInfo = unidadesVisibles.find(u => u.clues === origenClues) || { nombre: 'Origen', clues: origenClues };
         limpiarLineasCercanas();
         const lineas = resultados.map((u, i) => ({
             type: 'Feature',

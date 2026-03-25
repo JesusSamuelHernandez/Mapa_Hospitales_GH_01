@@ -13,12 +13,26 @@
 
 - **Turno 3 (24/03/2026):**
   - [x] Mejora 2: Exclusividad y Consistencia de Herramientas.
-    - Eliminado `if (modoUnidadesCercanas) return;` del handler `click, estados-fill` — ahora el clic en polígono funciona mientras la herramienta está activa.
+    - Eliminado `if (modoUnidadesCercanas) return;` del handler `click, estados-fill`.
     - `activarModoRuta()` y `activarModoIsocronas()` desactivan `modoUnidadesCercanas` si está activo.
 
 - **Turno 4 (24/03/2026):**
   - [x] Mejora 3: Visualización de Conexiones en "Unidades Cercanas".
-    - Fuente `lineas-cercanas-source` + 4 capas (`glow`, `neon`, `main`, `highlight`) añadidas en `inicializarCapas()`.
-    - `mostrarResultadosCercanas` genera FeatureCollection LineString con propiedades de origen/destino/tiempo.
-    - `limpiarLineasCercanas()` creada y llamada desde `desactivarModoCercanas()`.
-    - Click handler en `lineas-cercanas-main` con toggle, feature-state `seleccionada` y popup de información.
+    - Fuente `lineas-cercanas-source` + capas de estilo neón y resaltado.
+    - Lógica de `mostrarResultadosCercanas` y `limpiarLineasCercanas` implementada.
+    - Click handler en líneas con popup de información.
+
+- **Turno 5 (24/03/2026):**
+  - [x] Mejora 4: Corrección de Interacciones y Persistencia de Red.
+    - Capa `lineas-cercanas-hitbox` para facilitar clics.
+    - Aislamiento de etiquetas de tiempo en `puntos-cercanos-source`.
+    - Lógica de persistencia de red (`redCercanaActiva`, `datosPinesRed`) y fusión de pines en `aplicarFiltros`.
+
+- **Turno 6 (24/03/2026):**
+  - [x] Mejora 5: Selección Múltiple de Estados + Semaforización Consistente.
+    - `estadosSeleccionados[]` + `selectedEstadoIds` (Set) reemplazan `selectedEstadoId` (scalar).
+    - `sincronizarResaltadosEstados(nombres[])` + `fitBoundsEstados(nombres[])` + `actualizarUIEstados()` creadas.
+    - Ctrl+clic en polígono = selección múltiple; clic normal = selección única.
+    - Etiquetas visuales por estado en `#etiquetas-estados-seleccionados` con botón de cierre.
+    - `enriquecerFeaturesConStock(features)` centraliza enriquecimiento de stock.
+    - `unidadesVisibles` y `datosPinesRed` ahora incluyen datos de stock/cobertura.

@@ -1,30 +1,38 @@
 # Contexto Activo (Active Context)
 
-## Tarea Actual: Mejoras de Visualización
+## Tarea Actual: Mejora 5 - Selección Múltiple y Semaforización Consistente
 
 **Estado:** Completado.
 
-**Descripción:** Implementar la visualización de conexiones directas en la herramienta "Unidades Cercanas".
-
 ---
 
-### Mejora 3: Visualización de Conexiones en "Unidades Cercanas"
+### Plan Ejecutado
 
-**Plan de Ejecución:**
-1.  **`script.js` - Crear Fuente de Datos para Líneas:** ✅
-2.  **`script.js` - Estilo de Líneas Neón:** ✅
-3.  **`script.js` - Generar y Dibujar Líneas:** ✅
-4.  **`script.js` - Interactividad (Click y Resaltado):** ✅
+**Parte 1: Selección Múltiple de Estados**
+- [x] `index.html`: `<div id="etiquetas-estados-seleccionados" class="etiquetas-container">` añadido bajo `btn-todos-estados`.
+- [x] `estilos.css`: Estilos para `.etiquetas-container`, `.etiqueta-estado`, `.etiqueta-cerrar` con soporte modo oscuro.
+- [x] `script.js`:
+  - `selectedEstadoId` (single) → `selectedEstadoIds` (Set) + `estadosSeleccionados` (array).
+  - `seleccionarEstado(id)` reemplazada por `sincronizarResaltadosEstados(nombres[])`.
+  - `fitBoundsEstados(nombres[])` creada — llama `fitBoundsEstado` para 1, calcula bounding box combinado para múltiples.
+  - `actualizarUIEstados()` renderiza etiquetas con botón `×` por estado.
+  - Click handler `estados-fill`: Ctrl+clic → toggle; clic normal → reemplaza selección.
+  - Dropdown `change`, `btn-todos-estados`, `btn-restablecer` actualizados para sincronizar `estadosSeleccionados`.
+  - `aplicarFiltros` usa `estadosSeleccionados` como fuente de verdad; sincroniza dropdown al final.
+  - `actualizarBtnTodosEstados` usa `estadosSeleccionados.length > 0`.
+
+**Parte 2: Semaforización Consistente**
+- [x] `enriquecerFeaturesConStock(features)` creada — centraliza el enriquecimiento con datos de stock.
+- [x] `aplicarFiltros` llama a `enriquecerFeaturesConStock` en lugar del bloque `if (claveMed) {...}`.
+- [x] `unidadesVisibles` ahora incluye `stockActual`, `cobertura`, `medNombre`.
+- [x] `datosPinesRed` en `mostrarResultadosCercanas` ahora guarda features con datos de stock enriquecidos.
 
 ---
 
 ## Notas Técnicas (para revisión del Arquitecto)
 
-- Se añadieron `lineaSeleccionadaId` y `lineaPopup` como variables globales.
-- Fuente `lineas-cercanas-source` añadida en `inicializarCapas()`, entre `ruta-layer` y `pines-labels` para que las líneas queden debajo de las etiquetas.
-- `mostrarResultadosCercanas` ahora recibe `(resultados, origenCoords, origenClues)`. La firma se actualizó en la función y en la llamada desde `calcularUnidadesCercanas`.
-- `limpiarLineasCercanas()` vacía la fuente, limpia el popup y resetea `lineaSeleccionadaId`. Se llama desde `desactivarModoCercanas()`.
-- El click handler en `lineas-cercanas-main` maneja toggle (misma línea = deseleccionar), limpieza de estado previo y cierre del popup vía `lineaPopup.once('close', ...)`.
-- **Posible residuo:** Si el usuario cambia de tema (toggle de estilo), `style.load` recrea las capas. `limpiarLineasCercanas()` no se llama en ese evento, por lo que los datos de la fuente se perderán pero el estado visual quedará limpio al recrear la fuente vacía. El `lineaSeleccionadaId` podría quedar con un valor obsoleto — el Arquitecto puede evaluar si se necesita un reset en el handler de `style.load`.
+- `actualizarSelectorEstados(claveMed)` (llamada en `btn-restablecer` y al cambiar medicamento) repuebla las opciones del dropdown. No se tocó, funciona bien para filtrar qué estados tienen unidades con el medicamento. La sincronización con `estadosSeleccionados` ocurre después via `aplicarFiltros`.
+- El hint de TypeScript sobre `medNombre` (falso positivo recurrente) sigue apareciendo en `enriquecerFeaturesConStock` por la asignación dinámica a `f.properties` — sin impacto en runtime.
+- `fitBoundsEstados` con múltiples estados usa `normalizarEstado` para el matching, consistente con el resto del código.
 
 **Próxima Acción para Claude Code:** Ninguna. Esperando el siguiente plan del Arquitecto.
