@@ -36,3 +36,8 @@
     - Etiquetas visuales por estado en `#etiquetas-estados-seleccionados` con botón de cierre.
     - `enriquecerFeaturesConStock(features)` centraliza enriquecimiento de stock.
     - `unidadesVisibles` y `datosPinesRed` ahora incluyen datos de stock/cobertura.
+
+- **Cierre de rama `detalles_y_multiagentes` (24/03/2026):**
+  - Merge a `main` completado. Conflicto de `config.js` resuelto a favor de `main`.
+  - Jerarquía de clics operativa: hitbox de líneas > pines DOM > polígonos de estado.
+  - Estado de la herramienta Unidades Cercanas persiste correctamente al filtrar estados.
