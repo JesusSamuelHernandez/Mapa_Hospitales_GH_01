@@ -119,6 +119,7 @@ map.on('load', async () => {
         }
 
         function seleccionarMed(op) {
+            if (redCercanaActiva) desactivarModoCercanas();
             selectorMed.value = op.value;
             inputBusqueda.value = '';
             listaMed.style.display = 'none';

@@ -89,13 +89,13 @@ datosHospitales
 
 ---
 
-### Pendientes técnicos para la próxima sesión
+### Pendientes técnicos — Estado final (Turno 7, 25/03/2026)
 
-1. **`estadosSeleccionados` no se limpia al cambiar medicamento** — `seleccionarMed()` llama a `actualizarSelectorEstados(claveMed)` y `aplicarFiltros()`, pero no resetea `estadosSeleccionados`. Si el usuario tenía 3 estados y el nuevo medicamento solo existe en 1, los otros 2 producen un filtro vacío silencioso. Evaluar si se necesita `estadosSeleccionados = []` en `seleccionarMed()` o un filtrado de validación.
+1. ~~**`estadosSeleccionados` no se limpia al cambiar medicamento**~~ — **[DESCARTADO]** El usuario hizo `git restore .` y decidió mantener la lógica original de estados y popups. No aplica en el código actual.
 
-2. **`lineaSeleccionadaId` obsoleto tras cambio de tema** — Al hacer toggle de tema, `style.load` recrea todas las fuentes vacías pero `lineaSeleccionadaId` puede conservar un valor numérico de la sesión anterior. No rompe nada (source vacío), pero es estado fantasma. Solución: agregar `lineaSeleccionadaId = null` y `lineaPopup?.remove()` en el handler de `style.load` (bloque `map.on('style.load', ...)`).
+2. ~~**`lineaSeleccionadaId` obsoleto tras cambio de tema**~~ — **[DESCARTADO]** Ídem, revertido con `git restore .`. No aplica en el código actual.
 
-3. **`datosPinesRed` con datos de medicamento anterior** — Si el usuario cambia de medicamento mientras la red está visible, los pines de la red muestran el color del medicamento del momento del cálculo. `limpiarMed()` ya llama `desactivarModoCercanas()` si `redCercanaActiva`, pero `seleccionarMed()` no. Revisar si se debe agregar esa llamada también en `seleccionarMed()`.
+3. ~~**`datosPinesRed` con datos de medicamento anterior**~~ — **[RESUELTO]** Se añadió `if (redCercanaActiva) desactivarModoCercanas();` como primera línea de `seleccionarMed()`. La red de cercanas se limpia antes de procesar el nuevo medicamento, igual que ya hacía `limpiarMed()`.
 
 ---
 
