@@ -95,7 +95,16 @@ datosHospitales
 
 2. ~~**`lineaSeleccionadaId` obsoleto tras cambio de tema**~~ — **[DESCARTADO]** Ídem, revertido con `git restore .`. No aplica en el código actual.
 
-3. ~~**`datosPinesRed` con datos de medicamento anterior**~~ — **[RESUELTO]** Se añadió `if (redCercanaActiva) desactivarModoCercanas();` como primera línea de `seleccionarMed()`. La red de cercanas se limpia antes de procesar el nuevo medicamento, igual que ya hacía `limpiarMed()`.
+3. ~~**`datosPinesRed` con datos de medicamento anterior**~~ — **[RESUELTO — mejorado en Turno 8]** La red ya no se destruye al cambiar medicamento. `aplicarFiltros()` re-enriquece `datosPinesRed` vía `enriquecerFeaturesConStock()` antes de fusionar, actualizando colores de pines sin perder la red. `btn-restablecer` sí la destruye vía `desactivarModoCercanas()`.
+
+---
+
+- **Turno 8 (25/03/2026):**
+  - [x] Reset completo en `btn-restablecer`: añadido `if (redCercanaActiva) desactivarModoCercanas()` al inicio del listener.
+  - [x] Semaforización dinámica de red: `seleccionarMed()` ya no destruye la red; `aplicarFiltros()` re-enriquece `datosPinesRed` con el stock del nuevo medicamento antes de renderizar.
+
+- **Turno 9 (25/03/2026):**
+  - [x] `btn-restablecer` como comando global de limpieza: añadido `if (modoRuta || origenRuta || destinoRuta) limpiarRuta(true)` tras el guard de red. El reset ahora limpia en orden: red de cercanas → ruta (marcadores + source + panel) → filtros → flyTo.
 
 ---
 

@@ -119,7 +119,6 @@ map.on('load', async () => {
         }
 
         function seleccionarMed(op) {
-            if (redCercanaActiva) desactivarModoCercanas();
             selectorMed.value = op.value;
             inputBusqueda.value = '';
             listaMed.style.display = 'none';
@@ -148,6 +147,8 @@ map.on('load', async () => {
         btnLimpiar.addEventListener('click', limpiarMed);
 
         document.getElementById('btn-restablecer').addEventListener('click', () => {
+            if (redCercanaActiva) desactivarModoCercanas();
+            if (modoRuta || origenRuta || destinoRuta) limpiarRuta(true);
             selectorMed.value = '';
             inputBusqueda.value = '';
             listaMed.style.display = 'none';
@@ -683,9 +684,10 @@ function aplicarFiltros() {
 
     // Fusionar pines de la red activa con los del filtro de estado
     if (redCercanaActiva) {
-        const cluesEnRed = new Set(datosPinesRed.map(p => p.properties.clues));
+        const pinesRedActualizados = enriquecerFeaturesConStock(datosPinesRed);
+        const cluesEnRed = new Set(pinesRedActualizados.map(p => p.properties.clues));
         const resultantesSinDuplicados = resultantes.filter(r => !cluesEnRed.has(r.properties.clues));
-        resultantes = [...datosPinesRed, ...resultantesSinDuplicados];
+        resultantes = [...pinesRedActualizados, ...resultantesSinDuplicados];
     }
 
     renderizarPines(resultantes);
