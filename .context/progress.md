@@ -105,6 +105,23 @@ datosHospitales
 
 - **Turno 9 (25/03/2026):**
   - [x] `btn-restablecer` como comando global de limpieza: añadido `if (modoRuta || origenRuta || destinoRuta) limpiarRuta(true)` tras el guard de red. El reset ahora limpia en orden: red de cercanas → ruta (marcadores + source + panel) → filtros → flyTo.
+  - [x] Consistencia de Reset validada: herramienta de Rutas y herramienta de Unidades Cercanas responden al `btn-restablecer` de forma simétrica. Ambas limpian sus estados, visualizaciones y paneles desde un único punto de entrada.
+
+---
+
+### Estado al cierre de sesión (25/03/2026)
+
+**Fase de corrección de comportamiento: COMPLETADA.**
+
+Todas las herramientas son consistentes con el Reset global:
+
+| Herramienta | Limpieza por `btn-restablecer` | Limpieza por herramienta propia |
+|---|---|---|
+| Unidades Cercanas | `desactivarModoCercanas()` | botón "Cerrar herramienta" |
+| Rutas | `limpiarRuta(true)` | botón "Limpiar ruta" |
+| Isócronas | pendiente (siguiente sesión) | botón "Limpiar isócronas" |
+
+**Pendiente para mañana:** Optimización de funciones (`script.js`), Stress Test de datos, y alinear Isócronas al mismo patrón de Reset.
 
 ---
 
